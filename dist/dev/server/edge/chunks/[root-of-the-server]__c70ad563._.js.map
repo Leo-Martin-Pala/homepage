@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/i18n/routing.ts"],"sourcesContent":["import { defineRouting } from 'next-intl/routing';\n\nexport const routing = defineRouting({\n  locales: ['en', 'et'],\n  defaultLocale: 'et',\n  localePrefix: 'always',\n});\n"],"names":[],"mappings":";;;;AAAA;;AAEO,MAAM,UAAU,IAAA,2PAAa,EAAC;IACnC,SAAS;QAAC;QAAM;KAAK;IACrB,eAAe;IACf,cAAc;AAChB"}},
+    {"offset": {"line": 34, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import createMiddleware from 'next-intl/middleware';\nimport { routing } from './src/i18n/routing';\n\nexport default createMiddleware(routing);\n\nexport const config = {\n  // Match all pathnames except for\n  // - /api routes\n  // - /_next (Next.js internals)\n  // - /_vercel (Vercel internals)\n  // - all root files inside /public (e.g. /favicon.ico)\n  matcher: ['/((?!api|_next|_vercel|.*\\\\..*).*)'],\n};\n"],"names":[],"mappings":";;;;;;AAAA;AACA;;;uCAEe,IAAA,yMAAgB,EAAC,yIAAO;AAEhC,MAAM,SAAS;IACpB,iCAAiC;IACjC,gBAAgB;IAChB,+BAA+B;IAC/B,gCAAgC;IAChC,sDAAsD;IACtD,SAAS;QAAC;KAAqC;AACjD"}}]
+}

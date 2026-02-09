@@ -47,7 +47,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="pixel-card dark:bg-brown dark:border-cream px-4 py-2 text-lg font-bold text-brown dark:text-cream hover:no-underline transition-colors"
+            className="pixel-card px-4 py-2 text-lg font-bold text-brown dark:text-cream hover:no-underline transition-colors"
             onClick={() => playSound(523.25, 0.08)}
           >
             <span className="text-dusty-rose-dark dark:text-dusty-rose">LM</span>Pala

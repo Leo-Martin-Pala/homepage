@@ -1,83 +1,145 @@
-[00:02:13.063] Browser LOG     [HomePage] Cube 1 clicked
-[00:02:13.063] Browser LOG     [EasterEggs] checkCubeSequence called with cube 1
-[00:02:13.063] Browser LOG     [EasterEggs] Current sequence: []
-[00:02:13.063] Browser LOG     [EasterEggs] New sequence: [1]
-[00:02:13.063] Browser LOG     [EasterEggs] Is correct so far: true
-[00:02:13.063] Browser LOG     [EasterEggs] Correct! Playing note 1 (261.63Hz)
-[00:02:13.063] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.15s, soundEnabled=true
-[00:02:14.816] Browser LOG     [HomePage] Cube 2 clicked
-[00:02:14.816] Browser LOG     [EasterEggs] checkCubeSequence called with cube 2
-[00:02:14.816] Browser LOG     [EasterEggs] Current sequence: [1]
-[00:02:14.816] Browser LOG     [EasterEggs] New sequence: [1,2]
-[00:02:14.816] Browser LOG     [EasterEggs] Is correct so far: true
-[00:02:14.816] Browser LOG     [EasterEggs] Correct! Playing note 2 (293.66Hz)
-[00:02:14.816] Browser LOG     [SoundContext] playSound called: 293.66Hz, 0.15s, soundEnabled=true
-[00:02:16.330] Browser LOG     [HomePage] Cube 3 clicked
-[00:02:16.330] Browser LOG     [EasterEggs] checkCubeSequence called with cube 3
-[00:02:16.330] Browser LOG     [EasterEggs] Current sequence: [1,2]
-[00:02:16.330] Browser LOG     [EasterEggs] New sequence: [1,2,3]
-[00:02:16.330] Browser LOG     [EasterEggs] Is correct so far: true
-[00:02:16.330] Browser LOG     [EasterEggs] Correct! Playing note 3 (329.63Hz)
-[00:02:16.330] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.15s, soundEnabled=true
-[00:02:18.074] Browser LOG     [HomePage] Cube 4 clicked
-[00:02:18.074] Browser LOG     [EasterEggs] checkCubeSequence called with cube 4
-[00:02:18.074] Browser LOG     [EasterEggs] Current sequence: [1,2,3]
-[00:02:18.074] Browser LOG     [EasterEggs] New sequence: [1,2,3,4]
-[00:02:18.074] Browser LOG     [EasterEggs] Is correct so far: true
-[00:02:18.074] Browser LOG     [EasterEggs] Correct! Playing note 4 (349.23Hz)
-[00:02:18.074] Browser LOG     [SoundContext] playSound called: 349.23Hz, 0.15s, soundEnabled=true
-[00:02:18.074] Browser LOG     [EasterEggs] Sequence complete! Activating secret mode.
-[00:02:18.074] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.1s, soundEnabled=true
-[00:02:18.074] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.1s, soundEnabled=true
-[00:02:18.074] Browser LOG     [SoundContext] playSound called: 392Hz, 0.1s, soundEnabled=true
-[00:02:18.074] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.3s, soundEnabled=true
-[00:02:29.910] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:02:33.951] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:02:38.430] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:02:42.072] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:02:45.784] Browser LOG     [SoundContext] playSound called: 300Hz, 0.05s, soundEnabled=true
-[00:02:49.540] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:02:54.636] Browser LOG     [SoundContext] playSound called: 300Hz, 0.05s, soundEnabled=true
-[00:02:58.060] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:04.904] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
-[00:03:04.904] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
-[00:03:08.336] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:13.132] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:29.269] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:35.186] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:40.071] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:49.889] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
-[00:03:52.016] Browser LOG     [SoundContext] playSound called: 440Hz, 0.1s, soundEnabled=true
-[00:04:04.893] Browser LOG     [HomePage] Cube 1 clicked
-[00:04:04.893] Browser LOG     [EasterEggs] checkCubeSequence called with cube 1
-[00:04:04.893] Browser LOG     [EasterEggs] Current sequence: []
-[00:04:04.893] Browser LOG     [EasterEggs] New sequence: [1]
-[00:04:04.893] Browser LOG     [EasterEggs] Is correct so far: true
-[00:04:04.893] Browser LOG     [EasterEggs] Correct! Playing note 1 (261.63Hz)
-[00:04:04.893] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.15s, soundEnabled=true
-[00:04:06.185] Browser LOG     [HomePage] Cube 2 clicked
-[00:04:06.185] Browser LOG     [EasterEggs] checkCubeSequence called with cube 2
-[00:04:06.185] Browser LOG     [EasterEggs] Current sequence: [1]
-[00:04:06.185] Browser LOG     [EasterEggs] New sequence: [1,2]
-[00:04:06.185] Browser LOG     [EasterEggs] Is correct so far: true
-[00:04:06.185] Browser LOG     [EasterEggs] Correct! Playing note 2 (293.66Hz)
-[00:04:06.185] Browser LOG     [SoundContext] playSound called: 293.66Hz, 0.15s, soundEnabled=true
-[00:04:07.512] Browser LOG     [HomePage] Cube 3 clicked
-[00:04:07.512] Browser LOG     [EasterEggs] checkCubeSequence called with cube 3
-[00:04:07.512] Browser LOG     [EasterEggs] Current sequence: [1,2]
-[00:04:07.512] Browser LOG     [EasterEggs] New sequence: [1,2,3]
-[00:04:07.512] Browser LOG     [EasterEggs] Is correct so far: true
-[00:04:07.512] Browser LOG     [EasterEggs] Correct! Playing note 3 (329.63Hz)
-[00:04:07.512] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.15s, soundEnabled=true
-[00:04:08.988] Browser LOG     [HomePage] Cube 4 clicked
-[00:04:08.988] Browser LOG     [EasterEggs] checkCubeSequence called with cube 4
-[00:04:08.988] Browser LOG     [EasterEggs] Current sequence: [1,2,3]
-[00:04:08.988] Browser LOG     [EasterEggs] New sequence: [1,2,3,4]
-[00:04:08.988] Browser LOG     [EasterEggs] Is correct so far: true
-[00:04:08.988] Browser LOG     [EasterEggs] Correct! Playing note 4 (349.23Hz)
-[00:04:08.988] Browser LOG     [SoundContext] playSound called: 349.23Hz, 0.15s, soundEnabled=true
-[00:04:08.988] Browser LOG     [EasterEggs] Sequence complete! Activating secret mode.
-[00:04:08.988] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.1s, soundEnabled=true
-[00:04:08.988] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.1s, soundEnabled=true
-[00:04:08.988] Browser LOG     [SoundContext] playSound called: 392Hz, 0.1s, soundEnabled=true
-[00:04:08.988] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.3s, soundEnabled=true
+[00:00:01.063] Server  LOG     ✓ Ready in 851ms
+[00:00:07.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.951] Browser LOG     [HomePage] Cube 1 clicked
+[00:00:08.952] Browser LOG     [EasterEggs] checkCubeSequence called with cube 1
+[00:00:08.952] Browser LOG     [EasterEggs] Current sequence: []
+[00:00:08.952] Browser LOG     [EasterEggs] New sequence: [1]
+[00:00:08.952] Browser LOG     [EasterEggs] Is correct so far: true
+[00:00:08.952] Browser LOG     [EasterEggs] Correct! Playing note 1 (261.63Hz)
+[00:00:08.952] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.15s, soundEnabled=true
+[00:00:09.927] Browser LOG     [HomePage] Cube 2 clicked
+[00:00:09.927] Browser LOG     [EasterEggs] checkCubeSequence called with cube 2
+[00:00:09.928] Browser LOG     [EasterEggs] Current sequence: [1]
+[00:00:09.928] Browser LOG     [EasterEggs] New sequence: [1,2]
+[00:00:09.928] Browser LOG     [EasterEggs] Is correct so far: true
+[00:00:09.928] Browser LOG     [EasterEggs] Correct! Playing note 2 (293.66Hz)
+[00:00:09.928] Browser LOG     [SoundContext] playSound called: 293.66Hz, 0.15s, soundEnabled=true
+[00:00:11.256] Browser LOG     [HomePage] Cube 3 clicked
+[00:00:11.256] Browser LOG     [EasterEggs] checkCubeSequence called with cube 3
+[00:00:11.256] Browser LOG     [EasterEggs] Current sequence: [1,2]
+[00:00:11.256] Browser LOG     [EasterEggs] New sequence: [1,2,3]
+[00:00:11.256] Browser LOG     [EasterEggs] Is correct so far: true
+[00:00:11.256] Browser LOG     [EasterEggs] Correct! Playing note 3 (329.63Hz)
+[00:00:11.256] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.15s, soundEnabled=true
+[00:00:12.449] Browser LOG     [HomePage] Cube 4 clicked
+[00:00:12.450] Browser LOG     [EasterEggs] checkCubeSequence called with cube 4
+[00:00:12.450] Browser LOG     [EasterEggs] Current sequence: [1,2,3]
+[00:00:12.450] Browser LOG     [EasterEggs] New sequence: [1,2,3,4]
+[00:00:12.450] Browser LOG     [EasterEggs] Is correct so far: true
+[00:00:12.450] Browser LOG     [EasterEggs] Correct! Playing note 4 (349.23Hz)
+[00:00:12.450] Browser LOG     [SoundContext] playSound called: 349.23Hz, 0.15s, soundEnabled=true
+[00:00:12.450] Browser LOG     [EasterEggs] Sequence complete! Activating secret mode.
+[00:00:12.450] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.1s, soundEnabled=true
+[00:00:12.450] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.1s, soundEnabled=true
+[00:00:12.450] Browser LOG     [SoundContext] playSound called: 392Hz, 0.1s, soundEnabled=true
+[00:00:12.450] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.3s, soundEnabled=true
+[00:01:55.505] Browser LOG     [SoundContext] playSound called: 440Hz, 0.1s, soundEnabled=true
+[00:02:00.020] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.1s, soundEnabled=true
+[00:02:00.021] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:02:00.021] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:02:01.117] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:02:02.672] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.1s, soundEnabled=true
+[00:02:02.933] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:05.100] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.1s, soundEnabled=true
+[00:02:05.252] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:07.256] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.1s, soundEnabled=true
+[00:02:07.377] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:09.405] Server  LOG     ✓ Compiled in 663ms
+[00:04:11.072] Server  LOG     ✓ Compiled in 370ms
+[00:04:39.463] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:04:41.094] Browser LOG     [HomePage] Cube 1 clicked
+[00:04:41.094] Browser LOG     [EasterEggs] checkCubeSequence called with cube 1
+[00:04:41.094] Browser LOG     [EasterEggs] Current sequence: []
+[00:04:41.094] Browser LOG     [EasterEggs] New sequence: [1]
+[00:04:41.094] Browser LOG     [EasterEggs] Is correct so far: true
+[00:04:41.094] Browser LOG     [EasterEggs] Correct! Playing note 1 (261.63Hz)
+[00:04:41.094] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.15s, soundEnabled=true
+[00:04:42.178] Browser LOG     [HomePage] Cube 2 clicked
+[00:04:42.178] Browser LOG     [EasterEggs] checkCubeSequence called with cube 2
+[00:04:42.178] Browser LOG     [EasterEggs] Current sequence: [1]
+[00:04:42.178] Browser LOG     [EasterEggs] New sequence: [1,2]
+[00:04:42.178] Browser LOG     [EasterEggs] Is correct so far: true
+[00:04:42.178] Browser LOG     [EasterEggs] Correct! Playing note 2 (293.66Hz)
+[00:04:42.178] Browser LOG     [SoundContext] playSound called: 293.66Hz, 0.15s, soundEnabled=true
+[00:04:43.393] Browser LOG     [HomePage] Cube 3 clicked
+[00:04:43.394] Browser LOG     [EasterEggs] checkCubeSequence called with cube 3
+[00:04:43.394] Browser LOG     [EasterEggs] Current sequence: [1,2]
+[00:04:43.394] Browser LOG     [EasterEggs] New sequence: [1,2,3]
+[00:04:43.394] Browser LOG     [EasterEggs] Is correct so far: true
+[00:04:43.394] Browser LOG     [EasterEggs] Correct! Playing note 3 (329.63Hz)
+[00:04:43.394] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.15s, soundEnabled=true
+[00:04:44.577] Browser LOG     [HomePage] Cube 4 clicked
+[00:04:44.577] Browser LOG     [EasterEggs] checkCubeSequence called with cube 4
+[00:04:44.577] Browser LOG     [EasterEggs] Current sequence: [1,2,3]
+[00:04:44.577] Browser LOG     [EasterEggs] New sequence: [1,2,3,4]
+[00:04:44.577] Browser LOG     [EasterEggs] Is correct so far: true
+[00:04:44.577] Browser LOG     [EasterEggs] Correct! Playing note 4 (349.23Hz)
+[00:04:44.577] Browser LOG     [SoundContext] playSound called: 349.23Hz, 0.15s, soundEnabled=true
+[00:04:44.577] Browser LOG     [EasterEggs] Sequence complete! Activating secret mode.
+[00:04:44.577] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.1s, soundEnabled=true
+[00:04:44.577] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.1s, soundEnabled=true
+[00:04:44.578] Browser LOG     [SoundContext] playSound called: 392Hz, 0.1s, soundEnabled=true
+[00:04:44.578] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.3s, soundEnabled=true
+[00:04:49.333] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
+[00:04:52.225] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.05s, soundEnabled=true
+[00:04:55.396] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:04:55.396] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:03.562] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:05:03.562] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:05:12.314] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:12.314] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:13.774] Browser LOG     [SoundContext] playSound called: 440Hz, 0.1s, soundEnabled=true
+[00:05:16.591] Browser LOG     [HomePage] Cube 1 clicked
+[00:05:16.591] Browser LOG     [EasterEggs] checkCubeSequence called with cube 1
+[00:05:16.591] Browser LOG     [EasterEggs] Current sequence: []
+[00:05:16.591] Browser LOG     [EasterEggs] New sequence: [1]
+[00:05:16.591] Browser LOG     [EasterEggs] Is correct so far: true
+[00:05:16.591] Browser LOG     [EasterEggs] Correct! Playing note 1 (261.63Hz)
+[00:05:16.591] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.15s, soundEnabled=true
+[00:05:17.304] Browser LOG     [HomePage] Cube 2 clicked
+[00:05:17.304] Browser LOG     [EasterEggs] checkCubeSequence called with cube 2
+[00:05:17.304] Browser LOG     [EasterEggs] Current sequence: [1]
+[00:05:17.304] Browser LOG     [EasterEggs] New sequence: [1,2]
+[00:05:17.304] Browser LOG     [EasterEggs] Is correct so far: true
+[00:05:17.304] Browser LOG     [EasterEggs] Correct! Playing note 2 (293.66Hz)
+[00:05:17.305] Browser LOG     [SoundContext] playSound called: 293.66Hz, 0.15s, soundEnabled=true
+[00:05:18.136] Browser LOG     [HomePage] Cube 3 clicked
+[00:05:18.136] Browser LOG     [EasterEggs] checkCubeSequence called with cube 3
+[00:05:18.136] Browser LOG     [EasterEggs] Current sequence: [1,2]
+[00:05:18.136] Browser LOG     [EasterEggs] New sequence: [1,2,3]
+[00:05:18.136] Browser LOG     [EasterEggs] Is correct so far: true
+[00:05:18.136] Browser LOG     [EasterEggs] Correct! Playing note 3 (329.63Hz)
+[00:05:18.136] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.15s, soundEnabled=true
+[00:05:19.344] Browser LOG     [HomePage] Cube 4 clicked
+[00:05:19.344] Browser LOG     [EasterEggs] checkCubeSequence called with cube 4
+[00:05:19.344] Browser LOG     [EasterEggs] Current sequence: [1,2,3]
+[00:05:19.344] Browser LOG     [EasterEggs] New sequence: [1,2,3,4]
+[00:05:19.344] Browser LOG     [EasterEggs] Is correct so far: true
+[00:05:19.344] Browser LOG     [EasterEggs] Correct! Playing note 4 (349.23Hz)
+[00:05:19.344] Browser LOG     [SoundContext] playSound called: 349.23Hz, 0.15s, soundEnabled=true
+[00:05:19.344] Browser LOG     [EasterEggs] Sequence complete! Activating secret mode.
+[00:05:19.344] Browser LOG     [SoundContext] playSound called: 261.63Hz, 0.1s, soundEnabled=true
+[00:05:19.344] Browser LOG     [SoundContext] playSound called: 329.63Hz, 0.1s, soundEnabled=true
+[00:05:19.344] Browser LOG     [SoundContext] playSound called: 392Hz, 0.1s, soundEnabled=true
+[00:05:19.344] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.3s, soundEnabled=true
+[00:05:23.458] Browser LOG     [SoundContext] playSound called: 440Hz, 0.1s, soundEnabled=true
+[00:05:27.288] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:27.288] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:34.614] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:34.614] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:41.908] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:05:44.229] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:05:51.647] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:05:51.647] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:06:57.564] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:07:02.556] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:07:02.556] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:07:18.495] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:07:18.495] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:07:26.211] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:07:26.211] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.15s, soundEnabled=true
+[00:07:27.198] Browser LOG     [SoundContext] playSound called: 659.25Hz, 0.1s, soundEnabled=true
+[00:07:35.615] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:07:42.708] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:07:44.943] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true
+[00:07:46.387] Browser LOG     [SoundContext] playSound called: 523.25Hz, 0.08s, soundEnabled=true

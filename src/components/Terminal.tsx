@@ -23,7 +23,7 @@ const COMMANDS: Record<string, string | ((eggs: ReturnType<typeof useEasterEggs>
   exit       - Close terminal
   
 Type any command to execute it...`,
-  
+
   whoami: `Leo-Martin Pala
   - Informatics Student @ University of Tartu
   - AI Enthusiast & Developer
@@ -33,7 +33,7 @@ Type any command to execute it...`,
   - Built a voice agent and LLM chess bot
   
 Fun fact: Started programming at age 7!`,
-  
+
   chess: () => {
     const tips = [
       "Control the center (e4, d4, e5, d5) - it's the key to chess dominance!",
@@ -47,20 +47,20 @@ Fun fact: Started programming at age 7!`,
     ];
     return `♟ Chess Tip:\n${tips[Math.floor(Math.random() * tips.length)]}`;
   },
-  
+
   matrix: (eggs) => {
     const newIntensity = eggs.matrixIntensity === 0.15 ? 0.4 : 0.15;
     eggs.setMatrixIntensity(newIntensity);
     return `Matrix rain intensity set to ${Math.round(newIntensity * 100)}%`;
   },
-  
+
   rainbow: (eggs) => {
     eggs.setRainbowMode(!eggs.rainbowMode);
     return `Rainbow cube mode ${!eggs.rainbowMode ? 'activated' : 'deactivated'}! 🌈`;
   },
-  
+
   clear: '',
-  
+
   exit: ''
 };
 
@@ -82,7 +82,7 @@ export default function Terminal() {
       const text = 'help';
       let index = 0;
       let direction = 1; // 1 = typing, -1 = deleting
-      
+
       const typeHint = () => {
         if (direction === 1) {
           if (index <= text.length) {
@@ -104,9 +104,9 @@ export default function Terminal() {
           }
         }
       };
-      
+
       typeHint();
-      
+
       return () => {
         if (hintTimeoutRef.current) clearTimeout(hintTimeoutRef.current);
       };
@@ -130,20 +130,20 @@ export default function Terminal() {
 
   const executeCommand = useCallback((cmd: string) => {
     const trimmedCmd = cmd.trim().toLowerCase();
-    
+
     if (trimmedCmd === 'clear') {
       setHistory([]);
       return;
     }
-    
+
     if (trimmedCmd === 'exit') {
       eggs.deactivateSecretMode();
       return;
     }
-    
+
     const commandFunc = COMMANDS[trimmedCmd];
     let output: string;
-    
+
     if (commandFunc) {
       if (typeof commandFunc === 'function') {
         output = commandFunc(eggs);
@@ -157,7 +157,7 @@ export default function Terminal() {
       output = `Command not found: ${trimmedCmd}\nType 'help' for available commands.`;
       playSound(300, 0.05);
     }
-    
+
     if (output) {
       setHistory(prev => [...prev, { command: cmd, output }]);
     }
@@ -189,13 +189,13 @@ export default function Terminal() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsExpanded(true)}
-            className="fixed bottom-4 right-4 z-50 w-14 h-14 bg-brown-dark dark:bg-cream rounded-xl flex items-center justify-center shadow-lg border-2 border-sage hover:border-sage-dark transition-colors"
+            className="fixed bottom-4 right-4 z-50 w-14 h-14 bg-brown-dark rounded-xl flex items-center justify-center shadow-lg border-2 border-sage hover:border-sage-dark transition-colors"
           >
-            <TerminalIcon className="text-sage dark:text-brown-dark" size={24} />
-            
+            <TerminalIcon className="text-sage" size={24} />
+
             {/* Hint Text */}
             {showHint && (
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-brown-dark dark:bg-cream text-sage dark:text-brown-dark px-3 py-1 rounded-lg text-sm whitespace-nowrap">
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-brown-dark text-sage px-3 py-1 rounded-lg text-sm whitespace-nowrap">
                 <span className="font-mono">{hintText}</span>
                 <span className="animate-pulse">_</span>
               </div>
@@ -213,7 +213,7 @@ export default function Terminal() {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className="fixed bottom-4 right-4 z-50 w-80 md:w-96 h-96"
           >
-            <div className="w-full h-full bg-brown-dark dark:bg-cream border-2 border-sage rounded-xl shadow-2xl flex flex-col overflow-hidden">
+            <div className="w-full h-full bg-brown-dark border-2 border-sage rounded-xl shadow-2xl flex flex-col overflow-hidden">
               {/* Header */}
               <div className="bg-sage dark:bg-sage-dark px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -240,7 +240,7 @@ export default function Terminal() {
                     <p className="mt-2">Type &apos;help&apos; to see available commands.</p>
                   </div>
                 )}
-                
+
                 {/* Command History */}
                 {history.map((entry, index) => (
                   <div key={index} className="space-y-1">
