@@ -6,19 +6,28 @@ import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Code, Palette, Terminal, Flower2, Rocket, Target, Brain } from 'lucide-react';
 import { useSound } from '@/components/SoundContext';
+import { useEasterEggs } from '@/components/EasterEggs';
 
 export default function HomePageClient() {
   const t = useTranslations('home');
   const locale = useLocale();
   const { playSound } = useSound();
+  const { checkCubeSequence, rainbowMode } = useEasterEggs();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+
+
   const handleClick = () => {
     playSound(659.25, 0.1);
+  };
+
+  const handleCubeClick = (cubeNumber: number) => {
+    console.log(`[HomePage] Cube ${cubeNumber} clicked`);
+    checkCubeSequence(cubeNumber);
   };
 
   if (!mounted) return null;
@@ -48,40 +57,131 @@ export default function HomePageClient() {
     <div className="space-y-20 pb-20">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center px-4 overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background decorations - Clickable cubes with secret numbers */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Cube 1 - Top Left diagonal */}
           <motion.div
             animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, 0]
+              y: [0, -15, 0],
+              x: [0, 5, 0],
+              rotate: rainbowMode ? [0, 360] : [0, 5, 0],
+              backgroundColor: rainbowMode 
+                ? ['#a8c5a8', '#d4a5a5', '#e6c985', '#d4956b', '#a8c5a8']
+                : undefined
             }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-20 left-10 w-16 h-16 bg-sage/30 dark:bg-sage/20 rounded-lg"
-          />
+            transition={{ 
+              y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+              x: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+              rotate: rainbowMode 
+                ? { duration: 3, repeat: Infinity, ease: "linear" }
+                : { duration: 6, repeat: Infinity, ease: "easeInOut" },
+              backgroundColor: rainbowMode
+                ? { duration: 2, repeat: Infinity }
+                : undefined
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCubeClick(1);
+            }}
+            className="group absolute top-[12%] left-[8%] w-14 h-14 md:w-16 md:h-16 bg-sage/40 dark:bg-sage/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-sage/40 shadow-lg pointer-events-auto z-20"
+          >
+            <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+              1
+            </span>
+          </motion.div>
+
+          {/* Cube 2 - Upper diagonal */}
           <motion.div
             animate={{
-              y: [0, 15, 0],
-              rotate: [0, -5, 0]
+              y: [0, 12, 0],
+              x: [0, -8, 0],
+              rotate: rainbowMode ? [0, -360] : [0, -5, 0],
+              backgroundColor: rainbowMode 
+                ? ['#d4a5a5', '#e6c985', '#d4956b', '#a8c5a8', '#d4a5a5']
+                : undefined
             }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-40 right-20 w-12 h-12 bg-dusty-rose/30 dark:bg-dusty-rose/20 rounded-lg"
-          />
+            transition={{ 
+              y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
+              x: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+              rotate: rainbowMode 
+                ? { duration: 3, repeat: Infinity, ease: "linear" }
+                : { duration: 5, repeat: Infinity, ease: "easeInOut" },
+              backgroundColor: rainbowMode
+                ? { duration: 2, repeat: Infinity }
+                : undefined
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCubeClick(2);
+            }}
+            className="group absolute top-[25%] right-[12%] w-12 h-12 md:w-14 md:h-14 bg-dusty-rose/40 dark:bg-dusty-rose/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-dusty-rose/40 shadow-lg pointer-events-auto z-20"
+          >
+            <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+              2
+            </span>
+          </motion.div>
+
+          {/* Cube 3 - Lower left diagonal */}
           <motion.div
             animate={{
-              y: [0, -25, 0],
-              rotate: [0, 8, 0]
+              y: [0, -18, 0],
+              x: [0, 6, 0],
+              rotate: rainbowMode ? [0, 360] : [0, 8, 0],
+              backgroundColor: rainbowMode 
+                ? ['#e6c985', '#d4956b', '#a8c5a8', '#d4a5a5', '#e6c985']
+                : undefined
             }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-40 left-1/4 w-20 h-20 bg-warm-gold/20 dark:bg-warm-gold/10 rounded-lg"
-          />
+            transition={{ 
+              y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 },
+              x: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 },
+              rotate: rainbowMode 
+                ? { duration: 3, repeat: Infinity, ease: "linear" }
+                : { duration: 7, repeat: Infinity, ease: "easeInOut" },
+              backgroundColor: rainbowMode
+                ? { duration: 2, repeat: Infinity }
+                : undefined
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCubeClick(3);
+            }}
+            className="group absolute top-[60%] left-[5%] w-16 h-16 md:w-20 md:h-20 bg-warm-gold/35 dark:bg-warm-gold/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-warm-gold/40 shadow-lg pointer-events-auto z-20"
+          >
+            <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+              3
+            </span>
+          </motion.div>
+
+          {/* Cube 4 - Lower right diagonal */}
           <motion.div
             animate={{
               y: [0, 10, 0],
-              rotate: [0, -3, 0]
+              x: [0, -6, 0],
+              rotate: rainbowMode ? [0, -360] : [0, -3, 0],
+              backgroundColor: rainbowMode 
+                ? ['#d4956b', '#a8c5a8', '#d4a5a5', '#e6c985', '#d4956b']
+                : undefined
             }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute bottom-20 right-1/3 w-14 h-14 bg-terracotta/20 dark:bg-terracotta/10 rounded-lg"
-          />
+            transition={{ 
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+              x: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 },
+              rotate: rainbowMode 
+                ? { duration: 3, repeat: Infinity, ease: "linear" }
+                : { duration: 4, repeat: Infinity, ease: "easeInOut" },
+              backgroundColor: rainbowMode
+                ? { duration: 2, repeat: Infinity }
+                : undefined
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCubeClick(4);
+            }}
+            className="group absolute top-[70%] right-[6%] w-14 h-14 md:w-16 md:h-16 bg-terracotta/35 dark:bg-terracotta/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-terracotta/40 shadow-lg pointer-events-auto z-20"
+          >
+            <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+              4
+            </span>
+          </motion.div>
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">

@@ -9,7 +9,7 @@
   "home": {
     "badge": "Welcome to my cozy corner of the internet",
     "title": "Hi, I'm {name}",
-    "subtitle": "Computer Science student at University of Tartu. Passionate about cybersecurity, AI, and building practical solutions",
+    "subtitle": "Informatics Student @ University of Tartu | AI Enthusiast & Developer | Cyber Defence Volunteer",
     "viewWork": "View My Work",
     "getInTouch": "Get In Touch",
     "whatIDo": {
@@ -77,30 +77,40 @@
     "title": "About Me",
     "description": "Get to know the person behind the pixels. I'm a developer who believes that technology should feel warm and human.",
     "greeting": "Hello! I'm Leo-Martin",
-    "bio1": "I'm a Computer Science student at University of Tartu with a passion for cybersecurity, AI, and software development. Currently maintaining a 4.71 GPA while actively participating in various tech communities and projects.",
-    "bio2": "I'm a member of Kaitseliidu Küberkaitseüksus (Defence League Cyber Defence Unit) and have completed SANS SEC599 certification in purple team tactics. I've also served as a mentor for first-year students and held leadership roles in student organizations.",
-    "bio3": "When I'm not studying or coding, you'll find me playing chess, participating in cybersecurity exercises, or working on side projects involving LLMs and voice agents.",
+    "bio1": "I'm a third year Informatics student at University of Tartu. My interest in Data Science and software development was sparked by the Generative AI explosion in 2022. Since then, I have been experimenting with how these technologies work under the hood.",
+    "bio2": "I enjoy building personal projects to learn new tools. Recently, I developed an interactive voice-agent using Python, and an LLM-powered chess bot using Vue.js. I often leverage AI tools to accelerate my own coding and learning process.",
+    "bio3": "In addition to my IT studies, I have a background in natural sciences (International Earth Science Olympiad bronze medalist), which helped hone my analytical thinking. I am currently looking for an internship in Data Science or AI Engineering to learn from experienced developers and tackle real-world problems.",
     "journey": {
       "title": "My Journey",
+      "houseElder": {
+        "year": "2026",
+        "title": "House Elder @ EÜS Põhjala",
+        "description": "Managing budgets, leading a team, and society premises management. Currently serving as House Elder in the academic corporation."
+      },
       "internship": {
         "year": "2025",
-        "title": "LHV Bank IT Internship",
-        "description": "Gained hands-on experience in IT administration, Service Desk support, and hardware maintenance. Worked with Atlassian tools (Jira/Confluence)."
+        "title": "IT Support Specialist Intern @ LHV",
+        "description": "Gained hands-on experience in IT administration, Service Desk support, and hardware maintenance. Worked with Atlassian tools (Jira/Confluence). Jun 2025 - Aug 2025."
+      },
+      "waiter": {
+        "year": "2024",
+        "title": "Waiter & Cashier @ Varbuse Teemaja",
+        "description": "Part-time summer work providing customer service, taking orders, and handling cash register operations. Jul 2024 - Aug 2024."
       },
       "university": {
         "year": "2023",
         "title": "University of Tartu",
-        "description": "Started Computer Science BSc studies with 4.71 GPA. Joined Kaitseliit Cyber Defence Unit and became a mentor for first-year students."
+        "description": "Started Computer Science BSc studies. Third year informatics student. Joined Kaitseliit Cyber Defence Unit and became a mentor for first-year students."
       },
       "olympiad": {
         "year": "2023",
         "title": "Bronze Medal - IESO",
-        "description": "Won bronze medal at International Earth Science Olympiad. Graduated from Põlva Gümnaasium with silver medal."
+        "description": "Awarded Bronze Medal in the Data Mining Test (DMT) at the International Earth Science Olympiad (IESO). Graduated from Põlva Gümnaasium with silver medal (4.9 GPA)."
       },
       "chess": {
         "year": "2023",
-        "title": "Chess Instructor",
-        "description": "Taught chess at Põlva Jakobi Kool, developing skills in explaining complex concepts to young students."
+        "title": "Chess Instructor @ Põlva Jakobi Kool",
+        "description": "Taught chess at elementary school level, developing skills in explaining complex concepts to young students. Jan 2023 - May 2023."
       }
     },
     "skills": {
@@ -172,6 +182,7 @@
       "certifications": "Certifications & Training"
     },
     "certifications": [
+      "C1 Advanced English - Cambridge English (Score 192, Nov 2022)",
       "SANS SEC599 - Purple Team Tactics & Kill Chain Defenses (2025)",
       "Combat Ready Leadership Training (2024)",
       "Estonian Information Security Standard (E-ITS) Basic & Implementation (2024)"

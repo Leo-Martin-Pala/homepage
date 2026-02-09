@@ -49,12 +49,13 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <SoundProvider>
-              <Navigation />
-              <main className="min-h-screen">
-                {children}
-              </main>
-              <Footer />
-              <EasterEggs />
+              <EasterEggs>
+                <Navigation />
+                <main className="min-h-screen">
+                  {children}
+                </main>
+                <Footer />
+              </EasterEggs>
             </SoundProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

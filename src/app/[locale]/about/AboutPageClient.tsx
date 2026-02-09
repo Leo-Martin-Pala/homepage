@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Coffee, BookOpen, Gamepad2, Plane, Terminal } from 'lucide-react';
+import { MapPin, Coffee, BookOpen, Gamepad2, Plane, Terminal, Building, UtensilsCrossed } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSound } from '@/components/SoundContext';
 
@@ -11,11 +11,25 @@ export default function AboutPageClient() {
 
   const timeline = [
     {
+      year: t('journey.houseElder.year'),
+      title: t('journey.houseElder.title'),
+      description: t('journey.houseElder.description'),
+      icon: Building,
+      color: 'warm-gold',
+    },
+    {
       year: t('journey.internship.year'),
       title: t('journey.internship.title'),
       description: t('journey.internship.description'),
       icon: Coffee,
       color: 'sage',
+    },
+    {
+      year: t('journey.waiter.year'),
+      title: t('journey.waiter.title'),
+      description: t('journey.waiter.description'),
+      icon: UtensilsCrossed,
+      color: 'terracotta',
     },
     {
       year: t('journey.university.year'),

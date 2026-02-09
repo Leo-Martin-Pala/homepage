@@ -19,6 +19,7 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const playSound = useCallback((frequency: number, duration: number, type: OscillatorType = 'sine') => {
+    console.log(`[SoundContext] playSound called: ${frequency}Hz, ${duration}s, soundEnabled=${soundEnabled}`);
     if (!soundEnabled) return;
 
     try {

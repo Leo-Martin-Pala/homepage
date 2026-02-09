@@ -9,7 +9,7 @@
   "home": {
     "badge": "Tere tulemast minu interneti nurka",
     "title": "Tere, olen {name}",
-    "subtitle": "Tartu Ülikooli informaatika tudeng. Kirglik küberturbe, AI ja praktiliste lahenduste vastu",
+    "subtitle": "Informaatika tudeng @ Tartu Ülikool | AI entusiast ja arendaja | Küberkaitse vabatahtlik",
     "viewWork": "Vaata minu töid",
     "getInTouch": "Võta ühendust",
     "whatIDo": {
@@ -77,30 +77,40 @@
     "title": "Minust",
     "description": "Tutvu inimesega pikslite taga. Olen arendaja, kes usub, et tehnoloogia peaks tunduma soe ja inimlik.",
     "greeting": "Tere! Olen Leo-Martin",
-    "bio1": "Olen Tartu Ülikooli informaatika tudeng, kelle kirg on küberturve, AI ja tarkvaraarendus. Hetkel säilitan 4.71 GPA-d, osaledes aktiivselt erinevates tehnikakogukondades ja projektides.",
-    "bio2": "Olen Kaitseliidu Küberkaitseüksuse liige ja olen lõpetanud SANS SEC599 sertifitseerimise purple team taktikates. Olen ka teeninud esmakursuslaste mentorina ja pidanud juhtrolli üliõpilasorganisatsioonides.",
-    "bio3": "Kui ma ei õpi ega kodeeri, leiad mind maletamas, osalemast küberturbeharjutustel või töötamas kõrvalprojektide kallal, mis hõlmavad LLM-sid ja hääleagente.",
+    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai alguse generatiivse AI plahvatuslikust kasvust 2022. aastal. Sellest ajast olen katsetanud, kuidas need tehnoloogiad töötavad.",
+    "bio2": "Naudin isiklike projektide ehitamist uute tööriistade õppimiseks. Hiljuti arendasin Pythoni kasutades interaktiivse kõneagendi ja Vue.js abil LLM-toelise malebotti. Kasutan sageli AI tööriistu oma kodeerimise ja õppimise kiirendamiseks.",
+    "bio3": "IT õpingute kõrval on mul taust loodusteadustes (Rahvusvahelise Maateaduste Olümpiaadi pronksmedalist), mis aitas teritada minu analüütilist mõtlemist. Otsin hetkel praktikakohta andmeteaduses või AI inseneerimises, et õppida kogenud arendajatelt ja lahendada reaalseid probleeme.",
     "journey": {
       "title": "Minu teekond",
+      "houseElder": {
+        "year": "2026",
+        "title": "Majavanem @ EÜS Põhjala",
+        "description": "Eelarvete haldamine, meeskonna juhtimine ja seltsi ruumide haldamine. Teenin hetkel majavanemana akadeemilises korporatsioonis."
+      },
       "internship": {
         "year": "2025",
-        "title": "LHV Panga IT praktika",
-        "description": "Kogesin praktilist IT-administratsiooni, Service Desk tuge ja riistvara hooldust. Töötasin Atlassiani tööriistadega (Jira/Confluence)."
+        "title": "IT tugispetsialisti praktikant @ LHV",
+        "description": "Praktiline kogemus IT-administratsioonis, Service Desk tugis ja riistvara hoolduses. Töötasin Atlassiani tööriistadega (Jira/Confluence). Juuni 2025 - Aug 2025."
+      },
+      "waiter": {
+        "year": "2024",
+        "title": "Teenindaja ja kassapidaja @ Varbuse Teemaja",
+        "description": "Suve töö klienditeeninduses, tellimuste võtmine ja kassaoperatsioonid. Juuli 2024 - Aug 2024."
       },
       "university": {
         "year": "2023",
         "title": "Tartu Ülikool",
-        "description": "Alustasin informaatika BSc õpinguid 4.71 GPA-ga. Liitusin Kaitseliidu Küberkaitseüksusega ja sain esmakursuslaste mentoriks."
+        "description": "Alustasin informaatika BSc õpinguid. Kolmanda kursuse informaatika tudeng. Liitusin Kaitseliidu Küberkaitseüksusega ja sain esmakursuslaste mentoriks."
       },
       "olympiad": {
         "year": "2023",
         "title": "Pronksmedal - IESO",
-        "description": "Võitsin pronksmedali rahvusvahelisel maateaduste olümpiaadil. Lõpetasin Põlva Gümnaasiumi hõbemedaliga."
+        "description": "Pronksmedal Data Mining Testis (DMT) Rahvusvahelisel Maateaduste Olümpiaadil (IESO). Lõpetasin Põlva Gümnaasiumi hõbemedaliga (4.9 GPA)."
       },
       "chess": {
         "year": "2023",
-        "title": "Maleõpetaja",
-        "description": "Õpetasin malet Põlva Jakobi Koolis, arendades oskusi keeruliste mõistete selgitamisel noortele."
+        "title": "Maleõpetaja @ Põlva Jakobi Kool",
+        "description": "Male õpetamine algkooli õpilastele, arendades oskusi keeruliste mõistete selgitamisel noortele. Jaan 2023 - Mai 2023."
       }
     },
     "skills": {
@@ -172,6 +182,7 @@
       "certifications": "Sertifikaadid ja koolitused"
     },
     "certifications": [
+      "C1 Advanced inglise keel - Cambridge English (Tulemus 192, Nov 2022)",
       "SANS SEC599 - Purple Team Tactics & Kill Chain Defenses (2025)",
       "Combat Ready juhtimise baas- ja jätkukoolitus (2024)",
       "Eesti infoturbestandardi (E-ITS) baas- ja rakenduskoolitus (2024)"
