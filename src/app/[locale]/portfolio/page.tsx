@@ -1,0 +1,17 @@
+import { setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+import PortfolioPageClient from './PortfolioPageClient';
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function PortfolioPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <PortfolioPageClient />;
+}

@@ -1,26 +1,318 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cozy Cottagecore Color Palette - Light Mode */
+  --background: #FFF8F0;
+  --foreground: #2D2016;
+
+  /* Primary Colors */
+  --sage: #7A9E66;
+  --sage-light: #A8C496;
+  --sage-dark: #5C7A4D;
+
+  /* Accent Colors */
+  --dusty-rose: #C9888D;
+  --dusty-rose-light: #E8B4B8;
+  --dusty-rose-dark: #A86B70;
+
+  --warm-gold: #D4894F;
+  --warm-gold-light: #F4A261;
+  --warm-gold-dark: #B8733F;
+
+  --terracotta: #C96A52;
+  --terracotta-light: #E07A5F;
+  --terracotta-dark: #A65542;
+
+  /* Neutrals */
+  --cream: #FFF8F0;
+  --cream-light: #FFFDF9;
+  --cream-dark: #EDE5DC;
+  --brown: #2D2016;
+  --brown-light: #5C4A3A;
+  --brown-dark: #1A120C;
+
+  /* Text Colors - Light Mode */
+  --text-primary: #2D2016;
+  --text-secondary: #4A3828;
+  --text-muted: #6B5D4E;
+
+  /* Semantic Colors */
+  --card: #FFFFFF;
+  --card-foreground: #2D2016;
+  --border: #D4C8BC;
+  --muted: #F0E8E0;
+  --muted-foreground: #5C4A3A;
+}
+
+/* Dark Mode Variables */
+.dark {
+  /* Modern Dark Color Palette */
+  --background: #1A1E24;
+  --foreground: #F5F0EB;
+
+  /* Primary Colors - Brighter for dark mode */
+  --sage: #8FC278;
+  --sage-light: #A8D494;
+  --sage-dark: #6BA055;
+
+  /* Accent Colors - Vibrant for dark mode */
+  --dusty-rose: #E8A0A5;
+  --dusty-rose-light: #F0B8BC;
+  --dusty-rose-dark: #D08085;
+
+  --warm-gold: #F4A86C;
+  --warm-gold-light: #F8BE8F;
+  --warm-gold-dark: #E89445;
+
+  --terracotta: #E8856B;
+  --terracotta-light: #F09880;
+  --terracotta-dark: #D87055;
+
+  /* Neutrals - Dark Mode */
+  --cream: #F5F0EB;
+  --cream-dark: #E0D8D0;
+  --brown: #F5F0EB;
+  --brown-light: #C8BEB4;
+  --brown-dark: #252A32;
+
+  /* Text Colors - Dark Mode */
+  --text-primary: #F5F0EB;
+  --text-secondary: #DDD6CE;
+  --text-muted: #B0A598;
+
+  /* Semantic Colors - Dark Mode */
+  --card: #252A32;
+  --card-foreground: #F5F0EB;
+  --border: #3A4050;
+  --muted: #2A2F38;
+  --muted-foreground: #A8A098;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+
+  /* Cozy Colors */
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-dark: var(--sage-dark);
+
+  --color-dusty-rose: var(--dusty-rose);
+  --color-dusty-rose-light: var(--dusty-rose-light);
+  --color-dusty-rose-dark: var(--dusty-rose-dark);
+
+  --color-warm-gold: var(--warm-gold);
+  --color-warm-gold-light: var(--warm-gold-light);
+  --color-warm-gold-dark: var(--warm-gold-dark);
+
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-light: var(--terracotta-light);
+  --color-terracotta-dark: var(--terracotta-dark);
+
+  --color-cream: var(--cream);
+  --color-cream-light: var(--cream-light);
+  --color-cream-dark: var(--cream-dark);
+  --color-brown: var(--brown);
+  --color-brown-light: var(--brown-light);
+  --color-brown-dark: var(--brown-dark);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+@layer components {
+
+  /* Pixel Art Utilities */
+  .pixel-border {
+    border: 4px solid var(--brown);
+    image-rendering: pixelated;
+    box-shadow: 4px 4px 0 var(--brown);
+  }
+
+  .pixel-border-sage {
+    border: 4px solid var(--sage-dark);
+    box-shadow: 4px 4px 0 var(--sage-dark);
+  }
+
+  .pixel-border-rose {
+    border: 4px solid var(--dusty-rose-dark);
+    box-shadow: 4px 4px 0 var(--dusty-rose-dark);
+  }
+
+  .pixel-border-gold {
+    border: 4px solid var(--warm-gold-dark);
+    box-shadow: 4px 4px 0 var(--warm-gold-dark);
+  }
+
+  /* Pixel Card Style */
+  .pixel-card {
+    background: var(--card);
+    border: 3px solid var(--brown);
+    box-shadow: 6px 6px 0 var(--brown);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .pixel-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--brown);
+  }
+
+  .pixel-card-sage {
+    background: var(--sage-light);
+    border: 3px solid var(--sage-dark);
+    box-shadow: 6px 6px 0 var(--sage-dark);
+  }
+
+  .pixel-card-sage:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--sage-dark);
+  }
+
+  .pixel-card-rose {
+    background: var(--dusty-rose-light);
+    border: 3px solid var(--dusty-rose-dark);
+    box-shadow: 6px 6px 0 var(--dusty-rose-dark);
+  }
+
+  .pixel-card-rose:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--dusty-rose-dark);
+  }
+
+  /* Pixel Button */
+  .pixel-btn {
+    background: var(--sage);
+    border: 3px solid var(--sage-dark);
+    box-shadow: 4px 4px 0 var(--sage-dark);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  .pixel-btn:hover {
+    background: var(--sage-light);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--sage-dark);
+  }
+
+  .pixel-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--sage-dark);
+  }
+
+  .pixel-btn-rose {
+    background: var(--dusty-rose);
+    border: 3px solid var(--dusty-rose-dark);
+    box-shadow: 4px 4px 0 var(--dusty-rose-dark);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  .pixel-btn-rose:hover {
+    background: var(--dusty-rose-light);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--dusty-rose-dark);
+  }
+
+  .pixel-btn-rose:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--dusty-rose-dark);
+  }
+
+  .pixel-btn-gold {
+    background: var(--warm-gold);
+    border: 3px solid var(--warm-gold-dark);
+    box-shadow: 4px 4px 0 var(--warm-gold-dark);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  .pixel-btn-gold:hover {
+    background: var(--warm-gold-light);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--warm-gold-dark);
+  }
+
+  .pixel-btn-gold:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--warm-gold-dark);
+  }
+
+  /* Pixel Badge */
+  .pixel-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--cream-dark);
+    border: 2px solid var(--brown);
+    box-shadow: 2px 2px 0 var(--brown);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage);
+  border: 2px solid var(--cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage-dark);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--dusty-rose);
+  color: var(--brown);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

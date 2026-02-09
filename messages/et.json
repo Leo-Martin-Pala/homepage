@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "home": "Avaleht",
+    "about": "Minust",
+    "portfolio": "Portfoolio",
+    "contact": "Kontakt",
+    "garden": "Aed"
+  },
+  "home": {
+    "badge": "Tere tulemast minu interneti nurka",
+    "title": "Tere, olen {name}",
+    "subtitle": "Tartu Ülikooli informaatika tudeng. Kirglik küberturbe, AI ja praktiliste lahenduste vastu",
+    "viewWork": "Vaata minu töid",
+    "getInTouch": "Võta ühendust",
+    "whatIDo": {
+      "title": "Mida ma teen",
+      "description": "Loon digitaalseid kogemusi, mis tunduvad soojad, sõbralikud ja läbimõeldud",
+      "software": {
+        "title": "Tarkvaraarendus",
+        "description": "Rakenduste loomine Pythoni, Java ja JavaScriptiga. Kogemus Vue.js ja kaasaegsete raamistikega."
+      },
+      "cybersecurity": {
+        "title": "Küberturve",
+        "description": "Kaitseliidu Küberkaitseüksuse liige. SANS SEC599 sertifitseeritud. Kirglik purple team taktikate ja kaitse vastu."
+      },
+      "ai": {
+        "title": "AI & LLM projektid",
+        "description": "Interaktiivsete hääleagentide ja LLM-toeliste rakenduste loomine. Kogemus livekit ja AI integratsioonidega."
+      }
+    },
+    "journey": {
+      "title": "Minu teekond",
+      "description": "Alates esimesest JavaScripti koodist 7-aastasena kuni tänapäevani",
+      "beginnings": {
+        "title": "Varajased algused",
+        "description": "Minu programmeerimishuvi algas 7-aastaselt esimese JavaScripti koodiga. Põhikooli lõpuks hakkasin süsteemsemalt arendama, ehitades oma esimese veebisaidi ja õppides Java põhitõdesid."
+      },
+      "growth": {
+        "title": "Kasv ja avastamine",
+        "description": "Gümnaasiumis laienesin võistlusprogrammeerimisse ja Pythonisse, süvenesin ka süsteemiadministratsiooni, konfigureerides oma Dell PowerEdge R610 serveri Proxmoxiga. Ülikoolis on mu oskused oluliselt paranenud, eriline huvi keelemudelite ja generatiivse AI vastu."
+      }
+    },
+    "approach": {
+      "title": "Minu lähenemine",
+      "workTitle": "Kuidas ma töötan",
+      "workDescription": "Töön pühendumuse ja eesmärgiga. Naudin meeskondade juhtimist, kuid väärtustan ka koostööd. Lahendan probleeme meetodiliselt ja säilitan rahu ka stressirohketes olukordades. Lõpetan alustatu, pragmatiliselt hinnates, millal mõistlik jätkata ja millal mitte.",
+      "philosophyTitle": "Minu filosoofia",
+      "philosophyDescription": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja ma teen oma ülesandeks õppida ja kohaneda. Mul on tasakaalustatud vaade AI-le – see on võimas tööriist, mida tuleb osavalt kasutada, mitte pimesi usaldada."
+    },
+    "featuredWork": {
+      "title": "Esiletõstetud tööd",
+      "description": "Valik projekte, mille üle ma uhke olen",
+      "viewAll": "Vaata kõiki projekte"
+    },
+    "garden": {
+      "title": "Digitaalne aed",
+      "description": "Minu Obsidianil põhinev digitaalne aed kasvab! Peagi saad uurida mu märkmeid, mõtteid ja õpinguid seotud ideede võrgustikus.",
+      "visit": "Külasta aeda"
+    },
+    "projects": {
+      "voiceAgent": {
+        "title": "Kõneagent / Ilmaennustaja",
+        "description": "Interaktiivne kõnerobot, mis suudab pidada loomulikku vestlust ja pakkuda ilmaprognoose maailma linnadele."
+      },
+      "chess": {
+        "title": "LLM-malesait",
+        "description": "Veebirakendus, mis kombineerib male ja suured keelemudelid innovaatilise mängukogemuse jaoks."
+      }
+    },
+    "cta": {
+      "title": "Loome midagi koos",
+      "description": "Olen alati elevil uute projektide ja kaaslaste kohtumise üle. Olgu sul konkreetne idee või lihtsalt soov juttu ajada, oleksin rõõmus, kui kuuleksin sinust!",
+      "button": "Alusta vestlust"
+    }
+  },
+  "about": {
+    "title": "Minust",
+    "description": "Tutvu inimesega pikslite taga. Olen arendaja, kes usub, et tehnoloogia peaks tunduma soe ja inimlik.",
+    "greeting": "Tere! Olen Leo-Martin",
+    "bio1": "Olen Tartu Ülikooli informaatika tudeng, kelle kirg on küberturve, AI ja tarkvaraarendus. Hetkel säilitan 4.71 GPA-d, osaledes aktiivselt erinevates tehnikakogukondades ja projektides.",
+    "bio2": "Olen Kaitseliidu Küberkaitseüksuse liige ja olen lõpetanud SANS SEC599 sertifitseerimise purple team taktikates. Olen ka teeninud esmakursuslaste mentorina ja pidanud juhtrolli üliõpilasorganisatsioonides.",
+    "bio3": "Kui ma ei õpi ega kodeeri, leiad mind maletamas, osalemast küberturbeharjutustel või töötamas kõrvalprojektide kallal, mis hõlmavad LLM-sid ja hääleagente.",
+    "journey": {
+      "title": "Minu teekond",
+      "internship": {
+        "year": "2025",
+        "title": "LHV Panga IT praktika",
+        "description": "Kogesin praktilist IT-administratsiooni, Service Desk tuge ja riistvara hooldust. Töötasin Atlassiani tööriistadega (Jira/Confluence)."
+      },
+      "university": {
+        "year": "2023",
+        "title": "Tartu Ülikool",
+        "description": "Alustasin informaatika BSc õpinguid 4.71 GPA-ga. Liitusin Kaitseliidu Küberkaitseüksusega ja sain esmakursuslaste mentoriks."
+      },
+      "olympiad": {
+        "year": "2023",
+        "title": "Pronksmedal - IESO",
+        "description": "Võitsin pronksmedali rahvusvahelisel maateaduste olümpiaadil. Lõpetasin Põlva Gümnaasiumi hõbemedaliga."
+      },
+      "chess": {
+        "year": "2023",
+        "title": "Maleõpetaja",
+        "description": "Õpetasin malet Põlva Jakobi Koolis, arendades oskusi keeruliste mõistete selgitamisel noortele."
+      }
+    },
+    "skills": {
+      "title": "Oskused ja tehnoloogiad",
+      "development": {
+        "title": "Arendus ja keeled",
+        "skills": ["Python", "Java", "JavaScript", "HTML/CSS", "Vue.js", "Node.js"]
+      },
+      "cloud": {
+        "title": "Pilv ja infrastruktuur",
+        "skills": ["Linux", "Docker", "Git", "Azure", "Proxmox", "Jira/Confluence"]
+      },
+      "ai": {
+        "title": "Andmeteadus ja AI",
+        "skills": ["Jupyter Notebooks", "LLM integratsioon", "Masinõpe", "SQL", "Andmeanalüüs"]
+      }
+    },
+    "beyondCode": {
+      "title": "Koodi taga",
+      "interests": ["Male", "Küberturve", "Maateadused", "Kohv"]
+    },
+    "hobbies": {
+      "title": "Kui ma ei kodeeri",
+      "description1": "Vajan vaba aega looduses jalutades või rattaga sõites. Säilitan vaimse tasakaalu läbi Tartu Meelepraktikate grupi. Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina.",
+      "description2": "Male on olnud erilisel kohal minu elus – olen mänginud erinevatel võistlustel ja õpetanud seda algkooli lastele Põlva Jakobi Koolis. Naudin ka häid raamatuid ja helimaterjale.",
+      "description3": "Usun produktiivsuse ja puhkuse tasakaalu olulisusesse ja püüan seda oma igapäevaelus hoida. Olen ka Kaitseliidu Küberkaitseüksuse liige, kus osalen küberturbeharjutustel ja koolitustel."
+    },
+    "values": {
+      "title": "Mida ma usun",
+      "dedication": {
+        "title": "Pühendumus ja eesmärk",
+        "description": "Töön pühendumuse ja eesmärgiga. Lõpetan alustatu, pragmatiliselt hinnates parimat edasiliikumise teed."
+      },
+      "learning": {
+        "title": "Pidev õppimine",
+        "description": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja nii teen ka mina."
+      },
+      "ai": {
+        "title": "Tasakaalustatud vaade AI-le",
+        "description": "AI on võimas tööriist, mida tuleb osavalt kasutada, mitte pimesi usaldada. Kasutan seda tarklikult oma projektides."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Minu portfoolio",
+    "description": "Projektide kollektsioon, millega olen töötanud. Igaüks õpetas mulle midagi uut ja aitas arengus.",
+    "featured": {
+      "title": "Esiletõstetud projektid"
+    },
+    "more": {
+      "title": "Veel projekte"
+    },
+    "projects": {
+      "voiceAgent": {
+        "title": "Kõneagent / Ilmaennustaja",
+        "description": "Interaktiivne kõnerobot, mis suudab pidada loomulikku vestlust ja pakkuda ilmaprognoose maailma linnadele. Ehitatud LiveKit raamistikuga ja LLM mudelitega."
+      },
+      "chess": {
+        "title": "LLM-malesait",
+        "description": "Veebirakendus, mis kombineerib male ja suured keelemudelid innovaatilise mängukogemuse jaoks."
+      },
+      "startup": {
+        "title": "Talendid Tartusse Startup",
+        "description": "Osalesin tootearenduse ja ideede valideerimise faasis startup-tiimi liikmena."
+      }
+    },
+    "technologies": {
+      "title": "Tehnoloogiad ja oskused",
+      "certifications": "Sertifikaadid ja koolitused"
+    },
+    "certifications": [
+      "SANS SEC599 - Purple Team Tactics & Kill Chain Defenses (2025)",
+      "Combat Ready juhtimise baas- ja jätkukoolitus (2024)",
+      "Eesti infoturbestandardi (E-ITS) baas- ja rakenduskoolitus (2024)"
+    ]
+  },
+  "contact": {
+    "title": "Võta minuga ühendust",
+    "description": "Olen alati huvitatud uutest võimalustest ja koostööst. Võta ühendust ja vastan niipea kui võimalik.",
+    "connect": {
+      "title": "Ühendu minuga",
+      "description": "Olen alati huvitatud uutest võimalustest ja koostööst. Olgu sul projektiidee, soov tehnikast rääkida või lihtsalt tere öelda, oleksin rõõmus, kui kuuleksin sinust!",
+      "response": "Vastan tavaliselt sõnumitele 24-48 tunni jooksul."
+    },
+    "form": {
+      "title": "Saada mulle sõnum",
+      "name": "Sinu nimi",
+      "email": "Sinu email",
+      "message": "Sinu sõnum",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "messagePlaceholder": "Kirjuta oma sõnum siia...",
+      "send": "Saada sõnum",
+      "sending": "Saadan...",
+      "success": "Sõnum saadetud!",
+      "successMessage": "Tähendab, et võtsid ühendust! Vastan niipea kui võimalik."
+    },
+    "info": {
+      "title": "Kontaktinfo",
+      "email": "Email",
+      "location": "Asukoht"
+    },
+    "social": {
+      "title": "Leia mind veebis",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "footer": "P.S. Kui soovid arutada malekäike või küberturvet, olen alati valmis!"
+  },
+  "garden": {
+    "title": "Digitaalne Aed",
+    "description": "Kasvav kollektsioon märkmeid, mõtteid ja õpinguid, mis on kultiveeritud Obsidianis.",
+    "status": "Hoolduses 🌱",
+    "statusTitle": "Aia Seisukord",
+    "statusPhase": "Idanemisfaas",
+    "growth": "Aia Kasv",
+    "comingSoon": "Organiseerin hetkel oma mõtteid ja märkmeid Obsidianis. Peagi õitseb see aed omavahel seotud ideedega veebiarenduse, disaini, produktiivsuse ja muu kohta.",
+    "seedsTitle": "Külvatavad Seemned",
+    "whatIsTitle": "Mis on Digitaalne Aed?",
+    "whatIsDescription": "Erinevalt traditsioonilisest blogist, kus postitused avaldatakse ja harva uuendatakse, on digitaalne aed elav märkmete ja ideede kollektsioon, mis kasvab ja areneb aja jooksul. See on ruum avalikuks õppimiseks, kus pooleldi välja kujunenud mõtted saavad eksisteerida koos viimistletud esseedega.",
+    "obsidianDescription": "Kasutan selle aia kultiveerimiseks Obsidianit, kasutades ära selle võimsaid lingifunktsioone seotud ideede võrgustiku loomiseks. Kui see on valmis, avaldan selle siin sinu uurimiseks.",
+    "obsidianLink": "Tutvu Obsidianiga",
+    "manifestoLink": "Digitaalse Aia Manifest",
+    "wantToKnow": "Soovid teada, kui aed õitseb?",
+    "getInTouch": "Võta ühendust",
+    "letYouKnow": "ja ma annan sulle teada!"
+  },
+  "footer": {
+    "copyright": "© {year} Leo-Martin. Kõik õigused kaitstud.",
+    "madeWith": "Tehtud",
+    "and": "ja",
+    "inEstonia": "Eestis"
+  }
+}
