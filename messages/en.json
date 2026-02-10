@@ -65,12 +65,61 @@
       "bitcoin": {
         "title": "Bitcoin Price Prediction",
         "description": "Data science project using global events data (GDELT dataset) to predict Bitcoin price movements."
+      },
+      "voiceAgent": {
+        "title": "Voice Agent / Weather Forecaster",
+        "description": "Estonian-speaking phone agent that predicts weather and answers voice queries using OpenWeatherMap and LiveKit."
       }
     },
     "cta": {
       "title": "Let's Create Something Together",
       "description": "I'm always excited to work on new projects and meet fellow creators. Whether you have a specific idea or just want to chat, I'd love to hear from you!",
       "button": "Start a Conversation"
+    }
+  },
+  "achievements": {
+    "title": "Achievement Board",
+    "ofUnlocked": "{count} of {total} unlocked ({percent}%)",
+    "progress": "Progress",
+    "clicks": "{count} clicks",
+    "unlocked": "{count} unlocked",
+    "masterUnlocked": "Master Unlocked!",
+    "showing": "Showing {type} achievements",
+    "showSecrets": "Show Secrets",
+    "hideSecrets": "Hide Secrets",
+    "hiddenAchievement": "Hidden Achievement",
+    "achievementUnlocked": "Achievement Unlocked!",
+    "items": {
+      "konamiCode": "Code Breaker",
+      "konamiCodeDesc": "You found the Konami code!",
+      "cubeSequence": "Cube Master",
+      "cubeSequenceDesc": "Complete the secret cube sequence",
+      "curious": "Curious",
+      "curiousDesc": "Click 10 times",
+      "persistent": "Persistent",
+      "persistentDesc": "Click 50 times",
+      "obsessive": "Obsessive",
+      "obsessiveDesc": "Click 100 times",
+      "clickMaster": "Click Master",
+      "clickMasterDesc": "Click 500 times",
+      "fingerFatigue": "Finger Fatigue",
+      "fingerFatigueDesc": "Click 1000 times",
+      "worldTraveler": "World Traveler",
+      "worldTravelerDesc": "Visit all pages",
+      "bilingual": "Bilingual",
+      "bilingualDesc": "Switch languages twice",
+      "themeShifter": "Theme Shifter",
+      "themeShifterDesc": "Toggle dark/light mode 5 times",
+      "soundCheck": "Sound Check",
+      "soundCheckDesc": "Toggle sound 10 times",
+      "networker": "Networker",
+      "networkerDesc": "Visit LinkedIn or GitHub profile",
+      "connector": "Connector",
+      "connectorDesc": "Send a message through the contact form",
+      "fullHouse": "Full House",
+      "fullHouseDesc": "Unlock 7 achievements",
+      "completionist": "Completionist",
+      "completionistDesc": "Unlock all achievements"
     }
   },
   "about": {

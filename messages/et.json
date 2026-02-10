@@ -65,12 +65,61 @@
       "bitcoin": {
         "title": "Bitcoini Hinnaprognoos",
         "description": "Andmeteaduse projekt, mis kasutab globaalsete sündmuste andmeid (GDELT) Bitcoini hinnaliikumiste ennustamiseks."
+      },
+      "voiceAgent": {
+        "title": "Kõneagent / Ilmaennustaja",
+        "description": "Eestikeelne telefoniagent, mis ennustab ilma ja vastab häälepäringutele, kasutades OpenWeatherMapi ja LiveKit'i."
       }
     },
     "cta": {
       "title": "Loome midagi koos",
       "description": "Olen alati elevil uute projektide ja kaaslaste kohtumise üle. Olgu sul konkreetne idee või lihtsalt soov juttu ajada, oleksin rõõmus, kui kuuleksin sinust!",
       "button": "Alusta vestlust"
+    }
+  },
+  "achievements": {
+    "title": "Saavutuste Tabel",
+    "ofUnlocked": "{count} {total}-st avatud ({percent}%)",
+    "progress": "Edenemine",
+    "clicks": "{count} klõpsu",
+    "unlocked": "{count} avatud",
+    "masterUnlocked": "Meister Avatud!",
+    "showing": "Kuvatakse {type} saavutusi",
+    "showSecrets": "Näita Salajasi",
+    "hideSecrets": "Peida Salajased",
+    "hiddenAchievement": "Peidetud Saavutus",
+    "achievementUnlocked": "Saavutus Avatud!",
+    "items": {
+      "konamiCode": "Koodimurdja",
+      "konamiCodeDesc": "Leidsid Konami koodi!",
+      "cubeSequence": "Kuubiku Meister",
+      "cubeSequenceDesc": "Lõpeta salajane kuubikute jada",
+      "curious": "Uudishimulik",
+      "curiousDesc": "Klõpsa 10 korda",
+      "persistent": "Püsiv",
+      "persistentDesc": "Klõpsa 50 korda",
+      "obsessive": "Obsessiivne",
+      "obsessiveDesc": "Klõpsa 100 korda",
+      "clickMaster": "Klõpsu Meister",
+      "clickMasterDesc": "Klõpsa 500 korda",
+      "fingerFatigue": "Sõrme Väsimus",
+      "fingerFatigueDesc": "Klõpsa 1000 korda",
+      "worldTraveler": "Maailmarändur",
+      "worldTravelerDesc": "Küpsta kõiki lehti",
+      "bilingual": "Kakskeelne",
+      "bilingualDesc": "Vaheta keelt kaks korda",
+      "themeShifter": "Teema Vahetaja",
+      "themeShifterDesc": "Lülita tumedat/valget režiimi 5 korda",
+      "soundCheck": "Helikontroll",
+      "soundCheckDesc": "Lülita heli sisse/välja 10 korda",
+      "networker": "Võrgustaja",
+      "networkerDesc": "Küpsta LinkedIn või GitHub profiili",
+      "connector": "Ühendaja",
+      "connectorDesc": "Saada sõnum kontaktivormi kaudu",
+      "fullHouse": "Täismaja",
+      "fullHouseDesc": "Ava 7 saavutust",
+      "completionist": "Lõpuni Vija",
+      "completionistDesc": "Ava kõik saavutused"
     }
   },
   "about": {

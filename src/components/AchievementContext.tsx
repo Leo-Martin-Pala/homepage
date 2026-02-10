@@ -5,38 +5,29 @@ import { useSound } from './SoundContext';
 
 export interface Achievement {
   id: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   icon: string;
   secret: boolean;
   unlockedAt?: string;
 }
 
 export const ACHIEVEMENTS: Achievement[] = [
-  // Secret Achievements (initially hidden)
-  { id: 'konami-code', title: 'Code Breaker', description: 'You found the Konami code!', icon: '🎮', secret: true },
-  { id: 'cube-sequence', title: 'Cube Master', description: 'Complete the secret cube sequence', icon: '🧩', secret: true },
-
-  // Click Achievements
-  { id: 'click-10', title: 'Curious', description: 'Click 10 times', icon: '👆', secret: false },
-  { id: 'click-50', title: 'Persistent', description: 'Click 50 times', icon: '🖱️', secret: false },
-  { id: 'click-100', title: 'Obsessive', description: 'Click 100 times', icon: '💪', secret: false },
-  { id: 'click-500', title: 'Click Master', description: 'Click 500 times', icon: '🏆', secret: false },
-  { id: 'click-1000', title: 'Finger Fatigue', description: 'Click 1000 times', icon: '🦾', secret: false },
-
-  // Navigation Achievements
-  { id: 'world-traveler', title: 'World Traveler', description: 'Visit all pages', icon: '🌍', secret: false },
-  { id: 'bilingual', title: 'Bilingual', description: 'Switch languages twice', icon: '🗣️', secret: false },
-  { id: 'theme-shifter', title: 'Theme Shifter', description: 'Toggle dark/light mode 5 times', icon: '🌓', secret: false },
-  { id: 'sound-toggler', title: 'Sound Check', description: 'Toggle sound 10 times', icon: '🔊', secret: false },
-
-  // Social Achievements
-  { id: 'networker', title: 'Networker', description: 'Visit LinkedIn or GitHub profile', icon: '🔗', secret: false },
-  { id: 'emailer', title: 'Connector', description: 'Send a message through the contact form', icon: '📧', secret: false },
-
-  // Combo Achievements
-  { id: 'full-house', title: 'Full House', description: 'Unlock 7 achievements', icon: '🎯', secret: false },
-  { id: 'completionist', title: 'Completionist', description: 'Unlock all achievements', icon: '👑', secret: false },
+  { id: 'konami-code', titleKey: 'konamiCode', descriptionKey: 'konamiCodeDesc', icon: '🎮', secret: true },
+  { id: 'cube-sequence', titleKey: 'cubeSequence', descriptionKey: 'cubeSequenceDesc', icon: '🧩', secret: true },
+  { id: 'click-10', titleKey: 'curious', descriptionKey: 'curiousDesc', icon: '👆', secret: false },
+  { id: 'click-50', titleKey: 'persistent', descriptionKey: 'persistentDesc', icon: '🖱️', secret: false },
+  { id: 'click-100', titleKey: 'obsessive', descriptionKey: 'obsessiveDesc', icon: '💪', secret: false },
+  { id: 'click-500', titleKey: 'clickMaster', descriptionKey: 'clickMasterDesc', icon: '🏆', secret: false },
+  { id: 'click-1000', titleKey: 'fingerFatigue', descriptionKey: 'fingerFatigueDesc', icon: '🦾', secret: false },
+  { id: 'world-traveler', titleKey: 'worldTraveler', descriptionKey: 'worldTravelerDesc', icon: '🌍', secret: false },
+  { id: 'bilingual', titleKey: 'bilingual', descriptionKey: 'bilingualDesc', icon: '🗣️', secret: false },
+  { id: 'theme-shifter', titleKey: 'themeShifter', descriptionKey: 'themeShifterDesc', icon: '🌓', secret: false },
+  { id: 'sound-toggler', titleKey: 'soundCheck', descriptionKey: 'soundCheckDesc', icon: '🔊', secret: false },
+  { id: 'networker', titleKey: 'networker', descriptionKey: 'networkerDesc', icon: '🔗', secret: false },
+  { id: 'emailer', titleKey: 'connector', descriptionKey: 'connectorDesc', icon: '📧', secret: false },
+  { id: 'full-house', titleKey: 'fullHouse', descriptionKey: 'fullHouseDesc', icon: '🎯', secret: false },
+  { id: 'completionist', titleKey: 'completionist', descriptionKey: 'completionistDesc', icon: '👑', secret: false },
 ];
 
 interface AchievementNotification {

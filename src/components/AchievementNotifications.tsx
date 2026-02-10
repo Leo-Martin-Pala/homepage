@@ -2,8 +2,11 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAchievements } from './AchievementContext';
+import { useTranslations } from 'next-intl';
 
 export default function AchievementNotifications() {
+  const t = useTranslations('achievements');
+  const tItems = useTranslations('achievements.items');
   const { notifications, dismissNotification } = useAchievements();
 
   return (
@@ -35,13 +38,13 @@ export default function AchievementNotifications() {
               {/* Content */}
               <div className="flex-1">
                 <div className="text-xs font-bold text-warm-gold uppercase tracking-wider mb-1">
-                  Achievement Unlocked!
+                  {t('achievementUnlocked')}
                 </div>
                 <h3 className="font-bold text-brown dark:text-cream text-lg">
-                  {achievement.title}
+                  {tItems(achievement.titleKey)}
                 </h3>
                 <p className="text-sm text-brown-light dark:text-cream/70">
-                  {achievement.description}
+                  {tItems(achievement.descriptionKey)}
                 </p>
               </div>
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Code, Palette, Terminal, Flower2, Rocket, Target, Brain } from 'lucide-react';
@@ -438,12 +439,14 @@ export default function HomePageClient() {
               title: t('projects.chess.title'),
               description: t('projects.chess.description'),
               tags: ['Vue.js', 'Node.js', 'LLM API'],
+              image: '/images/llm-chess-website.webp',
               color: 'sage',
             },
             {
-              title: t('projects.bitcoin.title'),
-              description: t('projects.bitcoin.description'),
-              tags: ['Python', 'ML', 'Data Science'],
+              title: t('projects.voiceAgent.title'),
+              description: t('projects.voiceAgent.description'),
+              tags: ['Python', 'LiveKit', 'LLM'],
+              image: '/images/weather.webp',
               color: 'dusty-rose',
             },
           ].map((project, index) => (
@@ -456,10 +459,14 @@ export default function HomePageClient() {
             >
               <Link href={`/${locale}/portfolio`} onClick={handleClick} className="block hover:no-underline">
                 <div className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-6 h-full">
-                  <div className={`h-48 bg-${project.color}-light dark:bg-${project.color}/20 rounded-lg mb-4 flex items-center justify-center`}>
-                    <span className={`text-${project.color}-dark dark:text-${project.color} text-4xl font-bold opacity-30`}>
-                      {project.title[0]}
-                    </span>
+                  <div className="h-48 relative rounded-lg mb-4 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-brown dark:text-cream mb-2">{project.title}</h3>
                   <p className="text-brown/80 dark:text-cream/80 mb-4">{project.description}</p>

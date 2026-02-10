@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Lock, Eye, EyeOff, X } from 'lucide-react';
 import { useAchievements, ACHIEVEMENTS } from './AchievementContext';
+import { useTranslations } from 'next-intl';
 
 interface AchievementBoardProps {
   isOpen: boolean;
@@ -11,6 +12,8 @@ interface AchievementBoardProps {
 }
 
 export default function AchievementBoard({ isOpen, onClose }: AchievementBoardProps) {
+  const t = useTranslations('achievements');
+  const tItems = useTranslations('achievements.items');
   const { unlockedAchievements, isUnlocked, totalClicks } = useAchievements();
   const [showSecrets, setShowSecrets] = useState(false);
   const [selectedAchievement, setSelectedAchievement] = useState<string | null>(null);
@@ -42,9 +45,9 @@ export default function AchievementBoard({ isOpen, onClose }: AchievementBoardPr
               <div className="flex items-center gap-3">
                 <Trophy className="text-warm-gold" size={32} />
                 <div>
-                  <h2 className="text-2xl font-bold text-brown dark:text-cream">Achievement Board</h2>
+                  <h2 className="text-2xl font-bold text-brown dark:text-cream">{t('title')}</h2>
                   <p className="text-brown-light dark:text-cream/70 text-sm">
-                    {unlockedCount} of {ACHIEVEMENTS.length} unlocked ({progress}%)
+                    {t('ofUnlocked', { count: unlockedCount, total: ACHIEVEMENTS.length, percent: progress })}
                   </p>
                 </div>
               </div>
@@ -59,7 +62,7 @@ export default function AchievementBoard({ isOpen, onClose }: AchievementBoardPr
             {/* Progress Bar */}
             <div className="px-6 py-4 bg-cream-dark dark:bg-brown-dark/50 border-b-4 border-sage/20">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-bold text-brown dark:text-cream">Progress</span>
+                <span className="text-sm font-bold text-brown dark:text-cream">{t('progress')}</span>
                 <span className="text-sm text-brown-light dark:text-cream/70">{progress}%</span>
               </div>
               <div className="h-4 bg-brown/10 dark:bg-cream/10 rounded-full overflow-hidden">
@@ -76,16 +79,16 @@ export default function AchievementBoard({ isOpen, onClose }: AchievementBoardPr
             <div className="px-6 py-4 flex flex-wrap gap-4 border-b-4 border-sage/20">
               <div className="pixel-badge bg-dusty-rose-light dark:bg-dusty-rose/20 flex items-center gap-2">
                 <span className="text-xl">🖱️</span>
-                <span className="font-bold text-brown dark:text-cream">{totalClicks} clicks</span>
+                <span className="font-bold text-brown dark:text-cream">{t('clicks', { count: totalClicks })}</span>
               </div>
               <div className="pixel-badge bg-sage-light dark:bg-sage/20 flex items-center gap-2">
                 <span className="text-xl">🏆</span>
-                <span className="font-bold text-brown dark:text-cream">{unlockedCount} unlocked</span>
+                <span className="font-bold text-brown dark:text-cream">{t('unlocked', { count: unlockedCount })}</span>
               </div>
               {ACHIEVEMENTS.filter(a => a.secret && isUnlocked(a.id)).length === secretCount && secretCount > 0 && (
                 <div className="pixel-badge bg-warm-gold-light dark:bg-warm-gold/20 flex items-center gap-2">
                   <span className="text-xl">👑</span>
-                  <span className="font-bold text-brown">Master Unlocked!</span>
+                  <span className="font-bold text-brown">{t('masterUnlocked')}</span>
                 </div>
               )}
             </div>
@@ -93,14 +96,14 @@ export default function AchievementBoard({ isOpen, onClose }: AchievementBoardPr
             {/* Filter Toggle */}
             <div className="px-6 py-3 border-b-4 border-sage/20 flex items-center justify-between">
               <span className="text-sm font-medium text-brown dark:text-cream/80">
-                Showing {showSecrets ? 'all' : 'standard'} achievements
+                {t('showing', { type: showSecrets ? 'all' : 'standard' })}
               </span>
               <button
                 onClick={() => setShowSecrets(!showSecrets)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brown/5 dark:bg-cream/5 hover:bg-brown/10 dark:hover:bg-cream/10 transition-colors text-sm text-brown dark:text-cream"
               >
                 {showSecrets ? <EyeOff size={16} /> : <Eye size={16} />}
-                {showSecrets ? 'Hide Secrets' : 'Show Secrets'}
+                {showSecrets ? t('hideSecrets') : t('showSecrets')}
               </button>
             </div>
 
@@ -143,7 +146,7 @@ export default function AchievementBoard({ isOpen, onClose }: AchievementBoardPr
                         font-bold text-sm mb-1
                         ${unlocked ? 'text-brown dark:text-cream' : 'text-brown/50 dark:text-cream/50'}
                       `}>
-                        {showAsLocked ? '???' : achievement.title}
+                        {showAsLocked ? '???' : tItems(achievement.titleKey)}
                       </h3>
 
                       {/* Description */}
@@ -151,7 +154,7 @@ export default function AchievementBoard({ isOpen, onClose }: AchievementBoardPr
                         text-xs
                         ${unlocked ? 'text-brown-light dark:text-cream/70' : 'text-brown/40 dark:text-cream/40'}
                       `}>
-                        {showAsLocked ? 'Hidden Achievement' : achievement.description}
+                        {showAsLocked ? t('hiddenAchievement') : tItems(achievement.descriptionKey)}
                       </p>
 
                       {/* Unlocked Badge */}
