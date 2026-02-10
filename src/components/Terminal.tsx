@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Terminal as TerminalIcon, X, Minimize2, Maximize2 } from 'lucide-react';
 import { useEasterEggs } from './EasterEggs';
 import { useSound } from './SoundContext';
+import { useTranslations } from 'next-intl';
 
 
 interface CommandHistory {
@@ -24,90 +25,64 @@ export default function Terminal() {
   const eggs = useEasterEggs();
   const { playSound } = useSound();
   const hintTimeoutRef = useRef<NodeJS.Timeout>(null);
+  const t = useTranslations('terminal');
 
   // Terminal commands
   const getCommandOutput = useCallback((cmd: string, args: string[]): string => {
     switch (cmd) {
       case 'help':
-        return `Available commands:
-  help              - Show this help message
-  matrix [0-100]    - Set matrix rain intensity (0-100%)
-  rainbow           - Toggle rainbow cube mode  
-  chess             - Get a random chess tip
-  whoami            - Learn about Leo
-  clear             - Clear terminal
-  exit              - Close terminal
+        return `${t('help.title')}
+  help              - ${t('help.helpDesc')}
+  matrix [0-100]    - ${t('help.matrixDesc')}
+  rainbow           - ${t('help.rainbowDesc')}
+  chess             - ${t('help.chessDesc')}
+  whoami            - ${t('help.whoamiDesc')}
+  clear             - ${t('help.clearDesc')}
+  exit              - ${t('help.exitDesc')}
   
-Type any command to execute it...`;
+${t('help.typeCommand')}`;
 
       case 'whoami': {
-        const facts = [
-          "Started programming at age 7 with JavaScript!",
-          "Built a voice agent that speaks Estonian and tells weather",
-          "Self-hosted an AI platform with access to 280+ LLMs",
-          "Configured a Dell PowerEdge R610 server with Proxmox",
-          "Bronze medalist at International Earth Science Olympiad",
-          "Used to teach chess to elementary school kids",
-          "Currently serving as House Elder in academic corporation EÜS Põhjala",
-          "Built an LLM chess bot that plays against language models",
-          "Did a data science project predicting Bitcoin prices using global events",
-          "Loves experimenting with new AI tools and technologies",
-          "Can recite the first 100 digits of pi... just kidding!",
-          "Has a homelab with multiple virtual machines running",
-          "Drinks way too much coffee while coding",
-          "Once stayed up all night fixing a server issue",
-          "Believes that the best code is written after a good gym session"
-        ];
+        const facts = t.raw('whoami.facts') as string[];
         return `Leo-Martin Pala
-  - Informatics Student @ University of Tartu
-  - AI Enthusiast & Software Developer
+  - ${t('whoami.subtitle')}
+  - ${t('whoami.role')}
   
-🎲 Random Fun Fact:
+${t('whoami.funFact')}
 ${facts[Math.floor(Math.random() * facts.length)]}`;
       }
 
       case 'chess': {
-        const tips = [
-          "Control the center (e4, d4, e5, d5) - it's the key to chess dominance!",
-          "Develop your knights and bishops early - don't move the same piece twice in the opening!",
-          "Castle your king to safety - usually within the first 10 moves!",
-          "Think before you move: 'When you see a good move, look for a better one!' - Emanuel Lasker",
-          "Protect your queen but don't rely on her too early in the game!",
-          "Forks are powerful - knights are especially good at creating forks!",
-          "Always check your opponent's threats before making your move!",
-          "Endgame tip: Activate your king - it's a strong piece in the endgame!"
-        ];
-        return `♟ Chess Tip:\n${tips[Math.floor(Math.random() * tips.length)]}`;
+        const tips = t.raw('chess.tips') as string[];
+        return `${t('chess.title')}\n${tips[Math.floor(Math.random() * tips.length)]}`;
       }
 
       case 'matrix': {
-        // Check if a percentage argument is provided
         if (args && args.length > 0) {
           const percentage = parseInt(args[0], 10);
           if (!isNaN(percentage) && percentage >= 0 && percentage <= 100) {
             eggs.setMatrixIntensity(percentage);
-            return `Matrix rain intensity set to ${percentage}%`;
+            return t('matrix.set', { percent: percentage });
           } else {
-            return 'Invalid intensity. Usage: matrix [0-100]';
+            return t('matrix.invalid');
           }
         }
         
-        // Toggle between 15% and 40% if no argument
         const newIntensity = eggs.matrixIntensity === 15 ? 40 : 15;
         eggs.setMatrixIntensity(newIntensity);
-        return `Matrix rain intensity set to ${newIntensity}%`;
+        return t('matrix.set', { percent: newIntensity });
       }
 
       case 'rainbow': {
         const newMode = !eggs.rainbowMode;
         eggs.setRainbowMode(newMode);
-        return `Rainbow cube mode ${newMode ? 'activated' : 'deactivated'}! 🌈`;
+        return newMode ? t('rainbow.activated') : t('rainbow.deactivated');
       }
 
       default:
         return '';
     }
-  }, [eggs]);
+  }, [eggs, t]);
 
   // Typing animation for hint
   useEffect(() => {
@@ -192,14 +167,14 @@ ${facts[Math.floor(Math.random() * facts.length)]}`;
         output = '';
         break;
       default:
-        output = `Command not found: ${cmd}\nType 'help' for available commands.`;
+        output = `${t('commandNotFound', { cmd })}\n${t('typeHelp')}`;
         playSound(300, 0.05);
     }
 
     if (output) {
       setHistory(prev => [...prev, { command: cmdLine, output }]);
     }
-  }, [eggs, getCommandOutput, playSound]);
+  }, [eggs, getCommandOutput, playSound, t]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -262,7 +237,7 @@ ${facts[Math.floor(Math.random() * facts.length)]}`;
                   <button
                     onClick={() => setIsExpanded(false)}
                     className="p-1 hover:bg-white/20 rounded transition-colors"
-                    title="Minimize"
+                    title={t('minimize')}
                   >
                     <Minimize2 className="text-white" size={14} />
                   </button>
@@ -274,8 +249,8 @@ ${facts[Math.floor(Math.random() * facts.length)]}`;
                 {/* Welcome Message */}
                 {history.length === 0 && (
                   <div className="text-sage-light dark:text-brown/70">
-                    <p>Welcome to Leo&apos;s Secret Terminal! 🚀</p>
-                    <p className="mt-2">Type &apos;help&apos; to see available commands.</p>
+                    <p>{t('welcome')}</p>
+                    <p className="mt-2">{t('helpPrompt')}</p>
                   </div>
                 )}
 
@@ -307,7 +282,7 @@ ${facts[Math.floor(Math.random() * facts.length)]}`;
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
                     className="flex-1 bg-transparent border-none outline-none text-cream dark:text-brown placeholder-cream/40 dark:placeholder-brown/40"
-                    placeholder="type a command..."
+                    placeholder={t('placeholder')}
                     autoFocus
                     spellCheck={false}
                     autoComplete="off"

@@ -5,11 +5,13 @@ import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAchievements } from './AchievementContext';
+import { useTranslations } from 'next-intl';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { incrementThemeToggles } = useAchievements();
+  const t = useTranslations('theme');
 
   useEffect(() => {
     setMounted(true);
@@ -23,7 +25,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <button className="w-10 h-10 rounded-lg border-2 border-brown/20 bg-cream flex items-center justify-center">
-        <span className="sr-only">Toggle theme</span>
+        <span className="sr-only">{t('toggle')}</span>
       </button>
     );
   }
@@ -34,7 +36,7 @@ export function ThemeToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="w-10 h-10 rounded-lg border-2 border-brown dark:border-cream bg-cream dark:bg-brown-dark flex items-center justify-center transition-colors"
-      aria-label="Toggle theme"
+      aria-label={t('toggle')}
     >
       {theme === 'dark' ? (
         <Sun className="w-5 h-5 text-warm-gold" />

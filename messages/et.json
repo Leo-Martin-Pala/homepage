@@ -4,10 +4,15 @@
     "about": "Minust",
     "portfolio": "Portfoolio",
     "contact": "Kontakt",
-    "garden": "Aed"
+    "garden": "Aed",
+    "muteSound": "Vaigista helid",
+    "enableSound": "Lülita helid sisse",
+    "viewAchievements": "Vaata saavutusi",
+    "achievements": "Saavutused",
+    "toggleMenu": "Ava menüü"
   },
   "home": {
-    "badge": "Tere tulemast minu interneti nurka",
+    "badge": "Tere tulemast minu hubasesse internetinurka",
     "title": "Tere, olen {name}",
     "subtitle": "Informaatika tudeng @ Tartu Ülikool | AI entusiast ja tarkvaraarendaja",
     "viewWork": "Vaata minu töid",
@@ -21,7 +26,7 @@
       },
       "ai": {
         "title": "AI & LLM projektid",
-        "description": "Interaktiivsete hääleagentide ja LLM-toeliste rakenduste loomine. Kogemus livekit ja AI integratsioonidega."
+        "description": "Interaktiivsete hääleagentide ja LLM-toeliste rakenduste loomine. Kogemus LiveKit ja AI integratsioonidega."
       },
       "infrastructure": {
         "title": "Infrastruktuur",
@@ -33,19 +38,19 @@
       "description": "Alates esimesest JavaScripti koodist 7-aastasena kuni tänapäevani",
       "beginnings": {
         "title": "Varajased algused",
-        "description": "Minu programmeerimishuvi algas 7-aastaselt esimese JavaScripti koodiga. Põhikooli lõpuks hakkasin süsteemsemalt arendama, ehitades oma esimese veebisaidi ja õppides Java põhitõdesid."
+        "description": "Minu programmeerimishuvi algas 7-aastaselt esimese JavaScripti koodiga. Põhikooli lõpuks hakkasin süstemaatilisemalt arendama, ehitades oma esimese veebisaidi ja õppides Java põhitõdesid."
       },
       "growth": {
         "title": "Kasv ja avastamine",
-        "description": "Gümnaasiumis laienesin võistlusprogrammeerimisse ja Pythonisse, süvenesin ka süsteemiadministratsiooni, konfigureerides oma Dell PowerEdge R610 serveri Proxmoxiga. Ülikoolis on mu oskused oluliselt paranenud, eriline huvi keelemudelite ja generatiivse AI vastu."
+        "description": "Gümnaasiumis hakkasin tegelema võistlusprogrammeerimise ja Pythoniga, süvenesin ka süsteemiadministratsiooni, konfigureerides oma Dell PowerEdge R610 serveri Proxmoxiga. Ülikoolis on mu oskused oluliselt arenenud, eriti keelemudelite ja generatiivse AI vallas."
       }
     },
     "approach": {
       "title": "Minu lähenemine",
       "workTitle": "Kuidas ma töötan",
-      "workDescription": "Töön pühendumuse ja eesmärgiga. Naudin meeskondade juhtimist, kuid väärtustan ka koostööd. Lahendan probleeme meetodiliselt ja säilitan rahu ka stressirohketes olukordades. Lõpetan alustatu, pragmatiliselt hinnates, millal mõistlik jätkata ja millal mitte.",
+      "workDescription": "Töötan pühendumuse ja eesmärgiga. Naudin meeskondade juhtimist, kuid väärtustan ka koostööd. Lahendan probleeme meetodiliselt ja säilitan rahu ka pingelistes olukordades. Lõpetan alustatu, pragmatiliselt hinnates, millal mõistlik jätkata ja millal mitte.",
       "philosophyTitle": "Minu filosoofia",
-      "philosophyDescription": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja ma teen oma ülesandeks õppida ja kohaneda."
+      "philosophyDescription": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja ma pean oluliseks pidevat õppimist ja kohanemist."
     },
     "featuredWork": {
       "title": "Esiletõstetud tööd",
@@ -54,7 +59,7 @@
     },
     "garden": {
       "title": "Digitaalne aed",
-      "description": "Minu Obsidianil põhinev digitaalne aed kasvab! Peagi saad uurida mu märkmeid, mõtteid ja õpinguid seotud ideede võrgustikus.",
+      "description": "Minu Obsidianil põhinev digitaalne aed kasvab! Peagi saad uurida mu märkmeid, mõtteid ja õpitut seotud ideede võrgustikus.",
       "visit": "Külasta aeda"
     },
     "projects": {
@@ -73,7 +78,7 @@
     },
     "cta": {
       "title": "Loome midagi koos",
-      "description": "Olen alati elevil uute projektide ja kaaslaste kohtumise üle. Olgu sul konkreetne idee või lihtsalt soov juttu ajada, oleksin rõõmus, kui kuuleksin sinust!",
+      "description": "Olen alati põnevil uute projektide üle ja naudin mõttekaaslastega kohtumist. Olgu sul konkreetne idee või lihtsalt soov juttu ajada, oleksin rõõmus, kui sinust kuuleksin!",
       "button": "Alusta vestlust"
     }
   },
@@ -105,7 +110,7 @@
       "fingerFatigue": "Sõrme Väsimus",
       "fingerFatigueDesc": "Klõpsa 1000 korda",
       "worldTraveler": "Maailmarändur",
-      "worldTravelerDesc": "Küpsta kõiki lehti",
+      "worldTravelerDesc": "Külasta kõiki lehti",
       "bilingual": "Kakskeelne",
       "bilingualDesc": "Vaheta keelt kaks korda",
       "themeShifter": "Teema Vahetaja",
@@ -113,12 +118,12 @@
       "soundCheck": "Helikontroll",
       "soundCheckDesc": "Lülita heli sisse/välja 10 korda",
       "networker": "Võrgustaja",
-      "networkerDesc": "Küpsta LinkedIn või GitHub profiili",
+      "networkerDesc": "Külasta LinkedIn või GitHub profiili",
       "connector": "Ühendaja",
       "connectorDesc": "Saada sõnum kontaktivormi kaudu",
       "fullHouse": "Täismaja",
       "fullHouseDesc": "Ava 7 saavutust",
-      "completionist": "Lõpuni Vija",
+      "completionist": "Lõpuni Viija",
       "completionistDesc": "Ava kõik saavutused"
     }
   },
@@ -126,9 +131,9 @@
     "title": "Minust",
     "description": "Tutvu inimesega pikslite taga. Hetkel õpin 'kuidas', et saaks ehitada 'miks'.",
     "greeting": "Tere! Olen Leo-Martin",
-    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai alguse generatiivse AI plahvatuslikust kasvust 2022. aastast. Sellest ajast olen katsetanud, kuidas need tehnoloogiad töötavad.",
+    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai alguse generatiivse AI plahvatuslikust kasvust 2022. aastal. Sellest ajast alates olen katsetanud, kuidas need tehnoloogiad töötavad.",
     "bio2": "Naudin isiklike projektide ehitamist uute tööriistade õppimiseks. Hiljuti arendasin Pythoni kasutades interaktiivse kõneagendi ja Vue.js abil LLM-toelise malebotti. Kasutan sageli AI tööriistu oma kodeerimise ja õppimise kiirendamiseks.",
-    "bio3": "IT õpingute kõrval naudin treeningut, lugemist ja enesearengut. Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina. Otsin hetkel praktikakohta andmeteaduses või AI inseneerimises, et õppida kogenud arendajatelt ja lahendada reaalseid probleeme.",
+    "bio3": "IT õpingute kõrval naudin treenimist, lugemist ja enesearengut. Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina. Otsin hetkel praktikakohta andmeteaduses või AI inseneerias, et õppida kogenud arendajatelt ja lahendada reaalseid probleeme.",
     "skills": {
       "title": "Oskused ja tehnoloogiad",
       "development": {
@@ -174,7 +179,7 @@
       ]
     },
     "beyondCode": {
-      "title": "Koodi taga",
+      "title": "Lisaks koodile",
       "interests": [
         "Treening",
         "Raamatud",
@@ -183,7 +188,7 @@
       ]
     },
     "hobbies": {
-      "title": "Kui ma ei kodeeri",
+      "title": "Kui ma parajasti ei arenda",
       "description1": "Käin jõusaalis ja teen erinevaid treeninguid. Loen palju - nii ilukirjandust kui ka erialast kirjandust. Püüan alati õppida uusi asju ja areneda.",
       "description2": "Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina. See on andnud mulle väärtuslikke juhtimiskogemusi.",
       "description3": "Usun produktiivsuse ja puhkuse tasakaalu olulisusesse ja püüan seda oma igapäevaelus hoida."
@@ -192,11 +197,11 @@
       "title": "Mida ma usun",
       "dedication": {
         "title": "Pühendumus ja eesmärk",
-        "description": "Töön pühendumuse ja eesmärgiga. Lõpetan alustatu, pragmatiliselt hinnates parimat edasiliikumise teed."
+        "description": "Töötan pühendumuse ja eesmärgiga. Lõpetan alustatu, pragmatiliselt hinnates parimat viisi edasi liikuda."
       },
       "learning": {
         "title": "Pidev õppimine",
-        "description": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja nii teen ka mina."
+        "description": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja mina koos sellega."
       },
       "growth": {
         "title": "Isiklik kasv",
@@ -208,7 +213,7 @@
       "education": {
         "title": "Haridus",
         "university": "Tartu Ülikool – informaatika BSc (4.71 GPA)",
-        "universityDate": "2023 – Tänaseni",
+        "universityDate": "2023 – praeguseni",
         "highSchool": "Põlva Gümnaasium (hõbemedal)",
         "highSchoolDate": "2020 – 2023"
       },
@@ -235,7 +240,7 @@
         "ees": {
           "role": "EÜS Põhjala – Majavanem",
           "date": "2026 kevad",
-          "description": "Vastutan seltsi ruumide korras hoidmise ja koristusgraafiku eest. Varasemalt arhivaari roll."
+          "description": "Vastutan seltsi ruumide korras hoidmise ja koristusgraafiku eest. Varem täitsin arhivaari rolli."
         },
         "cyber": {
           "role": "Kaitseliidu Küberkaitseüksus – Liige",
@@ -275,15 +280,15 @@
       },
       "openwebui": {
         "title": "OpenWebUI + LiteLLM API",
-        "description": "Iseseadistatud tehisintellekti platvorm, mis kombineerib tasuta LLM API-sid, pakkudes juurdepääsu üle 280 keelemudelile ilma kuutasudeta."
+        "description": "Isemajutatud tehisintellekti platvorm, mis kombineerib tasuta LLM API-sid, pakkudes juurdepääsu üle 280 keelemudelile ilma kuutasudeta."
       },
       "server": {
         "title": "Dell PowerEdge R610 Server",
-        "description": "Omanikkonfigureeritud server: iDRAC uuendamine, Windows Serveri ja Proxmoxi katsetamine, RAID seadistamine, virtuaalmasinate käitamine."
+        "description": "Ise konfigureeritud server: iDRAC uuendamine, Windows Serveri ja Proxmoxi katsetamine, RAID seadistamine, virtuaalmasinate käitamine."
       },
       "undermarch": {
         "title": "Undermarch",
-        "description": "Strateegiline koobasõda mäng, kus ehitate lõkse, juhate vägesid ja kujundate oma paigutust, et vastu pidada kangelasterakkudele.",
+        "description": "Strateegiline koopasõja mäng, kus ehitad lõkse, juhid vägesid ja kujundad oma paigutust, et vastu pidada kangelassalkadele.",
         "team": "Meeskond: Osvald Nigola, Leo-Martin Pala, Joosep Podekrat, Anna Liisa Nurm, Katarina Podekrat"
       }
     },
@@ -311,7 +316,7 @@
       "sendAnother": "Saada uus sõnum",
       "sending": "Saadan...",
       "success": "Sõnum saadetud!",
-      "successMessage": "Tähendab, et võtsid ühendust! Vastan niipea kui võimalik.",
+      "successMessage": "Aitäh, et ühendust võtsid! Vastan niipea kui võimalik.",
       "error": "Sõnumi saatmisel tekkis viga. Proovi uuesti."
     },
     "info": {
@@ -327,7 +332,7 @@
   },
   "garden": {
     "title": "Digitaalne Aed",
-    "description": "Kasvav kollektsioon märkmeid, mõtteid ja õpinguid, mis on kultiveeritud Obsidianis.",
+    "description": "Kasvav kollektsioon märkmeid, mõtteid ja õpitut, mis on kasvatatud Obsidianis.",
     "portalTitle": "Tere tulemast minu digitaalsesse aeda",
     "portalDescription": "Avasta minu omavahel seotud märkmeid, ideid ja avastusi. See on elav ruum, kus mõtted kasvavad ja arenevad aja jooksul.",
     "enterGarden": "Sisene aeda",
@@ -347,6 +352,77 @@
     "copyright": "© {year} Leo-Martin. Kõik õigused kaitstud.",
     "madeWith": "Tehtud",
     "and": "ja",
-    "inEstonia": "Eestis"
+    "inEstonia": "Eestis",
+    "clicks": "Klõpsud: {count}",
+    "keepClicking": "Jätka klõpsamist!",
+    "achievementsCount": "Saavutused: {count}"
+  },
+  "theme": {
+    "toggle": "Vaheta teemat"
+  },
+  "languageSwitcher": {
+    "switchTo": "Lülitu inglise keelele"
+  },
+  "terminal": {
+    "welcome": "Tere tulemast Leo salajasse terminali! 🚀",
+    "helpPrompt": "Sisesta 'help', et näha saadaolevaid käske.",
+    "placeholder": "sisesta käsk...",
+    "minimize": "Minimeeri",
+    "commandNotFound": "Käsku ei leitud: {cmd}",
+    "typeHelp": "Sisesta 'help', et näha saadaolevaid käske.",
+    "help": {
+      "title": "Saadaolevad käsud:",
+      "helpDesc": "Näita seda abiinfot",
+      "matrixDesc": "Sea maatriksi vihma intensiivsus (0-100%)",
+      "rainbowDesc": "Lülita vikerkuubiku režiim",
+      "chessDesc": "Saa juhuslik malenõuanne",
+      "whoamiDesc": "Saa teada Leo kohta",
+      "clearDesc": "Tühjenda terminal",
+      "exitDesc": "Sulge terminal",
+      "typeCommand": "Sisesta käsk selle käivitamiseks..."
+    },
+    "whoami": {
+      "subtitle": "Informaatika tudeng @ Tartu Ülikool",
+      "role": "AI entusiast ja tarkvaraarendaja",
+      "funFact": "🎲 Juhuslik lõbus fakt:",
+      "facts": [
+        "Alustasin programmeerimist 7-aastaselt JavaScriptiga!",
+        "Ehitasin kõneagendi, mis räägib eesti keelt ja ennustab ilma",
+        "Seadistasin ise AI platvormi juurdepääsuga üle 280 keelemudelile",
+        "Konfigureerisin Dell PowerEdge R610 serveri Proxmoxiga",
+        "Rahvusvahelise Maateaduste Olümpiaadi pronksmedalist",
+        "Õpetasin algkooli lastele malet",
+        "Teenin praegu majavanema rollis akadeemilises organisatsioonis EÜS Põhjala",
+        "Ehitasin LLM maleboti, mis mängib keelemudelite vastu",
+        "Tegin andmeteaduse projekti Bitcoini hindade ennustamiseks globaalsete sündmuste abil",
+        "Armastan katsetada uusi AI tööriistu ja tehnoloogiaid",
+        "Oskab öelda pi esimesed 100 kohta... tegelikult ei oska!",
+        "Omab kodulaborit mitme virtuaalmasinaga",
+        "Joob kodeerimise ajal liiga palju kohvi",
+        "Jäi kord terve öö üles serveriprobleemi lahendamiseks",
+        "Usub, et parim kood kirjutatakse pärast head trenni"
+      ]
+    },
+    "chess": {
+      "title": "♟ Malenõuanne:",
+      "tips": [
+        "Kontrolli keskust (e4, d4, e5, d5) – see on males domineerimise võti!",
+        "Arenda ratsud ja odad varakult – ära liiguta avangus sama nuppu kaks korda!",
+        "Vangerda oma kuningas turvaliselt – tavaliselt esimese 10 käigu jooksul!",
+        "Mõtle enne käiku: 'Kui näed head käiku, otsi paremat!' – Emanuel Lasker",
+        "Kaitse oma lippu, aga ära too teda mängu liiga vara!",
+        "Kahvlid on võimsad – ratsud on eriti head kahvlite loomiseks!",
+        "Kontrolli alati vastase ähvardusi enne oma käigu tegemist!",
+        "Lõppmängu nõuanne: aktiveeri oma kuningas – ta on lõppmängus tugev nupp!"
+      ]
+    },
+    "matrix": {
+      "set": "Maatriksi vihma intensiivsus seatud {percent}%-le",
+      "invalid": "Vigane intensiivsus. Kasutamine: matrix [0-100]"
+    },
+    "rainbow": {
+      "activated": "Vikerkuubiku režiim aktiveeritud! 🌈",
+      "deactivated": "Vikerkuubiku režiim deaktiveeritud! 🌈"
+    }
   }
 }

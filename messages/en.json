@@ -4,7 +4,12 @@
     "about": "About Me",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "garden": "Garden"
+    "garden": "Garden",
+    "muteSound": "Mute sounds",
+    "enableSound": "Enable sounds",
+    "viewAchievements": "View achievements",
+    "achievements": "Achievements",
+    "toggleMenu": "Toggle menu"
   },
   "home": {
     "badge": "Welcome to my cozy corner of the internet",
@@ -21,7 +26,7 @@
       },
       "ai": {
         "title": "AI & LLM Projects",
-        "description": "Creating interactive voice agents and LLM-powered applications. Experience with livekit and AI integrations."
+        "description": "Creating interactive voice agents and LLM-powered applications. Experience with LiveKit and AI integrations."
       },
       "infrastructure": {
         "title": "Infrastructure",
@@ -126,7 +131,7 @@
     "title": "About Me",
     "description": "Get to know the person behind the pixels. Currently learning the 'how' so I can build the 'why'.",
     "greeting": "Hello! I'm Leo-Martin",
-    "bio1": "I'm a third year Informatics student at University of Tartu. My interest in Data Science and software development was sparked by the Generative AI explosion in 2022. Since then, I have been experimenting with how these technologies work under the hood.",
+    "bio1": "I'm a third-year Informatics student at University of Tartu. My interest in Data Science and Software Development was sparked by the Generative AI explosion in 2022. Since then, I have been experimenting with how these technologies work under the hood.",
     "bio2": "I enjoy building personal projects to learn new tools. Recently, I developed an interactive voice-agent using Python, and an LLM-powered chess bot using Vue.js. I often leverage AI tools to accelerate my own coding and learning process.",
     "bio3": "Besides IT studies, I enjoy working out, reading, and self-development. I'm active in the academic organization Põhjala (EÜS Põhjala) where I've served as House Elder and Archivist. I am currently looking for an internship in Data Science or AI Engineering to learn from experienced developers and tackle real-world problems.",
     "skills": {
@@ -222,7 +227,7 @@
         "varbuse": {
           "role": "Varbuse Teemaja – Service Worker",
           "date": "Jul – Aug 2024",
-          "description": "Customer service in varying workload environments; quick and efficient action while maintaining calm during unexpected peak loads."
+          "description": "Customer service in a variable workload environment; quick and efficient action while maintaining calm during unexpected peak loads."
         },
         "chess": {
           "role": "Põlva Jakobi Kool – Chess Teacher",
@@ -238,9 +243,9 @@
           "description": "Responsible for society premises maintenance and cleaning schedule. Previously served as Archivist."
         },
         "cyber": {
-          "role": "Kaitseliidu Küberkaitseüksus",
+          "role": "Estonian Defence League Cyber Unit",
           "date": "2023 – Present",
-          "description": "Participating in exercises, cybersecurity training and exercises."
+          "description": "Participating in cybersecurity training and exercises."
         },
         "mentor": {
           "role": "TÜ Mentorgrupi – Mentor",
@@ -347,6 +352,77 @@
     "copyright": "© {year} Leo-Martin. All rights reserved.",
     "madeWith": "Made with",
     "and": "and",
-    "inEstonia": "in Estonia"
+    "inEstonia": "in Estonia",
+    "clicks": "Clicks: {count}",
+    "keepClicking": "Keep clicking!",
+    "achievementsCount": "Achievements: {count}"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "languageSwitcher": {
+    "switchTo": "Switch to Estonian"
+  },
+  "terminal": {
+    "welcome": "Welcome to Leo's Secret Terminal! 🚀",
+    "helpPrompt": "Type 'help' to see available commands.",
+    "placeholder": "type a command...",
+    "minimize": "Minimize",
+    "commandNotFound": "Command not found: {cmd}",
+    "typeHelp": "Type 'help' for available commands.",
+    "help": {
+      "title": "Available commands:",
+      "helpDesc": "Show this help message",
+      "matrixDesc": "Set matrix rain intensity (0-100%)",
+      "rainbowDesc": "Toggle rainbow cube mode",
+      "chessDesc": "Get a random chess tip",
+      "whoamiDesc": "Learn about Leo",
+      "clearDesc": "Clear terminal",
+      "exitDesc": "Close terminal",
+      "typeCommand": "Type any command to execute it..."
+    },
+    "whoami": {
+      "subtitle": "Informatics Student @ University of Tartu",
+      "role": "AI Enthusiast & Software Developer",
+      "funFact": "🎲 Random Fun Fact:",
+      "facts": [
+        "Started programming at age 7 with JavaScript!",
+        "Built a voice agent that speaks Estonian and tells weather",
+        "Self-hosted an AI platform with access to 280+ LLMs",
+        "Configured a Dell PowerEdge R610 server with Proxmox",
+        "Bronze medalist at International Earth Science Olympiad",
+        "Used to teach chess to elementary school kids",
+        "Currently serving as House Elder in academic corporation EÜS Põhjala",
+        "Built an LLM chess bot that plays against language models",
+        "Did a data science project predicting Bitcoin prices using global events",
+        "Loves experimenting with new AI tools and technologies",
+        "Can recite the first 100 digits of pi... just kidding!",
+        "Has a homelab with multiple virtual machines running",
+        "Drinks way too much coffee while coding",
+        "Once stayed up all night fixing a server issue",
+        "Believes that the best code is written after a good gym session"
+      ]
+    },
+    "chess": {
+      "title": "♟ Chess Tip:",
+      "tips": [
+        "Control the center (e4, d4, e5, d5) - it's the key to chess dominance!",
+        "Develop your knights and bishops early - don't move the same piece twice in the opening!",
+        "Castle your king to safety - usually within the first 10 moves!",
+        "Think before you move: 'When you see a good move, look for a better one!' - Emanuel Lasker",
+        "Protect your queen but don't rely on her too early in the game!",
+        "Forks are powerful - knights are especially good at creating forks!",
+        "Always check your opponent's threats before making your move!",
+        "Endgame tip: Activate your king - it's a strong piece in the endgame!"
+      ]
+    },
+    "matrix": {
+      "set": "Matrix rain intensity set to {percent}%",
+      "invalid": "Invalid intensity. Usage: matrix [0-100]"
+    },
+    "rainbow": {
+      "activated": "Rainbow cube mode activated! 🌈",
+      "deactivated": "Rainbow cube mode deactivated! 🌈"
+    }
   }
 }

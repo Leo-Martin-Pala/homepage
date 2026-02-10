@@ -129,7 +129,7 @@ export default function Navigation() {
                 <button
                   onClick={handleSoundToggle}
                   className="p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                  aria-label={soundEnabled ? 'Mute sounds' : 'Enable sounds'}
+                  aria-label={soundEnabled ? t('muteSound') : t('enableSound')}
                 >
                   {soundEnabled ? (
                     <Volume2 size={20} className="text-sage-dark dark:text-sage" />
@@ -143,8 +143,8 @@ export default function Navigation() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="relative p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                  aria-label="View achievements"
-                  title="Achievements"
+                  aria-label={t('viewAchievements')}
+                  title={t('achievements')}
                 >
                   <Trophy size={20} className="text-warm-gold" />
                   {/* Achievement Count Badge */}
@@ -164,7 +164,7 @@ export default function Navigation() {
               <button
                 onClick={handleSoundToggle}
                 className="p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                aria-label={soundEnabled ? 'Mute sounds' : 'Enable sounds'}
+                aria-label={soundEnabled ? t('muteSound') : t('enableSound')}
               >
                 {soundEnabled ? (
                   <Volume2 size={20} className="text-sage-dark dark:text-sage" />
@@ -178,7 +178,7 @@ export default function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="relative p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                aria-label="View achievements"
+                aria-label={t('viewAchievements')}
               >
                 <Trophy size={20} className="text-warm-gold" />
                 {mounted && unlockedAchievements.length > 0 && (
@@ -193,7 +193,7 @@ export default function Navigation() {
                   setMobileMenuOpen(!mobileMenuOpen);
                 }}
                 className="p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                aria-label="Toggle menu"
+                aria-label={t('toggleMenu')}
               >
                 {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

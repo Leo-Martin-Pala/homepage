@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { useTransition } from 'react';
 import { motion } from 'framer-motion';
@@ -18,6 +18,7 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const { incrementLanguageSwitches } = useAchievements();
+  const t = useTranslations('languageSwitcher');
 
   const toggleLanguage = () => {
     const newLocale = locale === 'en' ? 'et' : 'en';
@@ -39,8 +40,8 @@ export function LanguageSwitcher() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-brown dark:border-cream bg-cream dark:bg-brown-dark text-brown dark:text-cream font-medium text-sm transition-colors disabled:opacity-50"
-      aria-label={`Switch to ${locale === 'en' ? 'Estonian' : 'English'}`}
-      title={`Switch to ${locale === 'en' ? 'Estonian' : 'English'}`}
+      aria-label={t('switchTo')}
+      title={t('switchTo')}
     >
       <Globe className="w-4 h-4" />
       <span>{languages[locale as 'en' | 'et'].label}</span>

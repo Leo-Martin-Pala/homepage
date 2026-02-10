@@ -43,11 +43,11 @@ export default function Footer() {
           className="flex justify-center items-center gap-4 mt-4"
         >
           <p className="text-brown/50 dark:text-cream/60 text-xs">
-            Clicks: {totalClicks} {totalClicks > 0 && totalClicks < 10 && "Keep clicking!"}
+            {t('clicks', { count: totalClicks })} {totalClicks > 0 && totalClicks < 10 && t('keepClicking')}
           </p>
           <span className="text-brown/30 dark:text-cream/40">|</span>
           <p className="text-brown/50 dark:text-cream/60 text-xs">
-            Achievements: {unlockedAchievements.length}
+            {t('achievementsCount', { count: unlockedAchievements.length })}
           </p>
         </motion.div>
       </div>
