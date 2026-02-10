@@ -124,7 +124,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Get to know the person behind the pixels. I'm a developer who believes that technology should feel warm and human.",
+    "description": "Get to know the person behind the pixels. Currently learning the 'how' so I can build the 'why'.",
     "greeting": "Hello! I'm Leo-Martin",
     "bio1": "I'm a third year Informatics student at University of Tartu. My interest in Data Science and software development was sparked by the Generative AI explosion in 2022. Since then, I have been experimenting with how these technologies work under the hood.",
     "bio2": "I enjoy building personal projects to learn new tools. Recently, I developed an interactive voice-agent using Python, and an LLM-powered chess bot using Vue.js. I often leverage AI tools to accelerate my own coding and learning process.",
@@ -133,15 +133,35 @@
       "title": "Skills & Technologies",
       "development": {
         "title": "Development & Languages",
-        "skills": ["Python", "Java", "JavaScript", "HTML/CSS", "Vue.js", "Node.js"]
+        "skills": [
+          "Python",
+          "Java",
+          "JavaScript",
+          "HTML/CSS",
+          "Vue.js",
+          "Node.js"
+        ]
       },
       "cloud": {
         "title": "Cloud & Infrastructure",
-        "skills": ["Linux", "Docker", "Git", "Azure", "Proxmox", "Jira/Confluence"]
+        "skills": [
+          "Linux",
+          "Docker",
+          "Git",
+          "Azure",
+          "Proxmox",
+          "Jira/Confluence"
+        ]
       },
       "ai": {
         "title": "Data Science & AI",
-        "skills": ["Jupyter Notebooks", "LLM Integration", "Machine Learning", "SQL", "Data Analysis"]
+        "skills": [
+          "Jupyter Notebooks",
+          "LLM Integration",
+          "Machine Learning",
+          "SQL",
+          "Data Analysis"
+        ]
       }
     },
     "trainings": {
@@ -155,7 +175,12 @@
     },
     "beyondCode": {
       "title": "Beyond Code",
-      "interests": ["Gym", "Books", "Self-Development", "Linux"]
+      "interests": [
+        "Gym",
+        "Books",
+        "Self-Development",
+        "Linux"
+      ]
     },
     "hobbies": {
       "title": "When I'm Not Coding",
@@ -176,6 +201,52 @@
       "growth": {
         "title": "Personal Growth",
         "description": "I always strive to develop both professionally and personally. Working out, reading, and seeking new challenges are part of my routine."
+      }
+    },
+    "timeline": {
+      "title": "My Journey",
+      "education": {
+        "title": "Education",
+        "university": "University of Tartu – Informatics BSc (4.71 GPA)",
+        "universityDate": "2023 – Present",
+        "highSchool": "Põlva Gümnaasium (Silver Medal)",
+        "highSchoolDate": "2020 – 2023"
+      },
+      "experience": {
+        "title": "Work Experience",
+        "lhv": {
+          "role": "LHV Pank – IT Administration Intern",
+          "date": "Jun – Aug 2025",
+          "description": "Providing internal IT support, hardware configuration and maintenance, working with Jira/Confluence."
+        },
+        "varbuse": {
+          "role": "Varbuse Teemaja – Service Worker",
+          "date": "Jul – Aug 2024",
+          "description": "Customer service in varying workload environments; quick and efficient action while maintaining calm during unexpected peak loads."
+        },
+        "chess": {
+          "role": "Põlva Jakobi Kool – Chess Teacher",
+          "date": "Jan – May 2023",
+          "description": "Explaining complex topics and conducting lessons for youth."
+        }
+      },
+      "volunteer": {
+        "title": "Volunteer Work",
+        "ees": {
+          "role": "EÜS Põhjala – House Elder (Majavanem)",
+          "date": "2026 Spring",
+          "description": "Responsible for society premises maintenance and cleaning schedule. Previously served as Archivist."
+        },
+        "cyber": {
+          "role": "Kaitseliidu Küberkaitseüksus",
+          "date": "2023 – Present",
+          "description": "Participating in exercises, cybersecurity training and exercises."
+        },
+        "mentor": {
+          "role": "TÜ Mentorgrupi – Mentor",
+          "date": "Fall 2024",
+          "description": "Supporting first-year students in starting their studies. Organizing events."
+        }
       }
     }
   },
@@ -199,7 +270,8 @@
       },
       "bitcoin": {
         "title": "Bitcoin Price Prediction",
-        "description": "Data science project that uses global events data (GDELT dataset) to predict Bitcoin price movements, applying machine learning models."
+        "description": "Data science project that uses global events data (GDELT dataset) to predict Bitcoin price movements, applying machine learning models.",
+        "team": "Team: Osvald Nigola, Leo-Martin Pala"
       },
       "openwebui": {
         "title": "OpenWebUI + LiteLLM API",
@@ -208,6 +280,11 @@
       "server": {
         "title": "Dell PowerEdge R610 Server",
         "description": "Self-configured server: iDRAC updating, testing Windows Server and Proxmox, RAID configuration, running virtual machines."
+      },
+      "undermarch": {
+        "title": "Undermarch",
+        "description": "Strategic dungeon defense game where you build traps, command troops, and redesign your layout to withstand hero parties.",
+        "team": "Team: Osvald Nigola, Leo-Martin Pala, Joosep Podekrat, Anna Liisa Nurm, Katarina Podekrat"
       }
     },
     "technologies": {
@@ -246,8 +323,7 @@
       "title": "Find Me Online",
       "github": "GitHub",
       "linkedin": "LinkedIn"
-    },
-    "footer": "Write to me if you'd like to collaborate or just say hi!"
+    }
   },
   "garden": {
     "title": "Digital Garden",

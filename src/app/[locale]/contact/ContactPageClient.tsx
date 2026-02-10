@@ -289,19 +289,6 @@ export default function ContactPageClient() {
           </form>
         </motion.div>
       </div>
-
-      {/* Fun Footer Note */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mt-16 text-center"
-      >
-        <p className="text-brown-light dark:text-cream/70 text-sm">
-          {t('footer')}
-        </p>
-      </motion.div>
     </div>
   );
 }

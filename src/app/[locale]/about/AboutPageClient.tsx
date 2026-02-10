@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Coffee, BookOpen, Dumbbell, Terminal } from 'lucide-react';
+import { MapPin, Coffee, BookOpen, Dumbbell, Terminal, Briefcase, GraduationCap, Heart, Calendar } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSound } from '@/components/SoundContext';
 import Image from 'next/image';
@@ -36,6 +36,35 @@ export default function AboutPageClient() {
   ];
 
   const trainings = t.raw('trainings.items');
+
+  const timelineItems = [
+    {
+      category: 'education',
+      icon: GraduationCap,
+      items: [
+        { title: t('timeline.education.university'), date: t('timeline.education.universityDate'), description: '', color: 'sage' },
+        { title: t('timeline.education.highSchool'), date: t('timeline.education.highSchoolDate'), description: '', color: 'dusty-rose' },
+      ],
+    },
+    {
+      category: 'experience',
+      icon: Briefcase,
+      items: [
+        { title: t('timeline.experience.lhv.role'), date: t('timeline.experience.lhv.date'), description: t('timeline.experience.lhv.description'), color: 'sage' },
+        { title: t('timeline.experience.varbuse.role'), date: t('timeline.experience.varbuse.date'), description: t('timeline.experience.varbuse.description'), color: 'dusty-rose' },
+        { title: t('timeline.experience.chess.role'), date: t('timeline.experience.chess.date'), description: t('timeline.experience.chess.description'), color: 'warm-gold' },
+      ],
+    },
+    {
+      category: 'volunteer',
+      icon: Heart,
+      items: [
+        { title: t('timeline.volunteer.ees.role'), date: t('timeline.volunteer.ees.date'), description: t('timeline.volunteer.ees.description'), color: 'sage' },
+        { title: t('timeline.volunteer.cyber.role'), date: t('timeline.volunteer.cyber.date'), description: t('timeline.volunteer.cyber.description'), color: 'dusty-rose' },
+        { title: t('timeline.volunteer.mentor.role'), date: t('timeline.volunteer.mentor.date'), description: t('timeline.volunteer.mentor.description'), color: 'warm-gold' },
+      ],
+    },
+  ];
 
   return (
     <div className="px-4 py-12 max-w-4xl mx-auto">
@@ -87,6 +116,65 @@ export default function AboutPageClient() {
               {t('bio3')}
             </p>
           </div>
+        </div>
+      </motion.section>
+
+      {/* Timeline */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-12"
+      >
+        <h2 className="text-2xl font-bold text-brown dark:text-cream mb-8 flex items-center gap-2">
+          <span className="w-2 h-2 bg-sage rounded-full"></span>
+          {t('timeline.title')}
+        </h2>
+
+        <div className="space-y-8">
+          {timelineItems.map((category, catIndex) => {
+            const Icon = category.icon;
+            return (
+              <div key={category.category} className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-10 h-10 rounded-lg bg-${category.items[0].color} flex items-center justify-center`}>
+                    <Icon className="text-white" size={20} />
+                  </div>
+                  <h3 className="text-lg font-bold text-brown dark:text-cream">
+                    {t(`timeline.${category.category}.title`)}
+                  </h3>
+                </div>
+
+                <div className="ml-5 pl-8 border-l-2 border-sage/30 dark:border-sage/20 space-y-6">
+                  {category.items.map((item, index) => (
+                    <motion.div
+                      key={item.title}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: (catIndex * 3 + index) * 0.1 }}
+                      className="relative"
+                    >
+                      <div className={`absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-${item.color} border-4 border-cream dark:border-brown-dark`}></div>
+                      <div className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                          <h4 className="font-bold text-brown dark:text-cream">{item.title}</h4>
+                          <span className="text-sm text-brown-light dark:text-cream/60 flex items-center gap-1">
+                            <Calendar size={14} />
+                            {item.date}
+                          </span>
+                        </div>
+                        {item.description && (
+                          <p className="text-sm text-brown-light dark:text-cream/70">{item.description}</p>
+                        )}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </motion.section>
 

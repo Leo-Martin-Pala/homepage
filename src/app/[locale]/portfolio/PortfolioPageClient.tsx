@@ -21,43 +21,56 @@ export default function PortfolioPageClient() {
     trackSocialProfile();
   };
 
-  const projects = [
-    {
-      title: t('projects.chess.title'),
-      description: t('projects.chess.description'),
-      tags: ['Vue.js', 'Node.js', 'Express.js', 'LLM APIs'],
-      link: '#',
-      github: 'https://github.com/Leo-Martin-Pala',
-      image: '/images/llm-chess-website.webp',
-      color: 'sage',
-      featured: true,
-    },
+  interface Project {
+    title: string;
+    description: string;
+    tags: string[];
+    link: string;
+    github: string;
+    image: string;
+    color: string;
+    featured: boolean;
+    team?: string;
+  }
+
+  const projects: Project[] = [
     {
       title: t('projects.voiceAgent.title'),
       description: t('projects.voiceAgent.description'),
       tags: ['Python', 'LiveKit', 'LLM', 'Weather API'],
-      link: '#',
-      github: 'https://github.com/Leo-Martin-Pala',
+      link: '',
+      github: 'https://github.com/Leo-Martin-Pala/ai-voice-agent',
       image: '/images/weather.webp',
       color: 'dusty-rose',
+      featured: true,
+    },
+    {
+      title: t('projects.chess.title'),
+      description: t('projects.chess.description'),
+      tags: ['Vue.js', 'Node.js', 'Express.js', 'LLM APIs'],
+      link: 'https://chess.leomartin.me',
+      github: 'https://github.com/Leo-Martin-Pala/llm-chess',
+      image: '/images/llm-chess-website.webp',
+      color: 'sage',
       featured: true,
     },
     {
       title: t('projects.bitcoin.title'),
       description: t('projects.bitcoin.description'),
       tags: ['Python', 'scikit-learn', 'ML', 'Data Science'],
-      link: '#',
-      github: 'https://github.com/Leo-Martin-Pala',
+      link: '',
+      github: 'https://github.com/Ozzuke/GDELT-BTC',
       image: '/images/GDELT-BTC-prediction.webp',
       color: 'warm-gold',
       featured: false,
+      team: t('projects.bitcoin.team'),
     },
     {
       title: t('projects.openwebui.title'),
       description: t('projects.openwebui.description'),
       tags: ['LiteLLM', 'OpenWebUI', 'Docker', 'Azure'],
-      link: '#',
-      github: 'https://github.com/Leo-Martin-Pala',
+      link: 'https://chat.leomartin.me',
+      github: '',
       image: '/images/openwebui-litellm.png',
       color: 'terracotta',
       featured: false,
@@ -66,11 +79,22 @@ export default function PortfolioPageClient() {
       title: t('projects.server.title'),
       description: t('projects.server.description'),
       tags: ['Proxmox', 'Linux', 'Virtualization', 'RAID'],
-      link: '#',
-      github: '#',
+      link: '',
+      github: '',
       image: '/images/proxmox-r610-server.webp',
       color: 'sage',
       featured: false,
+    },
+    {
+      title: t('projects.undermarch.title'),
+      description: t('projects.undermarch.description'),
+      tags: ['Unity', 'C#', 'Game Development'],
+      link: 'https://chadenprojects.itch.io/undermarch',
+      github: 'https://github.com/JoosepPodekrat/Undermarch',
+      image: '/images/undermarch-game.webp',
+      color: 'warm-gold',
+      featured: false,
+      team: t('projects.undermarch.team'),
     },
   ];
 
@@ -143,26 +167,30 @@ export default function PortfolioPageClient() {
                   </div>
 
                   <div className="flex gap-3">
-                    <a
-                      href={project.link}
-                      onClick={handleClick}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pixel-btn inline-flex items-center gap-2 text-sm"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.github}
-                      onClick={handleGitHubClick}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
-                    >
-                      <Github size={16} />
-                      Code
-                    </a>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        onClick={handleClick}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pixel-btn inline-flex items-center gap-2 text-sm"
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        onClick={handleGitHubClick}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
+                      >
+                        <Github size={16} />
+                        Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -205,6 +233,11 @@ export default function PortfolioPageClient() {
               </div>
 
               <h3 className="text-xl font-bold text-brown dark:text-cream mb-2">{project.title}</h3>
+              {project.team && (
+                <p className="text-brown-light dark:text-cream/60 text-xs mb-2">
+                  {project.team}
+                </p>
+              )}
               <p className="text-brown-light dark:text-cream/70 text-sm mb-4 flex-grow">{project.description}</p>
 
               <div className="flex flex-wrap gap-2 mb-4">
@@ -216,27 +249,31 @@ export default function PortfolioPageClient() {
               </div>
 
               <div className="flex gap-2">
-                <a
-                  href={project.link}
-                  onClick={handleClick}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 pixel-btn text-center text-sm py-2"
-                >
-                  <span className="flex items-center justify-center gap-1">
-                    Demo <ArrowUpRight size={14} />
-                  </span>
-                </a>
-                <a
-                  href={project.github}
-                  onClick={handleGitHubClick}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
-                  aria-label="View code"
-                >
-                  <Github size={20} />
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    onClick={handleClick}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 pixel-btn text-center text-sm py-2"
+                  >
+                    <span className="flex items-center justify-center gap-1">
+                      Demo <ArrowUpRight size={14} />
+                    </span>
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    onClick={handleGitHubClick}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
+                    aria-label="View code"
+                  >
+                    <Github size={20} />
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}

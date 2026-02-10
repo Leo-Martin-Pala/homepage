@@ -124,24 +124,44 @@
   },
   "about": {
     "title": "Minust",
-    "description": "Tutvu inimesega pikslite taga. Olen arendaja, kes usub, et tehnoloogia peaks tunduma soe ja inimlik.",
+    "description": "Tutvu inimesega pikslite taga. Hetkel õpin 'kuidas', et saaks ehitada 'miks'.",
     "greeting": "Tere! Olen Leo-Martin",
-    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai alguse generatiivse AI plahvatuslikust kasvust 2022. aastal. Sellest ajast olen katsetanud, kuidas need tehnoloogiad töötavad.",
+    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai alguse generatiivse AI plahvatuslikust kasvust 2022. aastast. Sellest ajast olen katsetanud, kuidas need tehnoloogiad töötavad.",
     "bio2": "Naudin isiklike projektide ehitamist uute tööriistade õppimiseks. Hiljuti arendasin Pythoni kasutades interaktiivse kõneagendi ja Vue.js abil LLM-toelise malebotti. Kasutan sageli AI tööriistu oma kodeerimise ja õppimise kiirendamiseks.",
     "bio3": "IT õpingute kõrval naudin treeningut, lugemist ja enesearengut. Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina. Otsin hetkel praktikakohta andmeteaduses või AI inseneerimises, et õppida kogenud arendajatelt ja lahendada reaalseid probleeme.",
     "skills": {
       "title": "Oskused ja tehnoloogiad",
       "development": {
         "title": "Arendus ja keeled",
-        "skills": ["Python", "Java", "JavaScript", "HTML/CSS", "Vue.js", "Node.js"]
+        "skills": [
+          "Python",
+          "Java",
+          "JavaScript",
+          "HTML/CSS",
+          "Vue.js",
+          "Node.js"
+        ]
       },
       "cloud": {
         "title": "Pilv ja infrastruktuur",
-        "skills": ["Linux", "Docker", "Git", "Azure", "Proxmox", "Jira/Confluence"]
+        "skills": [
+          "Linux",
+          "Docker",
+          "Git",
+          "Azure",
+          "Proxmox",
+          "Jira/Confluence"
+        ]
       },
       "ai": {
         "title": "Andmeteadus ja AI",
-        "skills": ["Jupyter Notebooks", "LLM integratsioon", "Masinõpe", "SQL", "Andmeanalüüs"]
+        "skills": [
+          "Jupyter Notebooks",
+          "LLM integratsioon",
+          "Masinõpe",
+          "SQL",
+          "Andmeanalüüs"
+        ]
       }
     },
     "trainings": {
@@ -155,7 +175,12 @@
     },
     "beyondCode": {
       "title": "Koodi taga",
-      "interests": ["Treening", "Raamatud", "Eneseareng", "Linux"]
+      "interests": [
+        "Treening",
+        "Raamatud",
+        "Eneseareng",
+        "Linux"
+      ]
     },
     "hobbies": {
       "title": "Kui ma ei kodeeri",
@@ -175,7 +200,53 @@
       },
       "growth": {
         "title": "Isiklik kasv",
-        "description": "Püüan alati areneda nii professionaalselt kui ka isiklikult. Treening, lugemine ja uute väljakutsete otsimine on minu jaesed."
+        "description": "Püüan alati areneda nii professionaalselt kui ka isiklikult. Treening, lugemine ja uute väljakutsete otsimine on minu jaoks oluline."
+      }
+    },
+    "timeline": {
+      "title": "Minu teekond",
+      "education": {
+        "title": "Haridus",
+        "university": "Tartu Ülikool – informaatika BSc (4.71 GPA)",
+        "universityDate": "2023 – Tänaseni",
+        "highSchool": "Põlva Gümnaasium (hõbemedal)",
+        "highSchoolDate": "2020 – 2023"
+      },
+      "experience": {
+        "title": "Töökogemus",
+        "lhv": {
+          "role": "LHV Pank – IT-haldus (praktika)",
+          "date": "06.2025 – 08.2025",
+          "description": "Sisemise IT-kasutajatoe pakkumine, riistvara seadistamine ja hooldus. Atlassiani tööriistade kasutamine."
+        },
+        "varbuse": {
+          "role": "Varbuse teemaja – Teenindaja",
+          "date": "07.2024 – 08.2024",
+          "description": "Klientide teenindamine varieeruva töökoormusega. Kiire ja operatiivne tegutsemine ootamatute tippkoormuste ajal."
+        },
+        "chess": {
+          "role": "Põlva Jakobi Kool – Maleõpetaja",
+          "date": "01.2023 – 05.2023",
+          "description": "Keeruliste teemade selgitamine ja õppetöö läbiviimine noortele."
+        }
+      },
+      "volunteer": {
+        "title": "Vabatahtlik töö",
+        "ees": {
+          "role": "EÜS Põhjala – Majavanem",
+          "date": "2026 kevad",
+          "description": "Vastutan seltsi ruumide korras hoidmise ja koristusgraafiku eest. Varasemalt arhivaari roll."
+        },
+        "cyber": {
+          "role": "Kaitseliidu Küberkaitseüksus – Liige",
+          "date": "2023 – ...",
+          "description": "Osalemine õppustel ja küberkaitsealastel koolitustel."
+        },
+        "mentor": {
+          "role": "TÜ Mentorgrupi – Mentor",
+          "date": "2024 sügis",
+          "description": "Esmakursuslaste toetamine õpingute alustamisel. Ürituste korraldamine."
+        }
       }
     }
   },
@@ -199,7 +270,8 @@
       },
       "bitcoin": {
         "title": "Bitcoini Hinnaprognoos",
-        "description": "Andmeteaduse projekt, mis kasutab globaalsete sündmuste andmeid (GDELT andmestik) Bitcoini hinnaliikumiste ennustamiseks, rakendades masinõppe mudeleid."
+        "description": "Andmeteaduse projekt, mis kasutab globaalsete sündmuste andmeid (GDELT andmestik) Bitcoini hinnaliikumiste ennustamiseks, rakendades masinõppe mudeleid.",
+        "team": "Meeskond: Osvald Nigola, Leo-Martin Pala"
       },
       "openwebui": {
         "title": "OpenWebUI + LiteLLM API",
@@ -208,6 +280,11 @@
       "server": {
         "title": "Dell PowerEdge R610 Server",
         "description": "Omanikkonfigureeritud server: iDRAC uuendamine, Windows Serveri ja Proxmoxi katsetamine, RAID seadistamine, virtuaalmasinate käitamine."
+      },
+      "undermarch": {
+        "title": "Undermarch",
+        "description": "Strateegiline koobasõda mäng, kus ehitate lõkse, juhate vägesid ja kujundate oma paigutust, et vastu pidada kangelasterakkudele.",
+        "team": "Meeskond: Osvald Nigola, Leo-Martin Pala, Joosep Podekrat, Anna Liisa Nurm, Katarina Podekrat"
       }
     },
     "technologies": {
@@ -246,8 +323,7 @@
       "title": "Leia mind veebis",
       "github": "GitHub",
       "linkedin": "LinkedIn"
-    },
-    "footer": "Kirjuta mulle, kui soovid koostööd teha või lihtsalt tere öelda!"
+    }
   },
   "garden": {
     "title": "Digitaalne Aed",
