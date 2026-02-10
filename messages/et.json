@@ -111,10 +111,10 @@
       "fingerFatigueDesc": "Klõpsa 1000 korda",
       "worldTraveler": "Maailmarändur",
       "worldTravelerDesc": "Külasta kõiki lehti",
-      "bilingual": "Kakskeelne",
+      "bilingual": "Kahekeelne",
       "bilingualDesc": "Vaheta keelt kaks korda",
       "themeShifter": "Teema Vahetaja",
-      "themeShifterDesc": "Lülita tumedat/valget režiimi 5 korda",
+      "themeShifterDesc": "Lülita tumedat/heledat režiimi 5 korda",
       "soundCheck": "Helikontroll",
       "soundCheckDesc": "Lülita heli sisse/välja 10 korda",
       "networker": "Võrgustaja",
@@ -190,7 +190,7 @@
     "hobbies": {
       "title": "Kui ma parajasti ei arenda",
       "description1": "Käin jõusaalis ja teen erinevaid treeninguid. Loen palju - nii ilukirjandust kui ka erialast kirjandust. Püüan alati õppida uusi asju ja areneda.",
-      "description2": "Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina. See on andnud mulle väärtuslikke juhtimiskogemusi.",
+      "description2": "Olen aktiivne EÜS Põhjalas, kus olen teeninud majavanema ja arhivaarina. See on andnud mulle väärtuslikke juhtimiskogemusi.",
       "description3": "Usun produktiivsuse ja puhkuse tasakaalu olulisusesse ja püüan seda oma igapäevaelus hoida."
     },
     "values": {
@@ -255,6 +255,12 @@
       }
     }
   },
+  "easterEggs": {
+    "konamiTitle": "Leidsid koodi!",
+    "konamiDescription": "Konami kood on aktiveeritud. Sa oled nüüd ametlikult vinge!",
+    "secretModeActive": "🌟 Salajane režiim aktiivne",
+    "clickToClose": "× klõpsa sulgemiseks"
+  },
   "portfolio": {
     "title": "Minu portfoolio",
     "description": "Projektide kollektsioon, millega olen töötanud. Igaüks õpetas mulle midagi uut ja aitas arengus.",
@@ -294,6 +300,12 @@
     },
     "technologies": {
       "title": "Tehnoloogiad ja oskused"
+    },
+    "buttons": {
+      "liveDemo": "Demo vaade",
+      "code": "Kood",
+      "demo": "Demo",
+      "viewCode": "Vaata koodi"
     }
   },
   "contact": {
@@ -343,7 +355,7 @@
       "Isiklikud projektid",
       "Raamatute märkmed ja mõtted",
       "Õppematerjalid",
-      "Suvalised mõtted"
+      "Juhuslikud mõtted"
     ],
     "questions": "Küsimusi või soovid millegi üle arutada?",
     "getInTouch": "Võta ühendust"
@@ -396,11 +408,11 @@
         "Ehitasin LLM maleboti, mis mängib keelemudelite vastu",
         "Tegin andmeteaduse projekti Bitcoini hindade ennustamiseks globaalsete sündmuste abil",
         "Armastan katsetada uusi AI tööriistu ja tehnoloogiaid",
-        "Oskab öelda pi esimesed 100 kohta... tegelikult ei oska!",
-        "Omab kodulaborit mitme virtuaalmasinaga",
-        "Joob progemise ajal liiga palju kohvi",
-        "Jäi kord terve öö üles serveriprobleemi lahendamiseks",
-        "Usub, et parim kood kirjutatakse pärast head trenni"
+        "Oskan öelda pi esimesed 100 kohta... tegelikult ei oska!",
+        "Oman kodulaborit mitme virtuaalmasinaga",
+        "Joon progemise ajal liiga palju kohvi",
+        "Jäin kord terve öö üles serveriprobleemi lahendamiseks",
+        "Usun, et parim kood kirjutatakse pärast head trenni"
       ]
     },
     "chess": {
@@ -410,7 +422,7 @@
         "Arenda ratsud ja odad varakult – ära liiguta avangus sama nuppu kaks korda!",
         "Vangerda oma kuningas turvaliselt – tavaliselt esimese 10 käigu jooksul!",
         "Mõtle enne käiku: 'Kui näed head käiku, otsi paremat!' – Emanuel Lasker",
-        "Kaitse oma lippu, aga ära too teda mängu liiga vara!",
+        "Kaitse oma lippu, aga ära too seda mängu liiga vara!",
         "Kahvlid on võimsad – ratsud on eriti head kahvlite loomiseks!",
         "Kontrolli alati vastase ähvardusi enne oma käigu tegemist!",
         "Lõppmängu nõuanne: aktiveeri oma kuningas – ta on lõppmängus tugev nupp!"

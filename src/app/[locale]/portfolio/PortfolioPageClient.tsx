@@ -176,7 +176,7 @@ export default function PortfolioPageClient() {
                         className="pixel-btn inline-flex items-center gap-2 text-sm"
                       >
                         <ExternalLink size={16} />
-                        Live Demo
+                        {t('buttons.liveDemo')}
                       </a>
                     )}
                     {project.github && (
@@ -188,7 +188,7 @@ export default function PortfolioPageClient() {
                         className="inline-flex items-center gap-2 px-4 py-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
                       >
                         <Github size={16} />
-                        Code
+                        {t('buttons.code')}
                       </a>
                     )}
                   </div>
@@ -258,7 +258,7 @@ export default function PortfolioPageClient() {
                     className="flex-1 pixel-btn text-center text-sm py-2"
                   >
                     <span className="flex items-center justify-center gap-1">
-                      Demo <ArrowUpRight size={14} />
+                      {t('buttons.demo')} <ArrowUpRight size={14} />
                     </span>
                   </a>
                 )}
@@ -269,7 +269,7 @@ export default function PortfolioPageClient() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
-                    aria-label="View code"
+                    aria-label={t('buttons.viewCode')}
                   >
                     <Github size={20} />
                   </a>

@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback, createContext, useContext } from 'rea
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSound } from './SoundContext';
 import { useAchievements } from './AchievementContext';
+import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 
 // Lazy load heavy components that are only shown in secret mode
@@ -52,6 +53,7 @@ export function useEasterEggs() {
 export default function EasterEggs({ children }: { children: React.ReactNode }) {
   const { playSound, soundEnabled } = useSound();
   const achievements = useAchievements();
+  const t = useTranslations('easterEggs');
   const [konamiProgress, setKonamiProgress] = useState(0);
   const [konamiActivated, setKonamiActivated] = useState(false);
   const [clickCount, setClickCount] = useState(0);
@@ -219,10 +221,10 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
                 🎮
               </motion.div>
               <h2 className="text-2xl font-bold text-brown mb-2">
-                You found the code!
+                {t('konamiTitle')}
               </h2>
               <p className="text-brown-light">
-                The Konami code has been activated. You are now officially awesome!
+                {t('konamiDescription')}
               </p>
             </div>
           </motion.div>
@@ -242,9 +244,9 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
             whileTap={{ scale: 0.95 }}
           >
             <div className="pixel-badge bg-warm-gold text-brown flex items-center gap-2">
-              <span>🌟 Secret Mode Active</span>
+              <span>{t('secretModeActive')}</span>
               <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs ml-1">
-                × click to close
+                {t('clickToClose')}
               </span>
             </div>
           </motion.div>

@@ -190,7 +190,7 @@
     "hobbies": {
       "title": "When I'm Not Coding",
       "description1": "I go to the gym and do various workouts. I read a lot - both fiction and professional literature. I'm always trying to learn new things and develop myself.",
-      "description2": "I'm active in the academic organization Põhjala (EÜS Põhjala) where I've served as House Elder and Archivist. This has given me valuable leadership experience.",
+      "description2": "I'm active in EÜS Põhjala where I've served as House Elder and Archivist. This has given me valuable leadership experience.",
       "description3": "I believe in the importance of balancing productivity and rest and try to maintain this in my daily life."
     },
     "values": {
@@ -255,6 +255,12 @@
       }
     }
   },
+  "easterEggs": {
+    "konamiTitle": "You found the code!",
+    "konamiDescription": "The Konami code has been activated. You are now officially awesome!",
+    "secretModeActive": "🌟 Secret Mode Active",
+    "clickToClose": "× click to close"
+  },
   "portfolio": {
     "title": "My Portfolio",
     "description": "A collection of projects I've worked on. Each one taught me something new and helped me grow as a developer.",
@@ -294,6 +300,12 @@
     },
     "technologies": {
       "title": "Technologies & Skills"
+    },
+    "buttons": {
+      "liveDemo": "Live Demo",
+      "code": "Code",
+      "demo": "Demo",
+      "viewCode": "View code"
     }
   },
   "contact": {
@@ -410,7 +422,7 @@
         "Develop your knights and bishops early - don't move the same piece twice in the opening!",
         "Castle your king to safety - usually within the first 10 moves!",
         "Think before you move: 'When you see a good move, look for a better one!' - Emanuel Lasker",
-        "Protect your queen but don't rely on her too early in the game!",
+        "Protect your queen but don't bring her out too early in the game!",
         "Forks are powerful - knights are especially good at creating forks!",
         "Always check your opponent's threats before making your move!",
         "Endgame tip: Activate your king - it's a strong piece in the endgame!"
