@@ -44,12 +44,7 @@ ${t('help.typeCommand')}`;
 
       case 'whoami': {
         const facts = t.raw('whoami.facts') as string[];
-        return `Leo-Martin Pala
-  - ${t('whoami.subtitle')}
-  - ${t('whoami.role')}
-  
-${t('whoami.funFact')}
-${facts[Math.floor(Math.random() * facts.length)]}`;
+        return facts[Math.floor(Math.random() * facts.length)];
       }
 
       case 'chess': {
@@ -67,7 +62,7 @@ ${facts[Math.floor(Math.random() * facts.length)]}`;
             return t('matrix.invalid');
           }
         }
-        
+
         const newIntensity = eggs.matrixIntensity === 15 ? 40 : 15;
         eggs.setMatrixIntensity(newIntensity);
         return t('matrix.set', { percent: newIntensity });
