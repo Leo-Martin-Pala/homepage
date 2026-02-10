@@ -6,79 +6,12 @@ import { Terminal as TerminalIcon, X, Minimize2, Maximize2 } from 'lucide-react'
 import { useEasterEggs } from './EasterEggs';
 import { useSound } from './SoundContext';
 
+
 interface CommandHistory {
   command: string;
   output: string;
   isError?: boolean;
 }
-
-const COMMANDS: Record<string, string | ((eggs: ReturnType<typeof useEasterEggs>) => string)> = {
-  help: `Available commands:
-  help       - Show this help message
-  matrix     - Toggle matrix rain intensity
-  rainbow    - Toggle rainbow cube mode  
-  chess      - Get a random chess tip
-  whoami     - Learn about Leo
-  clear      - Clear terminal
-  exit       - Close terminal
-  
-Type any command to execute it...`,
-
-  whoami: () => {
-    const facts = [
-      "Started programming at age 7 with JavaScript!",
-      "Built a voice agent that speaks Estonian and tells weather",
-      "Self-hosted an AI platform with access to 280+ LLMs",
-      "Configured a Dell PowerEdge R610 server with Proxmox",
-      "Bronze medalist at International Earth Science Olympiad",
-      "Used to teach chess to elementary school kids",
-      "Currently serving as House Elder in academic corporation EÜS Põhjala",
-      "Built an LLM chess bot that plays against language models",
-      "Did a data science project predicting Bitcoin prices using global events",
-      "Loves experimenting with new AI tools and technologies",
-      "Can recite the first 100 digits of pi... just kidding!",
-      "Has a homelab with multiple virtual machines running",
-      "Drinks way too much coffee while coding",
-      "Once stayed up all night fixing a server issue",
-      "Believes that the best code is written after a good gym session"
-    ];
-    return `Leo-Martin Pala
-  - Informatics Student @ University of Tartu
-  - AI Enthusiast & Software Developer
-  
-🎲 Random Fun Fact:
-${facts[Math.floor(Math.random() * facts.length)]}`;
-  },
-
-  chess: () => {
-    const tips = [
-      "Control the center (e4, d4, e5, d5) - it's the key to chess dominance!",
-      "Develop your knights and bishops early - don't move the same piece twice in the opening!",
-      "Castle your king to safety - usually within the first 10 moves!",
-      "Think before you move: 'When you see a good move, look for a better one!' - Emanuel Lasker",
-      "Protect your queen but don't rely on her too early in the game!",
-      "Forks are powerful - knights are especially good at creating forks!",
-      "Always check your opponent's threats before making your move!",
-      "Endgame tip: Activate your king - it's a strong piece in the endgame!"
-    ];
-    return `♟ Chess Tip:\n${tips[Math.floor(Math.random() * tips.length)]}`;
-  },
-
-  matrix: (eggs) => {
-    const newIntensity = eggs.matrixIntensity === 0.15 ? 0.4 : 0.15;
-    eggs.setMatrixIntensity(newIntensity);
-    return `Matrix rain intensity set to ${Math.round(newIntensity * 100)}%`;
-  },
-
-  rainbow: (eggs) => {
-    eggs.setRainbowMode(!eggs.rainbowMode);
-    return `Rainbow cube mode ${!eggs.rainbowMode ? 'activated' : 'deactivated'}! 🌈`;
-  },
-
-  clear: '',
-
-  exit: ''
-};
 
 export default function Terminal() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -91,6 +24,90 @@ export default function Terminal() {
   const eggs = useEasterEggs();
   const { playSound } = useSound();
   const hintTimeoutRef = useRef<NodeJS.Timeout>(null);
+
+  // Terminal commands
+  const getCommandOutput = useCallback((cmd: string, args: string[]): string => {
+    switch (cmd) {
+      case 'help':
+        return `Available commands:
+  help              - Show this help message
+  matrix [0-100]    - Set matrix rain intensity (0-100%)
+  rainbow           - Toggle rainbow cube mode  
+  chess             - Get a random chess tip
+  whoami            - Learn about Leo
+  clear             - Clear terminal
+  exit              - Close terminal
+  
+Type any command to execute it...`;
+
+      case 'whoami': {
+        const facts = [
+          "Started programming at age 7 with JavaScript!",
+          "Built a voice agent that speaks Estonian and tells weather",
+          "Self-hosted an AI platform with access to 280+ LLMs",
+          "Configured a Dell PowerEdge R610 server with Proxmox",
+          "Bronze medalist at International Earth Science Olympiad",
+          "Used to teach chess to elementary school kids",
+          "Currently serving as House Elder in academic corporation EÜS Põhjala",
+          "Built an LLM chess bot that plays against language models",
+          "Did a data science project predicting Bitcoin prices using global events",
+          "Loves experimenting with new AI tools and technologies",
+          "Can recite the first 100 digits of pi... just kidding!",
+          "Has a homelab with multiple virtual machines running",
+          "Drinks way too much coffee while coding",
+          "Once stayed up all night fixing a server issue",
+          "Believes that the best code is written after a good gym session"
+        ];
+        return `Leo-Martin Pala
+  - Informatics Student @ University of Tartu
+  - AI Enthusiast & Software Developer
+  
+🎲 Random Fun Fact:
+${facts[Math.floor(Math.random() * facts.length)]}`;
+      }
+
+      case 'chess': {
+        const tips = [
+          "Control the center (e4, d4, e5, d5) - it's the key to chess dominance!",
+          "Develop your knights and bishops early - don't move the same piece twice in the opening!",
+          "Castle your king to safety - usually within the first 10 moves!",
+          "Think before you move: 'When you see a good move, look for a better one!' - Emanuel Lasker",
+          "Protect your queen but don't rely on her too early in the game!",
+          "Forks are powerful - knights are especially good at creating forks!",
+          "Always check your opponent's threats before making your move!",
+          "Endgame tip: Activate your king - it's a strong piece in the endgame!"
+        ];
+        return `♟ Chess Tip:\n${tips[Math.floor(Math.random() * tips.length)]}`;
+      }
+
+      case 'matrix': {
+        // Check if a percentage argument is provided
+        if (args && args.length > 0) {
+          const percentage = parseInt(args[0], 10);
+          if (!isNaN(percentage) && percentage >= 0 && percentage <= 100) {
+            eggs.setMatrixIntensity(percentage);
+            return `Matrix rain intensity set to ${percentage}%`;
+          } else {
+            return 'Invalid intensity. Usage: matrix [0-100]';
+          }
+        }
+        
+        // Toggle between 15% and 40% if no argument
+        const newIntensity = eggs.matrixIntensity === 15 ? 40 : 15;
+        eggs.setMatrixIntensity(newIntensity);
+        return `Matrix rain intensity set to ${newIntensity}%`;
+      }
+
+      case 'rainbow': {
+        const newMode = !eggs.rainbowMode;
+        eggs.setRainbowMode(newMode);
+        return `Rainbow cube mode ${newMode ? 'activated' : 'deactivated'}! 🌈`;
+      }
+
+      default:
+        return '';
+    }
+  }, [eggs]);
 
   // Typing animation for hint
   useEffect(() => {
@@ -144,40 +161,45 @@ export default function Terminal() {
     }
   }, [isExpanded]);
 
-  const executeCommand = useCallback((cmd: string) => {
-    const trimmedCmd = cmd.trim().toLowerCase();
+  const executeCommand = useCallback((cmdLine: string) => {
+    const trimmedCmdLine = cmdLine.trim().toLowerCase();
+    const parts = trimmedCmdLine.split(/\s+/);
+    const cmd = parts[0];
+    const args = parts.slice(1);
 
-    if (trimmedCmd === 'clear') {
+    if (cmd === 'clear') {
       setHistory([]);
       return;
     }
 
-    if (trimmedCmd === 'exit') {
+    if (cmd === 'exit') {
       eggs.deactivateSecretMode();
       return;
     }
 
-    const commandFunc = COMMANDS[trimmedCmd];
     let output: string;
 
-    if (commandFunc) {
-      if (typeof commandFunc === 'function') {
-        output = commandFunc(eggs);
-      } else {
-        output = commandFunc;
-      }
-      playSound(523.25, 0.05);
-    } else if (trimmedCmd === '') {
-      output = '';
-    } else {
-      output = `Command not found: ${trimmedCmd}\nType 'help' for available commands.`;
-      playSound(300, 0.05);
+    switch (cmd) {
+      case 'help':
+      case 'whoami':
+      case 'chess':
+      case 'matrix':
+      case 'rainbow':
+        output = getCommandOutput(cmd, args);
+        playSound(523.25, 0.05);
+        break;
+      case '':
+        output = '';
+        break;
+      default:
+        output = `Command not found: ${cmd}\nType 'help' for available commands.`;
+        playSound(300, 0.05);
     }
 
     if (output) {
-      setHistory(prev => [...prev, { command: cmd, output }]);
+      setHistory(prev => [...prev, { command: cmdLine, output }]);
     }
-  }, [eggs, playSound]);
+  }, [eggs, getCommandOutput, playSound]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -4,14 +4,21 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSound } from '@/components/SoundContext';
+import { useAchievements } from '@/components/AchievementContext';
 import Image from 'next/image';
 
 export default function PortfolioPageClient() {
   const t = useTranslations('portfolio');
   const { playSound } = useSound();
+  const { trackSocialProfile } = useAchievements();
 
   const handleClick = () => {
     playSound(659.25, 0.1);
+  };
+
+  const handleGitHubClick = () => {
+    handleClick();
+    trackSocialProfile();
   };
 
   const projects = [
@@ -21,7 +28,7 @@ export default function PortfolioPageClient() {
       tags: ['Vue.js', 'Node.js', 'Express.js', 'LLM APIs'],
       link: '#',
       github: 'https://github.com/Leo-Martin-Pala',
-      image: '/images/llm-chess-website.png',
+      image: '/images/llm-chess-website.webp',
       color: 'sage',
       featured: true,
     },
@@ -31,7 +38,7 @@ export default function PortfolioPageClient() {
       tags: ['Python', 'LiveKit', 'LLM', 'Weather API'],
       link: '#',
       github: 'https://github.com/Leo-Martin-Pala',
-      image: '/images/weather.jpg',
+      image: '/images/weather.webp',
       color: 'dusty-rose',
       featured: true,
     },
@@ -41,7 +48,7 @@ export default function PortfolioPageClient() {
       tags: ['Python', 'scikit-learn', 'ML', 'Data Science'],
       link: '#',
       github: 'https://github.com/Leo-Martin-Pala',
-      image: '/images/GDELT-BTC-prediction.jpg',
+      image: '/images/GDELT-BTC-prediction.webp',
       color: 'warm-gold',
       featured: false,
     },
@@ -117,6 +124,8 @@ export default function PortfolioPageClient() {
                     alt={project.title}
                     fill
                     className="object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
 
@@ -124,10 +133,10 @@ export default function PortfolioPageClient() {
                 <div className="flex-1 flex flex-col">
                   <h3 className="text-2xl font-bold text-brown dark:text-cream mb-3">{project.title}</h3>
                   <p className="text-brown-light dark:text-cream/70 mb-4 flex-grow">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="pixel-badge dark:border-cream/30 dark:text-cream/90 text-sm">
+                      <span key={tag} className="pixel-badge dark:border-cream/30 dark:text-brown-dark text-sm">
                         {tag}
                       </span>
                     ))}
@@ -146,7 +155,7 @@ export default function PortfolioPageClient() {
                     </a>
                     <a
                       href={project.github}
-                      onClick={handleClick}
+                      onClick={handleGitHubClick}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
@@ -190,15 +199,17 @@ export default function PortfolioPageClient() {
                   alt={project.title}
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              
+
               <h3 className="text-xl font-bold text-brown dark:text-cream mb-2">{project.title}</h3>
               <p className="text-brown-light dark:text-cream/70 text-sm mb-4 flex-grow">{project.description}</p>
-              
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.slice(0, 3).map((tag) => (
-                  <span key={tag} className="pixel-badge dark:border-cream/30 dark:text-cream/90 text-xs">
+                  <span key={tag} className="pixel-badge dark:border-cream/30 dark:text-brown-dark text-xs">
                     {tag}
                   </span>
                 ))}
@@ -218,7 +229,7 @@ export default function PortfolioPageClient() {
                 </a>
                 <a
                   href={project.github}
-                  onClick={handleClick}
+                  onClick={handleGitHubClick}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-brown dark:text-cream hover:text-brown-light dark:hover:text-cream/70 transition-colors"
@@ -247,7 +258,7 @@ export default function PortfolioPageClient() {
             'SQL', 'Linux', 'Docker', 'Git',
             'Azure', 'Atlassian', 'JetBrains IDEs', 'LLM APIs'
           ].map((skill) => (
-            <div key={skill} className="pixel-badge dark:border-cream/30 dark:text-cream/90 text-center">
+            <div key={skill} className="pixel-badge dark:border-cream/30 dark:text-brown-dark text-center">
               {skill}
             </div>
           ))}

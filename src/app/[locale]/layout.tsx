@@ -8,6 +8,13 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import EasterEggs from "@/components/EasterEggs";
+import AchievementProvider from "@/components/AchievementContext";
+import dynamic from "next/dynamic";
+
+// Lazy load notification component since it's not needed immediately
+const AchievementNotifications = dynamic(
+  () => import("@/components/AchievementNotifications")
+);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,13 +56,16 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <SoundProvider>
-              <EasterEggs>
-                <Navigation />
-                <main className="min-h-screen">
-                  {children}
-                </main>
-                <Footer />
-              </EasterEggs>
+              <AchievementProvider>
+                <EasterEggs>
+                  <Navigation />
+                  <main className="min-h-screen">
+                    {children}
+                  </main>
+                  <Footer />
+                  <AchievementNotifications />
+                </EasterEggs>
+              </AchievementProvider>
             </SoundProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

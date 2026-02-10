@@ -178,9 +178,19 @@ body {
     box-shadow: 6px 6px 0 var(--sage-dark);
   }
 
+  .dark .pixel-card-sage {
+    background: color-mix(in srgb, var(--sage) 20%, transparent);
+    border-color: var(--sage);
+    box-shadow: 6px 6px 0 var(--sage);
+  }
+
   .pixel-card-sage:hover {
     transform: translate(-2px, -2px);
     box-shadow: 8px 8px 0 var(--sage-dark);
+  }
+
+  .dark .pixel-card-sage:hover {
+    box-shadow: 8px 8px 0 var(--sage);
   }
 
   .pixel-card-rose {

@@ -3,17 +3,16 @@
 import { useEffect, useState, useCallback, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSound } from './SoundContext';
-import MatrixRain from './MatrixRain';
-import Terminal from './Terminal';
+import { useAchievements } from './AchievementContext';
+import dynamic from 'next/dynamic';
+
+// Lazy load heavy components that are only shown in secret mode
+const MatrixRain = dynamic(() => import('./MatrixRain'), { ssr: false });
+const Terminal = dynamic(() => import('./Terminal'), { ssr: false });
 
 const KONAMI_CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
-const HIDDEN_MESSAGES = [
-  { clicks: 10, message: "You found a secret! ✨", color: "warm-gold" },
-  { clicks: 20, message: "Still clicking? You're persistent! 🌟", color: "dusty-rose" },
-  { clicks: 30, message: "Okay, you're officially amazing! 🎉", color: "sage" },
-  { clicks: 50, message: "Legendary clicker! 🏆", color: "terracotta" },
-];
+
 
 interface EasterEggsContextType {
   secretMode: boolean;
@@ -36,15 +35,15 @@ export function useEasterEggs() {
     // Return default values when not in provider (e.g., during SSR)
     return {
       secretMode: false,
-      setSecretMode: () => {},
+      setSecretMode: () => { },
       cubeSequence: [],
-      setCubeSequence: () => {},
+      setCubeSequence: () => { },
       rainbowMode: false,
-      setRainbowMode: () => {},
-      matrixIntensity: 0.15,
-      setMatrixIntensity: () => {},
-      checkCubeSequence: () => {},
-      deactivateSecretMode: () => {}
+      setRainbowMode: () => { },
+      matrixIntensity: 15,
+      setMatrixIntensity: () => { },
+      checkCubeSequence: () => { },
+      deactivateSecretMode: () => { }
     };
   }
   return context;
@@ -52,14 +51,14 @@ export function useEasterEggs() {
 
 export default function EasterEggs({ children }: { children: React.ReactNode }) {
   const { playSound, soundEnabled } = useSound();
+  const achievements = useAchievements();
   const [konamiProgress, setKonamiProgress] = useState(0);
   const [konamiActivated, setKonamiActivated] = useState(false);
   const [clickCount, setClickCount] = useState(0);
-  const [currentMessage, setCurrentMessage] = useState<string | null>(null);
   const [secretMode, setSecretMode] = useState(false);
   const [cubeSequence, setCubeSequence] = useState<number[]>([]);
   const [rainbowMode, setRainbowMode] = useState(false);
-  const [matrixIntensity, setMatrixIntensity] = useState(0.15);
+  const [matrixIntensity, setMatrixIntensity] = useState(15);
 
   // Check for secret mode in URL
   useEffect(() => {
@@ -74,21 +73,21 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
 
   // Musical notes for the sequence (C major scale: C-D-E-F)
   const SEQUENCE_NOTES = [261.63, 293.66, 329.63, 349.23]; // C4, D4, E4, F4
-  
+
   // Check cube sequence when it changes
   const checkCubeSequence = useCallback((cubeNumber: number) => {
     console.log(`[EasterEggs] checkCubeSequence called with cube ${cubeNumber}`);
     console.log(`[EasterEggs] Current sequence:`, cubeSequence);
-    
+
     const newSequence = [...cubeSequence, cubeNumber];
     const correctSequence = [1, 2, 3, 4];
-    
+
     console.log(`[EasterEggs] New sequence:`, newSequence);
-    
+
     // Check if the sequence is correct so far
     const isCorrectSoFar = newSequence.every((num, index) => num === correctSequence[index]);
     console.log(`[EasterEggs] Is correct so far:`, isCorrectSoFar);
-    
+
     if (!isCorrectSoFar) {
       // Wrong cube clicked - play error sound (dissonant interval)
       console.log(`[EasterEggs] Wrong cube! Resetting sequence.`);
@@ -98,14 +97,14 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
       setTimeout(() => playSound(280, 0.08), 100);
       return;
     }
-    
+
     // Correct cube clicked - play the next note in the melody
     const noteIndex = newSequence.length - 1;
     console.log(`[EasterEggs] Correct! Playing note ${noteIndex + 1} (${SEQUENCE_NOTES[noteIndex]}Hz)`);
     playSound(SEQUENCE_NOTES[noteIndex], 0.15);
-    
+
     setCubeSequence(newSequence);
-    
+
     // Check if complete sequence
     if (newSequence.length === 4) {
       console.log(`[EasterEggs] Sequence complete! Activating secret mode.`);
@@ -114,30 +113,36 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
       setTimeout(() => playSound(329.63, 0.1), 100); // E
       setTimeout(() => playSound(392.00, 0.1), 200); // G
       setTimeout(() => playSound(523.25, 0.3), 300); // High C
-      
+
       setSecretMode(true);
       setCubeSequence([]);
+
+      // Unlock cube sequence achievement
+      achievements.unlockAchievement('cube-sequence');
     }
-  }, [cubeSequence, playSound]);
+  }, [cubeSequence, playSound, achievements]);
 
   // Konami code handler
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const key = e.key;
-      
+
       if (key === KONAMI_CODE[konamiProgress]) {
         const newProgress = konamiProgress + 1;
         setKonamiProgress(newProgress);
-        
+
         if (soundEnabled) {
           playSound(440 + newProgress * 50, 0.05);
         }
-        
+
         if (newProgress === KONAMI_CODE.length) {
           setKonamiActivated(true);
           setKonamiProgress(0);
           playSound(880, 0.3);
-          
+
+          // Unlock Konami code achievement
+          achievements.unlockAchievement('konami-code');
+
           setTimeout(() => {
             setKonamiActivated(false);
           }, 5000);
@@ -149,26 +154,15 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [konamiProgress, playSound, soundEnabled]);
+  }, [konamiProgress, playSound, soundEnabled, achievements]);
 
   // Click counter
   const handleClick = useCallback(() => {
-    setClickCount(prev => {
-      const newCount = prev + 1;
-      
-      const message = HIDDEN_MESSAGES.find(m => m.clicks === newCount);
-      if (message) {
-        setCurrentMessage(message.message);
-        playSound(659.25, 0.15);
-        
-        setTimeout(() => {
-          setCurrentMessage(null);
-        }, 3000);
-      }
-      
-      return newCount;
-    });
-  }, [playSound]);
+    setClickCount(prev => prev + 1);
+
+    // Also increment achievements click counter
+    achievements.incrementClicks();
+  }, [achievements]);
 
   useEffect(() => {
     document.addEventListener('click', handleClick);
@@ -178,10 +172,10 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
   const deactivateSecretMode = useCallback(() => {
     setSecretMode(false);
     setRainbowMode(false);
-    setMatrixIntensity(0.15);
+    setMatrixIntensity(15);
     setCubeSequence([]);
     playSound(440, 0.1);
-    
+
     // Remove secret parameter from URL
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
@@ -205,7 +199,7 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
     }}>
       {/* Matrix Rain Background */}
       <MatrixRain active={secretMode} intensity={matrixIntensity} />
-      
+
       {/* Konami Code Success Message */}
       <AnimatePresence>
         {konamiActivated && (
@@ -215,7 +209,7 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
             exit={{ opacity: 0, scale: 0.5 }}
             className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
           >
-            <div className="pixel-card-sage p-8 text-center max-w-md mx-4 bg-white">
+            <div className="pixel-card-sage p-8 text-center max-w-md mx-4 bg-white dark:bg-brown-dark">
               <motion.div
                 initial={{ rotate: 0 }}
                 animate={{ rotate: 360 }}
@@ -230,22 +224,6 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
               <p className="text-brown-light">
                 The Konami code has been activated. You are now officially awesome!
               </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Hidden Messages */}
-      <AnimatePresence>
-        {currentMessage && (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
-          >
-            <div className="pixel-badge bg-dusty-rose-light text-brown font-bold px-6 py-3 text-lg">
-              {currentMessage}
             </div>
           </motion.div>
         )}
@@ -275,7 +253,7 @@ export default function EasterEggs({ children }: { children: React.ReactNode }) 
 
       {/* Terminal Widget */}
       {secretMode && <Terminal />}
-      
+
       {/* Wrapped children */}
       {children}
     </EasterEggsContext.Provider>

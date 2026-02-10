@@ -1,21 +1,41 @@
 'use client';
 
-import React, { createContext, useContext, useState, useCallback, useRef } from 'react';
+import React, { createContext, useContext, useState, useCallback, useRef, useEffect } from 'react';
 
 interface SoundContextType {
   soundEnabled: boolean;
   toggleSound: () => void;
   playSound: (frequency: number, duration: number, type?: OscillatorType) => void;
+  soundToggleCount: number;
 }
 
 const SoundContext = createContext<SoundContextType | undefined>(undefined);
 
 export function SoundProvider({ children }: { children: React.ReactNode }) {
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [soundToggleCount, setSoundToggleCount] = useState(0);
   const audioContextRef = useRef<AudioContext | null>(null);
+
+  // Load sound toggle count from localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('soundToggleCount');
+      if (saved) {
+        setSoundToggleCount(parseInt(saved, 10) || 0);
+      }
+    }
+  }, []);
+
+  // Save sound toggle count to localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('soundToggleCount', soundToggleCount.toString());
+    }
+  }, [soundToggleCount]);
 
   const toggleSound = useCallback(() => {
     setSoundEnabled(prev => !prev);
+    setSoundToggleCount(prev => prev + 1);
   }, []);
 
   const playSound = useCallback((frequency: number, duration: number, type: OscillatorType = 'sine') => {
@@ -48,7 +68,7 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
   }, [soundEnabled]);
 
   return (
-    <SoundContext.Provider value={{ soundEnabled, toggleSound, playSound }}>
+    <SoundContext.Provider value={{ soundEnabled, toggleSound, playSound, soundToggleCount }}>
       {children}
     </SoundContext.Provider>
   );

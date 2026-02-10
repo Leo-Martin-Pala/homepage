@@ -66,10 +66,12 @@ export default function AboutPageClient() {
           {/* Profile Picture */}
           <div className="w-32 h-32 md:w-48 md:h-48 relative rounded-lg overflow-hidden flex-shrink-0">
             <Image
-              src="/images/profile-pic.jpg"
+              src="/images/profile-pic.webp"
               alt="Leo-Martin Pala"
               fill
               className="object-cover"
+              priority
+              sizes="(max-width: 768px) 128px, 192px"
             />
           </div>
 
@@ -111,7 +113,7 @@ export default function AboutPageClient() {
               <h3 className="text-xl font-bold text-brown dark:text-cream mb-4">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill: string) => (
-                  <span key={skill} className="pixel-badge dark:border-cream/30 dark:text-cream/90">
+                  <span key={skill} className="pixel-badge dark:border-cream/30 dark:text-brown-dark">
                     {skill}
                   </span>
                 ))}

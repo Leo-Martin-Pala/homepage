@@ -1,23 +1,14 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Heart, Code } from 'lucide-react';
+import { useAchievements } from './AchievementContext';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
-  const [clickCount, setClickCount] = useState(0);
-
-  const handleClick = useCallback(() => {
-    setClickCount(prev => prev + 1);
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, [handleClick]);
+  const { totalClicks, unlockedAchievements } = useAchievements();
 
   return (
     <footer className="border-t-2 border-brown/10 dark:border-cream/10 bg-cream-light dark:bg-brown-dark transition-colors duration-300">
@@ -44,15 +35,21 @@ export default function Footer() {
           </p>
         </motion.div>
 
-        {/* Click Counter */}
-        <motion.p
+        {/* Click Counter & Achievement Stats */}
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-brown/50 dark:text-cream/60 text-xs text-center mt-4"
+          className="flex justify-center items-center gap-4 mt-4"
         >
-          Clicks: {clickCount} {clickCount > 0 && clickCount < 10 && "Keep clicking!"}
-        </motion.p>
+          <p className="text-brown/50 dark:text-cream/60 text-xs">
+            Clicks: {totalClicks} {totalClicks > 0 && totalClicks < 10 && "Keep clicking!"}
+          </p>
+          <span className="text-brown/30 dark:text-cream/40">|</span>
+          <p className="text-brown/50 dark:text-cream/60 text-xs">
+            Achievements: {unlockedAchievements.length}
+          </p>
+        </motion.div>
       </div>
     </footer>
   );

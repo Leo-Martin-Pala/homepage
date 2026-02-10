@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, CheckCircle, Github, Linkedin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSound } from '@/components/SoundContext';
+import { useAchievements } from '@/components/AchievementContext';
 import emailjs from '@emailjs/browser';
 
 export default function ContactPageClient() {
   const t = useTranslations('contact');
   const { playSound } = useSound();
+  const { trackSocialProfile, trackEmailSent } = useAchievements();
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -44,6 +46,7 @@ export default function ContactPageClient() {
 
       setIsSubmitting(false);
       setIsSubmitted(true);
+      trackEmailSent();
       playSound(1046.5, 0.2);
     } catch (err) {
       setIsSubmitting(false);
@@ -121,7 +124,7 @@ export default function ContactPageClient() {
             {/* Contact Details */}
             <div className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-6">
               <h2 className="text-xl font-bold text-brown dark:text-cream mb-6">{t('info.title')}</h2>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-sage rounded-lg flex items-center justify-center flex-shrink-0">
@@ -129,8 +132,8 @@ export default function ContactPageClient() {
                   </div>
                   <div>
                     <p className="text-brown-light dark:text-cream/70 text-sm">{t('info.email')}</p>
-                    <a 
-                      href="mailto:leomartin.pala@outlook.com" 
+                    <a
+                      href="mailto:leomartin.pala@outlook.com"
                       className="text-brown dark:text-cream font-medium hover:text-sage-dark dark:hover:text-sage transition-colors"
                       onClick={() => playSound(659.25, 0.1)}
                     >
@@ -163,13 +166,16 @@ export default function ContactPageClient() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => playSound(523.25, 0.1)}
+                      onClick={() => {
+                        playSound(523.25, 0.1);
+                        trackSocialProfile();
+                      }}
                       whileHover={{ y: -3 }}
                       whileTap={{ scale: 0.95 }}
                       className={`w-12 h-12 bg-${social.color} rounded-lg flex items-center justify-center transition-colors hover:opacity-90`}
                       aria-label={social.label}
                     >
-                      <Icon className="text-white" size={24} />
+                      <Icon className="text-white dark:text-brown-dark" size={24} />
                     </motion.a>
                   );
                 })}

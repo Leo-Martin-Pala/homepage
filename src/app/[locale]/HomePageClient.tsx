@@ -77,14 +77,14 @@ export default function HomePageClient() {
               y: [0, -15, 0],
               x: [0, 5, 0],
               rotate: rainbowMode ? [0, 360] : [0, 5, 0],
-              backgroundColor: rainbowMode 
+              backgroundColor: rainbowMode
                 ? ['#a8c5a8', '#d4a5a5', '#e6c985', '#d4956b', '#a8c5a8']
                 : undefined
             }}
-            transition={{ 
+            transition={{
               y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
               x: { duration: 7, repeat: Infinity, ease: "easeInOut" },
-              rotate: rainbowMode 
+              rotate: rainbowMode
                 ? { duration: 3, repeat: Infinity, ease: "linear" }
                 : { duration: 6, repeat: Infinity, ease: "easeInOut" },
               backgroundColor: rainbowMode
@@ -97,7 +97,7 @@ export default function HomePageClient() {
             }}
             className="group absolute top-[12%] left-[8%] w-14 h-14 md:w-16 md:h-16 bg-sage/40 dark:bg-sage/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-sage/40 shadow-lg pointer-events-auto z-20"
           >
-            <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+            <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[0]}
             </span>
           </motion.div>
@@ -108,14 +108,14 @@ export default function HomePageClient() {
               y: [0, 12, 0],
               x: [0, -8, 0],
               rotate: rainbowMode ? [0, -360] : [0, -5, 0],
-              backgroundColor: rainbowMode 
+              backgroundColor: rainbowMode
                 ? ['#d4a5a5', '#e6c985', '#d4956b', '#a8c5a8', '#d4a5a5']
                 : undefined
             }}
-            transition={{ 
+            transition={{
               y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
               x: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
-              rotate: rainbowMode 
+              rotate: rainbowMode
                 ? { duration: 3, repeat: Infinity, ease: "linear" }
                 : { duration: 5, repeat: Infinity, ease: "easeInOut" },
               backgroundColor: rainbowMode
@@ -128,7 +128,7 @@ export default function HomePageClient() {
             }}
             className="group absolute top-[25%] right-[12%] w-12 h-12 md:w-14 md:h-14 bg-dusty-rose/40 dark:bg-dusty-rose/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-dusty-rose/40 shadow-lg pointer-events-auto z-20"
           >
-            <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+            <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[1]}
             </span>
           </motion.div>
@@ -139,14 +139,14 @@ export default function HomePageClient() {
               y: [0, -18, 0],
               x: [0, 6, 0],
               rotate: rainbowMode ? [0, 360] : [0, 8, 0],
-              backgroundColor: rainbowMode 
+              backgroundColor: rainbowMode
                 ? ['#e6c985', '#d4956b', '#a8c5a8', '#d4a5a5', '#e6c985']
                 : undefined
             }}
-            transition={{ 
+            transition={{
               y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 },
               x: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 },
-              rotate: rainbowMode 
+              rotate: rainbowMode
                 ? { duration: 3, repeat: Infinity, ease: "linear" }
                 : { duration: 7, repeat: Infinity, ease: "easeInOut" },
               backgroundColor: rainbowMode
@@ -159,7 +159,7 @@ export default function HomePageClient() {
             }}
             className="group absolute top-[60%] left-[5%] w-16 h-16 md:w-20 md:h-20 bg-warm-gold/35 dark:bg-warm-gold/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-warm-gold/40 shadow-lg pointer-events-auto z-20"
           >
-            <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+            <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[2]}
             </span>
           </motion.div>
@@ -170,14 +170,14 @@ export default function HomePageClient() {
               y: [0, 10, 0],
               x: [0, -6, 0],
               rotate: rainbowMode ? [0, -360] : [0, -3, 0],
-              backgroundColor: rainbowMode 
+              backgroundColor: rainbowMode
                 ? ['#d4956b', '#a8c5a8', '#d4a5a5', '#e6c985', '#d4956b']
                 : undefined
             }}
-            transition={{ 
+            transition={{
               y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
               x: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 },
-              rotate: rainbowMode 
+              rotate: rainbowMode
                 ? { duration: 3, repeat: Infinity, ease: "linear" }
                 : { duration: 4, repeat: Infinity, ease: "easeInOut" },
               backgroundColor: rainbowMode
@@ -190,7 +190,7 @@ export default function HomePageClient() {
             }}
             className="group absolute top-[70%] right-[6%] w-14 h-14 md:w-16 md:h-16 bg-terracotta/35 dark:bg-terracotta/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-terracotta/40 shadow-lg pointer-events-auto z-20"
           >
-            <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
+            <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[3]}
             </span>
           </motion.div>
@@ -314,7 +314,7 @@ export default function HomePageClient() {
                 className={`pixel-card-${item.color} dark:bg-brown-dark dark:border-cream/20 p-6`}
               >
                 <div className={`w-12 h-12 rounded-lg bg-${item.color} flex items-center justify-center mb-4`}>
-                  <Icon className="text-white" size={24} />
+                  <Icon className="text-white dark:text-brown-dark" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-brown dark:text-cream mb-2">{item.title}</h3>
                 <p className="text-brown/80 dark:text-cream/80">{item.description}</p>
@@ -434,18 +434,18 @@ export default function HomePageClient() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-        {
-          title: t('projects.chess.title'),
-          description: t('projects.chess.description'),
-          tags: ['Vue.js', 'Node.js', 'LLM API'],
-          color: 'sage',
-        },
-        {
-          title: t('projects.bitcoin.title'),
-          description: t('projects.bitcoin.description'),
-          tags: ['Python', 'ML', 'Data Science'],
-          color: 'dusty-rose',
-        },
+            {
+              title: t('projects.chess.title'),
+              description: t('projects.chess.description'),
+              tags: ['Vue.js', 'Node.js', 'LLM API'],
+              color: 'sage',
+            },
+            {
+              title: t('projects.bitcoin.title'),
+              description: t('projects.bitcoin.description'),
+              tags: ['Python', 'ML', 'Data Science'],
+              color: 'dusty-rose',
+            },
           ].map((project, index) => (
             <motion.div
               key={project.title}
@@ -465,7 +465,7 @@ export default function HomePageClient() {
                   <p className="text-brown/80 dark:text-cream/80 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="pixel-badge dark:border-cream/30 dark:text-cream/90">
+                      <span key={tag} className="pixel-badge dark:border-cream/30 dark:text-brown-dark">
                         {tag}
                       </span>
                     ))}

@@ -4,12 +4,15 @@ import { useEffect, useRef } from 'react';
 
 interface MatrixRainProps {
   active: boolean;
-  intensity?: number;
+  intensity?: number; // 0-100 percentage
 }
 
-export default function MatrixRain({ active, intensity = 0.15 }: MatrixRainProps) {
+export default function MatrixRain({ active, intensity = 15 }: MatrixRainProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>(0);
+
+  // Normalize intensity to 0-1 range for internal calculations
+  const normalizedIntensity = Math.max(0, Math.min(100, intensity)) / 100;
 
   useEffect(() => {
     if (!active) return;
@@ -46,32 +49,40 @@ export default function MatrixRain({ active, intensity = 0.15 }: MatrixRainProps
       frameCount++;
       
       // Draw semi-transparent black to create trail effect
-      ctx.fillStyle = `rgba(0, 0, 0, ${0.05 * intensity * 10})`;
+      // Trail opacity increases with intensity
+      const trailOpacity = 0.05 + (normalizedIntensity * 0.1);
+      ctx.fillStyle = `rgba(0, 0, 0, ${trailOpacity})`;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Set font
       ctx.font = `${fontSize}px monospace`;
 
+      // Calculate speed modifier based on intensity (only once)
+      const speedMod = Math.max(1, Math.floor(3 - normalizedIntensity * 2));
+      
       // Draw characters
       for (let i = 0; i < drops.length; i++) {
         // Only draw every few frames for slower, more mysterious effect
-        if (frameCount % 2 === 0) {
+        // Speed increases with intensity
+        if (frameCount % speedMod === 0) {
           const char = charArray[Math.floor(Math.random() * charArray.length)];
           
           // Vary the green color for depth
           const green = Math.floor(Math.random() * 155 + 100);
-          ctx.fillStyle = `rgba(0, ${green}, 0, ${intensity})`;
+          ctx.fillStyle = `rgba(0, ${green}, 0, ${0.3 + normalizedIntensity * 0.7})`;
           
           ctx.fillText(char, i * fontSize, drops[i] * fontSize);
         }
 
         // Move drop down
-        if (frameCount % 2 === 0) {
+        if (frameCount % speedMod === 0) {
           drops[i]++;
         }
 
         // Reset drop to top with random delay when it reaches bottom
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        // Lower threshold = more frequent resets = denser rain
+        const resetThreshold = 0.975 - (normalizedIntensity * 0.15);
+        if (drops[i] * fontSize > canvas.height && Math.random() > resetThreshold) {
           drops[i] = 0;
         }
       }
@@ -85,7 +96,7 @@ export default function MatrixRain({ active, intensity = 0.15 }: MatrixRainProps
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationRef.current);
     };
-  }, [active, intensity]);
+  }, [active, normalizedIntensity]);
 
   if (!active) return null;
 

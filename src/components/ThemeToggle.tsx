@@ -4,14 +4,21 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useAchievements } from './AchievementContext';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { incrementThemeToggles } = useAchievements();
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleToggle = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+    incrementThemeToggles();
+  };
 
   if (!mounted) {
     return (
@@ -23,7 +30,7 @@ export function ThemeToggle() {
 
   return (
     <motion.button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={handleToggle}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="w-10 h-10 rounded-lg border-2 border-brown dark:border-cream bg-cream dark:bg-brown-dark flex items-center justify-center transition-colors"

@@ -5,6 +5,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useTransition } from 'react';
 import { motion } from 'framer-motion';
 import { Globe } from 'lucide-react';
+import { useAchievements } from './AchievementContext';
 
 const languages = {
   en: { label: 'EN', name: 'English' },
@@ -16,9 +17,12 @@ export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
+  const { incrementLanguageSwitches } = useAchievements();
 
   const toggleLanguage = () => {
     const newLocale = locale === 'en' ? 'et' : 'en';
+    
+    incrementLanguageSwitches();
     
     startTransition(() => {
       // For static export, we need to handle the path differently
