@@ -24,15 +24,31 @@ const COMMANDS: Record<string, string | ((eggs: ReturnType<typeof useEasterEggs>
   
 Type any command to execute it...`,
 
-  whoami: `Leo-Martin Pala
+  whoami: () => {
+    const facts = [
+      "Started programming at age 7 with JavaScript!",
+      "Built a voice agent that speaks Estonian and tells weather",
+      "Self-hosted an AI platform with access to 280+ LLMs",
+      "Configured a Dell PowerEdge R610 server with Proxmox",
+      "Bronze medalist at International Earth Science Olympiad",
+      "Used to teach chess to elementary school kids",
+      "Currently serving as House Elder in academic corporation EÜS Põhjala",
+      "Built an LLM chess bot that plays against language models",
+      "Did a data science project predicting Bitcoin prices using global events",
+      "Loves experimenting with new AI tools and technologies",
+      "Can recite the first 100 digits of pi... just kidding!",
+      "Has a homelab with multiple virtual machines running",
+      "Drinks way too much coffee while coding",
+      "Once stayed up all night fixing a server issue",
+      "Believes that the best code is written after a good gym session"
+    ];
+    return `Leo-Martin Pala
   - Informatics Student @ University of Tartu
-  - AI Enthusiast & Developer
-  - Cyber Defence Volunteer
-  - Bronze Medalist @ International Earth Science Olympiad
-  - Chess Instructor
-  - Built a voice agent and LLM chess bot
+  - AI Enthusiast & Software Developer
   
-Fun fact: Started programming at age 7!`,
+🎲 Random Fun Fact:
+${facts[Math.floor(Math.random() * facts.length)]}`;
+  },
 
   chess: () => {
     const tips = [

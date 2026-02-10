@@ -9,23 +9,23 @@
   "home": {
     "badge": "Welcome to my cozy corner of the internet",
     "title": "Hi, I'm {name}",
-    "subtitle": "Informatics Student @ University of Tartu | AI Enthusiast & Developer | Cyber Defence Volunteer",
+    "subtitle": "Informatics Student @ University of Tartu | AI Enthusiast & Software Developer",
     "viewWork": "View My Work",
     "getInTouch": "Get In Touch",
     "whatIDo": {
       "title": "What I Do",
-      "description": "I create digital experiences that feel warm, welcoming, and thoughtfully crafted",
+      "description": "I explore and build projects that interest me",
       "software": {
         "title": "Software Development",
         "description": "Building applications with Python, Java, and JavaScript. Experienced with Vue.js and modern frameworks."
       },
-      "cybersecurity": {
-        "title": "Cybersecurity",
-        "description": "Member of Kaitseliidu Küberkaitseüksus. SANS SEC599 certified. Passionate about purple team tactics and defense."
-      },
       "ai": {
         "title": "AI & LLM Projects",
         "description": "Creating interactive voice agents and LLM-powered applications. Experience with livekit and AI integrations."
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Server and virtual machine management. Experience with Proxmox, Linux, and Docker."
       }
     },
     "journey": {
@@ -45,7 +45,7 @@
       "workTitle": "How I Work",
       "workDescription": "I work with dedication and purpose. I enjoy leading teams, but also highly value collaboration. I solve problems methodically and maintain calm even in stressful situations. I complete what I start, while pragmatically evaluating when it makes sense to continue and when not.",
       "philosophyTitle": "My Philosophy",
-      "philosophyDescription": "I believe in continuous development and never stand still. Technology evolves rapidly, and I make it a priority to keep learning and adapting. I have a balanced view of AI – it's a powerful tool that must be skillfully used, not blindly trusted."
+      "philosophyDescription": "I believe in continuous development and never stand still. Technology evolves rapidly, and I make it a priority to keep learning and adapting."
     },
     "featuredWork": {
       "title": "Featured Work",
@@ -58,13 +58,13 @@
       "visit": "Visit the Garden"
     },
     "projects": {
-      "voiceAgent": {
-        "title": "Voice Agent / Weather Forecaster",
-        "description": "Interactive voice robot capable of natural conversation and providing weather forecasts for cities worldwide."
-      },
       "chess": {
         "title": "LLM Chess Website",
-        "description": "Web application combining chess with large language models for an innovative gaming experience."
+        "description": "Interactive chess website that allows users to play against multiple language models. Built with Vue.js, Node.js, and Express.js."
+      },
+      "bitcoin": {
+        "title": "Bitcoin Price Prediction",
+        "description": "Data science project using global events data (GDELT dataset) to predict Bitcoin price movements."
       }
     },
     "cta": {
@@ -79,40 +79,7 @@
     "greeting": "Hello! I'm Leo-Martin",
     "bio1": "I'm a third year Informatics student at University of Tartu. My interest in Data Science and software development was sparked by the Generative AI explosion in 2022. Since then, I have been experimenting with how these technologies work under the hood.",
     "bio2": "I enjoy building personal projects to learn new tools. Recently, I developed an interactive voice-agent using Python, and an LLM-powered chess bot using Vue.js. I often leverage AI tools to accelerate my own coding and learning process.",
-    "bio3": "In addition to my IT studies, I have a background in natural sciences (International Earth Science Olympiad bronze medalist), which helped hone my analytical thinking. I am currently looking for an internship in Data Science or AI Engineering to learn from experienced developers and tackle real-world problems.",
-    "journey": {
-      "title": "My Journey",
-      "houseElder": {
-        "year": "2026",
-        "title": "House Elder @ EÜS Põhjala",
-        "description": "Managing budgets, leading a team, and society premises management. Currently serving as House Elder in the academic corporation."
-      },
-      "internship": {
-        "year": "2025",
-        "title": "IT Support Specialist Intern @ LHV",
-        "description": "Gained hands-on experience in IT administration, Service Desk support, and hardware maintenance. Worked with Atlassian tools (Jira/Confluence). Jun 2025 - Aug 2025."
-      },
-      "waiter": {
-        "year": "2024",
-        "title": "Waiter & Cashier @ Varbuse Teemaja",
-        "description": "Part-time summer work providing customer service, taking orders, and handling cash register operations. Jul 2024 - Aug 2024."
-      },
-      "university": {
-        "year": "2023",
-        "title": "University of Tartu",
-        "description": "Started Computer Science BSc studies. Third year informatics student. Joined Kaitseliit Cyber Defence Unit and became a mentor for first-year students."
-      },
-      "olympiad": {
-        "year": "2023",
-        "title": "Bronze Medal - IESO",
-        "description": "Awarded Bronze Medal in the Data Mining Test (DMT) at the International Earth Science Olympiad (IESO). Graduated from Põlva Gümnaasium with silver medal (4.9 GPA)."
-      },
-      "chess": {
-        "year": "2023",
-        "title": "Chess Instructor @ Põlva Jakobi Kool",
-        "description": "Taught chess at elementary school level, developing skills in explaining complex concepts to young students. Jan 2023 - May 2023."
-      }
-    },
+    "bio3": "Besides IT studies, I enjoy working out, reading, and self-development. I'm active in the academic organization Põhjala (EÜS Põhjala) where I've served as House Elder and Archivist. I am currently looking for an internship in Data Science or AI Engineering to learn from experienced developers and tackle real-world problems.",
     "skills": {
       "title": "Skills & Technologies",
       "development": {
@@ -128,15 +95,24 @@
         "skills": ["Jupyter Notebooks", "LLM Integration", "Machine Learning", "SQL", "Data Analysis"]
       }
     },
+    "trainings": {
+      "title": "Training",
+      "items": [
+        "SANS SEC599 - Purple Team Tactics & Kill Chain Defenses (2025)",
+        "Combat Ready Leadership Training (2024)",
+        "Estonian Information Security Standard (E-ITS) Basic & Implementation (2024)",
+        "C1 Advanced English - Cambridge English (Score 192, Nov 2022)"
+      ]
+    },
     "beyondCode": {
       "title": "Beyond Code",
-      "interests": ["Chess", "Cybersecurity", "Earth Sciences", "Coffee"]
+      "interests": ["Gym", "Books", "Self-Development", "Linux"]
     },
     "hobbies": {
       "title": "When I'm Not Coding",
-      "description1": "I spend my free time walking in nature or cycling. I maintain mental balance through the Mindfulness Practices Tartu group. I'm active in the academic organization Põhjala (EÜS Põhjala) where I've served as House Manager and Archivist.",
-      "description2": "Chess has held a special place in my life – I've played in various competitions and taught it to elementary school children at Põlva Jakobi Kool. I also enjoy good books and audio learning materials.",
-      "description3": "I believe in the importance of balancing productivity and rest and try to maintain this in my daily life. I'm also a member of Kaitseliidu Küberkaitseüksus, where I participate in cybersecurity exercises and training."
+      "description1": "I go to the gym and do various workouts. I read a lot - both fiction and professional literature. I'm always trying to learn new things and develop myself.",
+      "description2": "I'm active in the academic organization Põhjala (EÜS Põhjala) where I've served as House Elder and Archivist. This has given me valuable leadership experience.",
+      "description3": "I believe in the importance of balancing productivity and rest and try to maintain this in my daily life."
     },
     "values": {
       "title": "What I Believe",
@@ -148,9 +124,9 @@
         "title": "Continuous Learning",
         "description": "I believe in continuous development and never stand still. Technology evolves rapidly, and so do I."
       },
-      "ai": {
-        "title": "Balanced View of AI",
-        "description": "AI is a powerful tool that must be skillfully used, not blindly trusted. I leverage it wisely in my projects."
+      "growth": {
+        "title": "Personal Growth",
+        "description": "I always strive to develop both professionally and personally. Working out, reading, and seeking new challenges are part of my routine."
       }
     }
   },
@@ -164,29 +140,30 @@
       "title": "More Projects"
     },
     "projects": {
-      "voiceAgent": {
-        "title": "Voice Agent / Weather Forecaster",
-        "description": "Interactive voice robot capable of natural conversation and providing weather forecasts for cities worldwide. Built with LiveKit framework and LLM models."
-      },
       "chess": {
         "title": "LLM Chess Website",
-        "description": "Web application combining chess with large language models for an innovative gaming experience."
+        "description": "Interactive chess website that allows users to play against multiple language models, offering a unique challenge for players of all levels."
       },
-      "startup": {
-        "title": "Talendid Tartusse Startup",
-        "description": "Participated in product development and idea validation phase as part of a startup team."
+      "voiceAgent": {
+        "title": "Voice Agent / Weather Forecaster",
+        "description": "Estonian-speaking phone agent that predicts weather and answers voice queries using OpenWeatherMap and LiveKit."
+      },
+      "bitcoin": {
+        "title": "Bitcoin Price Prediction",
+        "description": "Data science project that uses global events data (GDELT dataset) to predict Bitcoin price movements, applying machine learning models."
+      },
+      "openwebui": {
+        "title": "OpenWebUI + LiteLLM API",
+        "description": "Self-hosted artificial intelligence platform that combines free LLM APIs, providing access to over 280 language models without any monthly charges."
+      },
+      "server": {
+        "title": "Dell PowerEdge R610 Server",
+        "description": "Self-configured server: iDRAC updating, testing Windows Server and Proxmox, RAID configuration, running virtual machines."
       }
     },
     "technologies": {
-      "title": "Technologies & Skills",
-      "certifications": "Certifications & Training"
-    },
-    "certifications": [
-      "C1 Advanced English - Cambridge English (Score 192, Nov 2022)",
-      "SANS SEC599 - Purple Team Tactics & Kill Chain Defenses (2025)",
-      "Combat Ready Leadership Training (2024)",
-      "Estonian Information Security Standard (E-ITS) Basic & Implementation (2024)"
-    ]
+      "title": "Technologies & Skills"
+    }
   },
   "contact": {
     "title": "Contact Me",
@@ -205,9 +182,11 @@
       "emailPlaceholder": "john@example.com",
       "messagePlaceholder": "Write your message here...",
       "send": "Send Message",
+      "sendAnother": "Send Another Message",
       "sending": "Sending...",
       "success": "Message Sent!",
-      "successMessage": "Thank you for reaching out! I'll get back to you as soon as possible."
+      "successMessage": "Thank you for reaching out! I'll get back to you as soon as possible.",
+      "error": "There was an error sending your message. Please try again."
     },
     "info": {
       "title": "Contact Information",
@@ -219,25 +198,25 @@
       "github": "GitHub",
       "linkedin": "LinkedIn"
     },
-    "footer": "P.S. If you want to discuss chess moves or cybersecurity, I'm always up for it!"
+    "footer": "Write to me if you'd like to collaborate or just say hi!"
   },
   "garden": {
     "title": "Digital Garden",
     "description": "A growing collection of notes, thoughts, and learnings cultivated in Obsidian.",
-    "status": "Currently under cultivation 🌱",
-    "statusTitle": "Garden Status",
-    "statusPhase": "Germination phase",
-    "growth": "Garden Growth",
-    "comingSoon": "I'm currently organizing my thoughts and notes in Obsidian. Soon, this garden will bloom with interconnected ideas about web development, design, productivity, and more.",
-    "seedsTitle": "Seeds Being Planted",
-    "whatIsTitle": "What is a Digital Garden?",
-    "whatIsDescription": "Unlike a traditional blog where posts are published and rarely updated, a digital garden is a living collection of notes and ideas that grow and evolve over time. It's a space for learning in public, where half-formed thoughts can coexist with polished essays.",
-    "obsidianDescription": "I'm using Obsidian to cultivate this garden, taking advantage of its powerful linking features to create a web of connected ideas. Once ready, I'll publish it here for you to explore.",
-    "obsidianLink": "Learn About Obsidian",
-    "manifestoLink": "Digital Garden Manifesto",
-    "wantToKnow": "Want to know when the garden blooms?",
-    "getInTouch": "Get in touch",
-    "letYouKnow": "and I'll let you know!"
+    "portalTitle": "Welcome to My Digital Garden",
+    "portalDescription": "Explore my interconnected notes, ideas, and discoveries. This is a living space where thoughts grow and evolve over time.",
+    "enterGarden": "Enter the Garden",
+    "whatToExpect": "What You'll Find",
+    "topics": [
+      "Web Development",
+      "AI & Machine Learning",
+      "Personal Projects",
+      "Book Notes & Insights",
+      "Learning Resources",
+      "Random Thoughts"
+    ],
+    "questions": "Have questions or want to discuss something?",
+    "getInTouch": "Get in touch"
   },
   "footer": {
     "copyright": "© {year} Leo-Martin. All rights reserved.",

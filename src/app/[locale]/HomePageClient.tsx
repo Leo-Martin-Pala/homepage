@@ -8,15 +8,27 @@ import { ArrowRight, Sparkles, Code, Palette, Terminal, Flower2, Rocket, Target,
 import { useSound } from '@/components/SoundContext';
 import { useEasterEggs } from '@/components/EasterEggs';
 
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export default function HomePageClient() {
   const t = useTranslations('home');
   const locale = useLocale();
   const { playSound } = useSound();
   const { checkCubeSequence, rainbowMode } = useEasterEggs();
   const [mounted, setMounted] = useState(false);
+  const [cubeNumbers, setCubeNumbers] = useState<number[]>([1, 2, 3, 4]);
 
   useEffect(() => {
     setMounted(true);
+    // Randomize cube numbers on each page refresh
+    setCubeNumbers(shuffleArray([1, 2, 3, 4]));
   }, []);
 
 
@@ -25,9 +37,9 @@ export default function HomePageClient() {
     playSound(659.25, 0.1);
   };
 
-  const handleCubeClick = (cubeNumber: number) => {
-    console.log(`[HomePage] Cube ${cubeNumber} clicked`);
-    checkCubeSequence(cubeNumber);
+  const handleCubeClick = (displayedNumber: number) => {
+    console.log(`[HomePage] Cube showing ${displayedNumber} clicked`);
+    checkCubeSequence(displayedNumber);
   };
 
   if (!mounted) return null;
@@ -41,14 +53,14 @@ export default function HomePageClient() {
     },
     {
       icon: Terminal,
-      title: t('whatIDo.cybersecurity.title'),
-      description: t('whatIDo.cybersecurity.description'),
+      title: t('whatIDo.ai.title'),
+      description: t('whatIDo.ai.description'),
       color: 'dusty-rose',
     },
     {
       icon: Palette,
-      title: t('whatIDo.ai.title'),
-      description: t('whatIDo.ai.description'),
+      title: t('whatIDo.infrastructure.title'),
+      description: t('whatIDo.infrastructure.description'),
       color: 'warm-gold',
     },
   ];
@@ -81,12 +93,12 @@ export default function HomePageClient() {
             }}
             onClick={(e) => {
               e.stopPropagation();
-              handleCubeClick(1);
+              handleCubeClick(cubeNumbers[0]);
             }}
             className="group absolute top-[12%] left-[8%] w-14 h-14 md:w-16 md:h-16 bg-sage/40 dark:bg-sage/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-sage/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
-              1
+              {cubeNumbers[0]}
             </span>
           </motion.div>
 
@@ -112,12 +124,12 @@ export default function HomePageClient() {
             }}
             onClick={(e) => {
               e.stopPropagation();
-              handleCubeClick(2);
+              handleCubeClick(cubeNumbers[1]);
             }}
             className="group absolute top-[25%] right-[12%] w-12 h-12 md:w-14 md:h-14 bg-dusty-rose/40 dark:bg-dusty-rose/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-dusty-rose/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
-              2
+              {cubeNumbers[1]}
             </span>
           </motion.div>
 
@@ -143,12 +155,12 @@ export default function HomePageClient() {
             }}
             onClick={(e) => {
               e.stopPropagation();
-              handleCubeClick(3);
+              handleCubeClick(cubeNumbers[2]);
             }}
             className="group absolute top-[60%] left-[5%] w-16 h-16 md:w-20 md:h-20 bg-warm-gold/35 dark:bg-warm-gold/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-warm-gold/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
-              3
+              {cubeNumbers[2]}
             </span>
           </motion.div>
 
@@ -174,12 +186,12 @@ export default function HomePageClient() {
             }}
             onClick={(e) => {
               e.stopPropagation();
-              handleCubeClick(4);
+              handleCubeClick(cubeNumbers[3]);
             }}
             className="group absolute top-[70%] right-[6%] w-14 h-14 md:w-16 md:h-16 bg-terracotta/35 dark:bg-terracotta/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-terracotta/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-brown/0 group-hover:text-brown/30 transition-all duration-300">
-              4
+              {cubeNumbers[3]}
             </span>
           </motion.div>
         </div>
@@ -422,18 +434,18 @@ export default function HomePageClient() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            {
-              title: t('projects.voiceAgent.title'),
-              description: t('projects.voiceAgent.description'),
-              tags: ['Python', 'LiveKit', 'LLM', 'Google Cloud'],
-              color: 'sage',
-            },
-            {
-              title: t('projects.chess.title'),
-              description: t('projects.chess.description'),
-              tags: ['Python', 'Vue.js', 'LLM API'],
-              color: 'dusty-rose',
-            },
+        {
+          title: t('projects.chess.title'),
+          description: t('projects.chess.description'),
+          tags: ['Vue.js', 'Node.js', 'LLM API'],
+          color: 'sage',
+        },
+        {
+          title: t('projects.bitcoin.title'),
+          description: t('projects.bitcoin.description'),
+          tags: ['Python', 'ML', 'Data Science'],
+          color: 'dusty-rose',
+        },
           ].map((project, index) => (
             <motion.div
               key={project.title}

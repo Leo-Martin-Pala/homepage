@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSound } from '@/components/SoundContext';
+import Image from 'next/image';
 
 export default function PortfolioPageClient() {
   const t = useTranslations('portfolio');
@@ -15,35 +16,56 @@ export default function PortfolioPageClient() {
 
   const projects = [
     {
-      title: t('projects.voiceAgent.title'),
-      description: t('projects.voiceAgent.description'),
-      tags: ['Python', 'LiveKit', 'LLM', 'Google Cloud', 'Weather API'],
+      title: t('projects.chess.title'),
+      description: t('projects.chess.description'),
+      tags: ['Vue.js', 'Node.js', 'Express.js', 'LLM APIs'],
       link: '#',
       github: 'https://github.com/Leo-Martin-Pala',
+      image: '/images/llm-chess-website.png',
       color: 'sage',
       featured: true,
     },
     {
-      title: t('projects.chess.title'),
-      description: t('projects.chess.description'),
-      tags: ['Python', 'Vue.js', 'LLM API', 'Chess'],
+      title: t('projects.voiceAgent.title'),
+      description: t('projects.voiceAgent.description'),
+      tags: ['Python', 'LiveKit', 'LLM', 'Weather API'],
       link: '#',
       github: 'https://github.com/Leo-Martin-Pala',
+      image: '/images/weather.jpg',
       color: 'dusty-rose',
       featured: true,
     },
     {
-      title: t('projects.startup.title'),
-      description: t('projects.startup.description'),
-      tags: ['Startup', 'Product Development', 'Teamwork'],
+      title: t('projects.bitcoin.title'),
+      description: t('projects.bitcoin.description'),
+      tags: ['Python', 'scikit-learn', 'ML', 'Data Science'],
       link: '#',
-      github: '#',
+      github: 'https://github.com/Leo-Martin-Pala',
+      image: '/images/GDELT-BTC-prediction.jpg',
       color: 'warm-gold',
       featured: false,
     },
+    {
+      title: t('projects.openwebui.title'),
+      description: t('projects.openwebui.description'),
+      tags: ['LiteLLM', 'OpenWebUI', 'Docker', 'Azure'],
+      link: '#',
+      github: 'https://github.com/Leo-Martin-Pala',
+      image: '/images/openwebui-litellm.png',
+      color: 'terracotta',
+      featured: false,
+    },
+    {
+      title: t('projects.server.title'),
+      description: t('projects.server.description'),
+      tags: ['Proxmox', 'Linux', 'Virtualization', 'RAID'],
+      link: '#',
+      github: '#',
+      image: '/images/proxmox-r610-server.webp',
+      color: 'sage',
+      featured: false,
+    },
   ];
-
-  const certifications = t.raw('certifications');
 
   const featuredProjects = projects.filter(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);
@@ -88,11 +110,14 @@ export default function PortfolioPageClient() {
               className={`pixel-card-${project.color} dark:bg-${project.color}/10 dark:border-${project.color}/30 p-6 md:p-8`}
             >
               <div className="flex flex-col md:flex-row gap-6">
-                {/* Project Image Placeholder */}
-                <div className={`w-full md:w-1/3 h-48 md:h-auto min-h-[200px] bg-${project.color}-light dark:bg-${project.color}/20 rounded-lg flex items-center justify-center`}>
-                  <span className={`text-${project.color}-dark dark:text-${project.color} text-6xl font-bold opacity-20`}>
-                    {project.title[0]}
-                  </span>
+                {/* Project Image */}
+                <div className="w-full md:w-1/3 h-48 md:h-auto min-h-[200px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Project Info */}
@@ -159,10 +184,13 @@ export default function PortfolioPageClient() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-6 flex flex-col"
             >
-              <div className={`h-32 bg-${project.color}-light dark:bg-${project.color}/20 rounded-lg mb-4 flex items-center justify-center`}>
-                <span className={`text-${project.color}-dark dark:text-${project.color} text-4xl font-bold opacity-20`}>
-                  {project.title[0]}
-                </span>
+              <div className="h-32 relative rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               
               <h3 className="text-xl font-bold text-brown dark:text-cream mb-2">{project.title}</h3>
@@ -213,7 +241,7 @@ export default function PortfolioPageClient() {
         className="mt-16 pixel-card-sage dark:bg-sage/10 dark:border-sage/30 p-8"
       >
         <h2 className="text-2xl font-bold text-brown dark:text-cream mb-6">{t('technologies.title')}</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             'Python', 'Java', 'JavaScript', 'Vue.js',
             'SQL', 'Linux', 'Docker', 'Git',
@@ -221,16 +249,6 @@ export default function PortfolioPageClient() {
           ].map((skill) => (
             <div key={skill} className="pixel-badge dark:border-cream/30 dark:text-cream/90 text-center">
               {skill}
-            </div>
-          ))}
-        </div>
-        
-        <h3 className="text-xl font-bold text-brown dark:text-cream mb-4">{t('technologies.certifications')}</h3>
-        <div className="space-y-2">
-          {certifications.map((cert: string) => (
-            <div key={cert} className="flex items-center gap-2 text-brown-light dark:text-cream/70">
-              <span className="w-2 h-2 bg-sage rounded-full"></span>
-              {cert}
             </div>
           ))}
         </div>

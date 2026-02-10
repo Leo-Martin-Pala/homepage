@@ -1,14 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, CheckCircle, Github, Linkedin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSound } from '@/components/SoundContext';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPageClient() {
   const t = useTranslations('contact');
   const { playSound } = useSound();
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,25 +18,38 @@ export default function ContactPageClient() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    setError(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     playSound(880, 0.1);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      await emailjs.sendForm(
+        'service_pv1qx94',
+        'template_c3zj6y5',
+        formRef.current!,
+        'L5jR-4YSeJahAyzLm'
+      );
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    playSound(1046.5, 0.2);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      playSound(1046.5, 0.2);
+    } catch (err) {
+      setIsSubmitting(false);
+      setError(t('form.error'));
+      playSound(440, 0.1);
+    }
   };
 
   const socialLinks = [
@@ -70,7 +85,7 @@ export default function ContactPageClient() {
             }}
             className="pixel-btn"
           >
-            {t('form.send')}
+            {t('form.sendAnother')}
           </button>
         </motion.div>
       </div>
@@ -115,11 +130,11 @@ export default function ContactPageClient() {
                   <div>
                     <p className="text-brown-light dark:text-cream/70 text-sm">{t('info.email')}</p>
                     <a 
-                      href="mailto:leomartin.pala@gmail.com" 
+                      href="mailto:leomartin.pala@outlook.com" 
                       className="text-brown dark:text-cream font-medium hover:text-sage-dark dark:hover:text-sage transition-colors"
                       onClick={() => playSound(659.25, 0.1)}
                     >
-                      leomartin.pala@gmail.com
+                      leomartin.pala@outlook.com
                     </a>
                   </div>
                 </div>
@@ -181,8 +196,14 @@ export default function ContactPageClient() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <form onSubmit={handleSubmit} className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-8">
+          <form ref={formRef} onSubmit={handleSubmit} className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-8">
             <h2 className="text-xl font-bold text-brown dark:text-cream mb-6">{t('form.title')}</h2>
+
+            {error && (
+              <div className="mb-4 p-3 bg-dusty-rose/20 border border-dusty-rose rounded-lg text-brown dark:text-cream text-sm">
+                {error}
+              </div>
+            )}
 
             <div className="space-y-6">
               {/* Name Field */}
