@@ -386,7 +386,7 @@
       "title": "Saadaolevad käsud:",
       "helpDesc": "Näita seda abiinfot",
       "matrixDesc": "Sea maatriksi vihma intensiivsus (0-100%)",
-      "rainbowDesc": "Lülita vikerkuubiku režiim",
+      "rainbowDesc": "Lülita sisse vikerkuubiku režiim",
       "chessDesc": "Saa juhuslik malenõuanne",
       "whoamiDesc": "Saa teada Leo kohta",
       "clearDesc": "Tühjenda terminal",

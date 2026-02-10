@@ -435,20 +435,20 @@ export default function HomePageClient() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            {
-              title: t('projects.chess.title'),
-              description: t('projects.chess.description'),
-              tags: ['Vue.js', 'Node.js', 'LLM API'],
-              image: '/images/llm-chess-website.webp',
-              color: 'sage',
-            },
-            {
-              title: t('projects.voiceAgent.title'),
-              description: t('projects.voiceAgent.description'),
-              tags: ['Python', 'LiveKit', 'LLM'],
-              image: '/images/weather.webp',
-              color: 'dusty-rose',
-            },
+          {
+            title: t('projects.chess.title'),
+            description: t('projects.chess.description'),
+            tags: ['Vue.js', 'Node.js', 'LLM API'],
+            image: '/images/llm-chess-website.webp',
+            color: 'dusty-rose',
+          },
+          {
+            title: t('projects.voiceAgent.title'),
+            description: t('projects.voiceAgent.description'),
+            tags: ['Python', 'LiveKit', 'LLM'],
+            image: '/images/weather.webp',
+            color: 'sage',
+          },
           ].map((project, index) => (
             <motion.div
               key={project.title}

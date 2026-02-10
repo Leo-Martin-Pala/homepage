@@ -41,7 +41,7 @@ export default function PortfolioPageClient() {
       link: '',
       github: 'https://github.com/Leo-Martin-Pala/ai-voice-agent',
       image: '/images/weather.webp',
-      color: 'dusty-rose',
+      color: 'sage',
       featured: true,
     },
     {
@@ -51,7 +51,7 @@ export default function PortfolioPageClient() {
       link: 'https://chess.leomartin.me',
       github: 'https://github.com/Leo-Martin-Pala/llm-chess',
       image: '/images/llm-chess-website.webp',
-      color: 'sage',
+      color: 'dusty-rose',
       featured: true,
     },
     {
