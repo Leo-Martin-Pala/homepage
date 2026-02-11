@@ -48,9 +48,9 @@
     "approach": {
       "title": "My Approach",
       "workTitle": "How I Work",
-      "workDescription": "I work with dedication and purpose. I enjoy leading teams, but also highly value collaboration. I solve problems methodically and maintain calm even in stressful situations. I complete what I start, while pragmatically evaluating when it makes sense to continue and when not.",
+      "workDescription": "I work with dedication and purpose. I thrive in team settings. I am comfortable stepping up to lead when direction is needed, but just as happy rolling up my sleeves and contributing alongside the group. I solve problems methodically and maintain calm even in stressful situations. I am committed to seeing projects through, while remaining pragmatic enough to recognize when a strategy needs to change.",
       "philosophyTitle": "My Philosophy",
-      "philosophyDescription": "I believe in continuous development and never stand still. Technology evolves rapidly, and I make it a priority to keep learning and adapting."
+      "philosophyDescription": "I believe in continuous evolution. Rather than chasing every trend, I maintain an agile mindset, ensuring my skills adapt as quickly as the technology does."
     },
     "featuredWork": {
       "title": "Featured Work",
@@ -133,7 +133,7 @@
     "greeting": "Hello! I'm Leo-Martin",
     "bio1": "I'm a third-year Informatics student at University of Tartu. My interest in Data Science and Software Development was sparked by the Generative AI explosion in 2022. Since then, I have been experimenting with how these technologies work under the hood.",
     "bio2": "I enjoy building personal projects to learn new tools. Recently, I developed an interactive voice-agent using Python, and an LLM-powered chess bot using Vue.js. I often leverage AI tools to accelerate my own coding and learning process.",
-    "bio3": "Besides IT studies, I enjoy working out, reading, and self-development. I'm active in the academic organization Põhjala (EÜS Põhjala) where I've served as House Elder and Archivist. I am currently looking for an internship in Data Science or AI Engineering to learn from experienced developers and tackle real-world problems.",
+    "bio3": "Besides IT studies, I enjoy working out, reading, and self-development. I'm active in the academic organization EÜS Põhjala where I'm currently serving as House Elder. I am currently looking for an internship in Data Science or AI Engineering to learn from experienced developers and tackle real-world problems.",
     "skills": {
       "title": "Skills & Technologies",
       "development": {
@@ -189,24 +189,9 @@
     },
     "hobbies": {
       "title": "When I'm Not Coding",
-      "description1": "I go to the gym and do various workouts. I read a lot - both fiction and professional literature. I'm always trying to learn new things and develop myself.",
-      "description2": "I'm active in EÜS Põhjala where I've served as House Elder and Archivist. This has given me valuable leadership experience.",
-      "description3": "I believe in the importance of balancing productivity and rest and try to maintain this in my daily life."
-    },
-    "values": {
-      "title": "What I Believe",
-      "dedication": {
-        "title": "Dedication & Purpose",
-        "description": "I work with dedication and purpose. I complete what I start while pragmatically evaluating the best path forward."
-      },
-      "learning": {
-        "title": "Continuous Learning",
-        "description": "I believe in continuous development and never stand still. Technology evolves rapidly, and so do I."
-      },
-      "growth": {
-        "title": "Personal Growth",
-        "description": "I always strive to develop both professionally and personally. Working out, reading, and seeking new challenges are part of my routine."
-      }
+      "description1": "As a developer, I believe in systematic thinking beyond just work. I enjoy consciously designing my life—whether through setting long-term goals (like 5-year plans) or optimizing daily habits to ensure stability and clarity.",
+      "description2": "A significant part of my free time is dedicated to audiobooks and self-improvement. I balance intense mental work with physical activity: I enjoy long bike rides in the summer, and year-round gym sessions or long walks to clear my mind. Recently, I took on a new creative challenge and started learning the piano.",
+      "description3": "I am social by nature and highly value quality time with my family. I am also an active member of the Student Society EÜS Põhjala, where I have served as Archivist and currently hold the responsibilities of the House Elder."
     },
     "timeline": {
       "title": "My Journey",
@@ -240,7 +225,7 @@
         "ees": {
           "role": "EÜS Põhjala – House Elder (Majavanem)",
           "date": "2026 Spring",
-          "description": "Responsible for society premises maintenance and cleaning schedule. Previously served as Archivist."
+          "description": "Responsible for society premises maintenance and cleaning schedule."
         },
         "cyber": {
           "role": "Estonian Defence League Cyber Unit",

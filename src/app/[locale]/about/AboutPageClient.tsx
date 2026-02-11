@@ -277,10 +277,10 @@ export default function AboutPageClient() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-12"
+        className="pixel-card-sage dark:bg-sage/10 dark:border-sage/30 p-8"
       >
         <h2 className="text-2xl font-bold text-brown dark:text-cream mb-6">{t('hobbies.title')}</h2>
-        <div className="pixel-card dark:bg-brown-dark dark:border-cream/20 p-6">
+        <div>
           <p className="text-brown-light dark:text-cream/70 mb-4">
             {t('hobbies.description1')}
           </p>
@@ -293,36 +293,6 @@ export default function AboutPageClient() {
         </div>
       </motion.section>
 
-      {/* Values */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="pixel-card-sage dark:bg-sage/10 dark:border-sage/30 p-8"
-      >
-        <h2 className="text-2xl font-bold text-brown dark:text-cream mb-6">{t('values.title')}</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div>
-            <h3 className="font-bold text-brown dark:text-cream mb-2">{t('values.dedication.title')}</h3>
-            <p className="text-brown-light dark:text-cream/70 text-sm">
-              {t('values.dedication.description')}
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-brown dark:text-cream mb-2">{t('values.learning.title')}</h3>
-            <p className="text-brown-light dark:text-cream/70 text-sm">
-              {t('values.learning.description')}
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-brown dark:text-cream mb-2">{t('values.growth.title')}</h3>
-            <p className="text-brown-light dark:text-cream/70 text-sm">
-              {t('values.growth.description')}
-            </p>
-          </div>
-        </div>
-      </motion.section>
     </div>
   );
 }

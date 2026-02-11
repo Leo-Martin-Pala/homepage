@@ -48,9 +48,9 @@
     "approach": {
       "title": "Minu lähenemine",
       "workTitle": "Kuidas ma töötan",
-      "workDescription": "Töötan pühendumuse ja eesmärgiga. Naudin meeskondade juhtimist, kuid väärtustan ka koostööd. Lahendan probleeme meetodiliselt ja säilitan rahu ka pingelistes olukordades. Lõpetan alustatu, pragmatiliselt hinnates, millal mõistlik jätkata ja millal mitte.",
-      "philosophyTitle": "Minu filosoofia",
-      "philosophyDescription": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja ma pean oluliseks pidevat õppimist ja kohanemist."
+      "workDescription": "Töötan pühendunult ja sihikindlalt. Tunnen end meeskonnatöös kindlalt. Võtan vajadusel julgelt juhtimise enda kanda, kuid löön sama meelsasti käed külge, et koos teistega ühisesse eesmärki panustada. Lahendan probleeme metoodiliselt ja säilitan rahu ka pingelistes olukordades. Viin alustatu lõpule, kuid säilitan pragmaatilise meele mõistmaks, millal on vaja strateegiat muuta.",
+      "philosophyTitle": "Minu põhimõtted",
+      "philosophyDescription": "Usun pidevasse arengusse. Iga trendiga kaasajooksmise asemel hoian oma mõtlemise paindlikuna, tagades, et mu oskused kohanevad sama kiiresti kui tehnoloogia."
     },
     "featuredWork": {
       "title": "Esiletõstetud tööd",
@@ -65,7 +65,7 @@
     "projects": {
       "chess": {
         "title": "LLM Male Veebileht",
-        "description": "Interaktiivne maleveeb, mis võimaldab mängida mitmete keelemudelite vastu. Vue.js, Node.js ja Express.js baasil."
+        "description": "Interaktiivne male veebileht, mis võimaldab mängida mitmete keelemudelite vastu. Vue.js, Node.js ja Express.js baasil."
       },
       "bitcoin": {
         "title": "Bitcoini Hinnaprognoos",
@@ -107,7 +107,7 @@
       "obsessiveDesc": "Klõpsa 100 korda",
       "clickMaster": "Klõpsu Meister",
       "clickMasterDesc": "Klõpsa 500 korda",
-      "fingerFatigue": "Sõrme Väsimus",
+      "fingerFatigue": "Sõrmed villis",
       "fingerFatigueDesc": "Klõpsa 1000 korda",
       "worldTraveler": "Maailmarändur",
       "worldTravelerDesc": "Külasta kõiki lehti",
@@ -131,9 +131,9 @@
     "title": "Minust",
     "description": "Tutvu inimesega pikslite taga. Hetkel õpin 'kuidas', et saaks ehitada 'miks'.",
     "greeting": "Tere! Olen Leo-Martin",
-    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai alguse generatiivse AI plahvatuslikust kasvust 2022. aastal. Sellest ajast alates olen katsetanud, kuidas need tehnoloogiad töötavad.",
-    "bio2": "Naudin isiklike projektide ehitamist uute tööriistade õppimiseks. Hiljuti arendasin Pythoni kasutades interaktiivse kõneagendi ja Vue.js abil LLM-toelise malebotti. Kasutan sageli AI tööriistu oma kodeerimise ja õppimise kiirendamiseks.",
-    "bio3": "IT õpingute kõrval naudin treenimist, lugemist ja enesearengut. Olen aktiivne akadeemilises organisatsioonis Põhjala (EÜS Põhjala), kus olen teeninud majavanema ja arhivaarina. Otsin hetkel praktikakohta andmeteaduses või AI inseneerias, et õppida kogenud arendajatelt ja lahendada reaalseid probleeme.",
+    "bio1": "Olen Tartu Ülikooli kolmanda kursuse informaatika tudeng. Minu huvi andmeteaduse ja tarkvaraarenduse vastu sai hoo sisse generatiivse AI plahvatuslikust kasvust 2022. aastal. Sellest ajast alates olen katsetanud, kuidas need tehnoloogiad töötavad.",
+    "bio2": "Naudin isiklike projektide ehitamist uute tööriistade õppimiseks. Hiljuti arendasin Pythonit kasutades interaktiivse kõneagendi ja Vue.js abil LLM-toelise malebotti. Kasutan sageli AI tööriistu oma programmeerimise ja õppimise kiirendamiseks.",
+    "bio3": "IT õpingute kõrval naudin treenimist, lugemist ja enesearengut. Olen aktiivne akadeemilises organisatsioonis EÜS Põhjala, kus olen olnud arhivaar ja tegutsen nüüd majavanemana. Otsin praktikakohta andmeteaduses, AI inseneerias või tarkvaraarenduses, et õppida kogenud arendajatelt ja lahendada reaalseid probleeme.",
     "skills": {
       "title": "Oskused ja tehnoloogiad",
       "development": {
@@ -189,30 +189,15 @@
     },
     "hobbies": {
       "title": "Kui ma parajasti ei arenda",
-      "description1": "Käin jõusaalis ja teen erinevaid treeninguid. Loen palju - nii ilukirjandust kui ka erialast kirjandust. Püüan alati õppida uusi asju ja areneda.",
-      "description2": "Olen aktiivne EÜS Põhjalas, kus olen teeninud majavanema ja arhivaarina. See on andnud mulle väärtuslikke juhtimiskogemusi.",
-      "description3": "Usun produktiivsuse ja puhkuse tasakaalu olulisusesse ja püüan seda oma igapäevaelus hoida."
-    },
-    "values": {
-      "title": "Mida ma usun",
-      "dedication": {
-        "title": "Pühendumus ja eesmärk",
-        "description": "Töötan pühendumuse ja eesmärgiga. Lõpetan alustatu, pragmatiliselt hinnates parimat viisi edasi liikuda."
-      },
-      "learning": {
-        "title": "Pidev õppimine",
-        "description": "Usun pidevasse arengusse ja ei seisa kunagi paigal. Tehnoloogia areneb kiiresti ja mina koos sellega."
-      },
-      "growth": {
-        "title": "Isiklik kasv",
-        "description": "Püüan alati areneda nii professionaalselt kui ka isiklikult. Treening, lugemine ja uute väljakutsete otsimine on minu jaoks oluline."
-      }
+      "description1": "Arendajana usun süsteemsusesse ka väljaspool tööd. Mulle meeldib oma elu teadlikult disainida – olgu selleks siis pikaajaliste eesmärkide seadmine (5 aasta plaanid) või igapäevaste harjumuste optimeerimine, et elada stabiilsemalt ja kindlamalt.",
+      "description2": "Suure osa minu vabast ajast täidavad audioraamatud ja eneseharimine. Tasakaalustan intensiivset mõttetööd aktiivse liikumisega: suviti naudin pikki rattasõite, aastaringselt käin jõusaalis või teen pikki jalutuskäike, et mõtteid selgitada. Hiljuti võtsin ette uue väljakutse ja alustasin klaveriõpingutega.",
+      "description3": "Olen loomult sotsiaalne ja hindan kõrgelt aega perega. Ühiskondlikult olen aktiivne EÜS Põhjalas, kus olen kandnud arhivaari kui ka kannan hetkel majavanema vastutust."
     },
     "timeline": {
       "title": "Minu teekond",
       "education": {
         "title": "Haridus",
-        "university": "Tartu Ülikool – informaatika BSc (4.71 GPA)",
+        "university": "Tartu Ülikool – informaatika BSc (4.71 KKH)",
         "universityDate": "2023 – praeguseni",
         "highSchool": "Põlva Gümnaasium (hõbemedal)",
         "highSchoolDate": "2020 – 2023"
@@ -225,7 +210,7 @@
           "description": "Sisemise IT-kasutajatoe pakkumine, riistvara seadistamine ja hooldus. Atlassiani tööriistade kasutamine."
         },
         "varbuse": {
-          "role": "Varbuse teemaja – Teenindaja",
+          "role": "Varbuse Teemaja – Teenindaja",
           "date": "07.2024 – 08.2024",
           "description": "Klientide teenindamine varieeruva töökoormusega. Kiire ja operatiivne tegutsemine ootamatute tippkoormuste ajal."
         },
@@ -240,7 +225,7 @@
         "ees": {
           "role": "EÜS Põhjala – Majavanem",
           "date": "2026 kevad",
-          "description": "Vastutan seltsi ruumide korras hoidmise ja koristusgraafiku eest. Varem täitsin arhivaari rolli."
+          "description": "Vastutan seltsi ruumide korras hoidmise ja koristusgraafiku eest."
         },
         "cyber": {
           "role": "Kaitseliidu Küberkaitseüksus – Liige",
@@ -314,12 +299,12 @@
     "connect": {
       "title": "Ühendu minuga",
       "description": "Olen alati huvitatud uutest võimalustest ja koostööst. Olgu sul projektiidee, soov tehnikast rääkida või lihtsalt tere öelda, oleksin rõõmus, kui kuuleksin sinust!",
-      "response": "Vastan tavaliselt sõnumitele 24-48 tunni jooksul."
+      "response": "Vastan sõnumitele tavaliselt 24-48 tunni jooksul."
     },
     "form": {
       "title": "Saada mulle sõnum",
       "name": "Sinu nimi",
-      "email": "Sinu email",
+      "email": "Sinu e-post",
       "message": "Sinu sõnum",
       "namePlaceholder": "Mari Mets",
       "emailPlaceholder": "mari@example.com",
