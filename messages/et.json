@@ -110,7 +110,7 @@
       "fingerFatigue": "Sõrmed villis",
       "fingerFatigueDesc": "Klõpsa 1000 korda",
       "worldTraveler": "Maailmarändur",
-      "worldTravelerDesc": "Külasta kõiki lehti",
+      "worldTravelerDesc": "Külasta kõiki vahelehti",
       "bilingual": "Kahekeelne",
       "bilingualDesc": "Vaheta keelt kaks korda",
       "themeShifter": "Teema Vahetaja",
@@ -335,12 +335,12 @@
     "enterGarden": "Sisene aeda",
     "whatToExpect": "Mida seal leiad",
     "topics": [
-      "Veebiarendus",
-      "AI ja masinõpe",
-      "Isiklikud projektid",
-      "Raamatute märkmed ja mõtted",
-      "Õppematerjalid",
-      "Juhuslikud mõtted"
+      "Mõtisklused",
+      "Raamatumärkmed",
+      "Süsteemid ja strateegia",
+      "Kureeritud varamu",
+      "Õpimärkmed",
+      "Tsitaadid ja muu tarkus"
     ],
     "questions": "Küsimusi või soovid millegi üle arutada?",
     "getInTouch": "Võta ühendust"
