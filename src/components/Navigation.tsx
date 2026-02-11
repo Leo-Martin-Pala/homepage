@@ -157,36 +157,9 @@ export default function Navigation() {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Only Theme Toggle and Hamburger */}
             <div className="md:hidden flex items-center gap-2">
               <ThemeToggle />
-              <LanguageSwitcher />
-              <button
-                onClick={handleSoundToggle}
-                className="p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                aria-label={soundEnabled ? t('muteSound') : t('enableSound')}
-              >
-                {soundEnabled ? (
-                  <Volume2 size={20} className="text-sage-dark dark:text-sage" />
-                ) : (
-                  <VolumeX size={20} className="text-brown-light dark:text-cream/50" />
-                )}
-              </button>
-              {/* Mobile Achievement Button */}
-              <motion.button
-                onClick={handleAchievementClick}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
-                aria-label={t('viewAchievements')}
-              >
-                <Trophy size={20} className="text-warm-gold" />
-                {mounted && unlockedAchievements.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-dusty-rose text-white text-xs font-bold rounded-full flex items-center justify-center">
-                    {unlockedAchievements.length}
-                  </span>
-                )}
-              </motion.button>
               <button
                 onClick={() => {
                   playSound(523.25, 0.05);
@@ -209,6 +182,38 @@ export default function Navigation() {
                 exit={{ opacity: 0, height: 0 }}
                 className="md:hidden mt-4 pt-4 border-t-2 border-brown/20 dark:border-cream/20"
               >
+                {/* Mobile Controls - Moved into menu */}
+                <div className="flex items-center justify-center gap-4 mb-4 pb-4 border-b border-brown/10 dark:border-cream/10">
+                  <div className="flex items-center gap-2">
+                    <LanguageSwitcher />
+                  </div>
+                  <button
+                    onClick={handleSoundToggle}
+                    className="p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
+                    aria-label={soundEnabled ? t('muteSound') : t('enableSound')}
+                  >
+                    {soundEnabled ? (
+                      <Volume2 size={20} className="text-sage-dark dark:text-sage" />
+                    ) : (
+                      <VolumeX size={20} className="text-brown-light dark:text-cream/50" />
+                    )}
+                  </button>
+                  {/* Mobile Achievement Button */}
+                  <motion.button
+                    onClick={handleAchievementClick}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="relative p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
+                    aria-label={t('viewAchievements')}
+                  >
+                    <Trophy size={20} className="text-warm-gold" />
+                    {mounted && unlockedAchievements.length > 0 && (
+                      <span className="absolute -top-1 -right-1 w-5 h-5 bg-dusty-rose text-white text-xs font-bold rounded-full flex items-center justify-center">
+                        {unlockedAchievements.length}
+                      </span>
+                    )}
+                  </motion.button>
+                </div>
                 <div className="flex flex-col gap-2">
                   {navItems.map((item) => {
                     const Icon = item.icon;
