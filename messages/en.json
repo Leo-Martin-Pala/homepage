@@ -398,21 +398,17 @@
       "role": "AI Enthusiast & Software Developer",
       "funFact": "🎲 Random Fun Fact:",
       "facts": [
-        "Started programming at age 7 with JavaScript!",
-        "Built a voice agent that speaks Estonian and tells weather",
-        "Self-hosted an AI platform with access to 280+ LLMs",
-        "Configured a Dell PowerEdge R610 server with Proxmox",
-        "Bronze medalist at International Earth Science Olympiad",
-        "Used to teach chess to elementary school kids",
-        "Currently serving as House Elder in academic corporation EÜS Põhjala",
-        "Built an LLM chess bot that plays against language models",
-        "Did a data science project predicting Bitcoin prices using global events",
-        "Loves experimenting with new AI tools and technologies",
-        "Can recite the first 100 digits of pi... just kidding!",
-        "Has a homelab with multiple virtual machines running",
-        "Drinks way too much coffee while coding",
-        "Once stayed up all night fixing a server issue",
-        "Believes that the best code is written after a good gym session"
+        "Purchasing Logic: Spent 6 months researching metal detectors... bought none. Same for drones.",
+        "Status: Self-hosting enthusiast. My home is warmer because of my Dell R610 server.",
+        "Init: Started coding at age 7 (JavaScript was my first language).",
+        "Audio Driver: Can whistle in two tones simultaneously.",
+        "Rendering Engine: Can mentally simulate the texture of any fictional material.",
+        "Botany Module: Can identify stone brambles (lillakad) in the wild with 100% accuracy.",
+        "Hardware: International Earth Science Olympiad Bronze Medalist.",
+        "Runtime Error: Completed Estonian exam 48h after arm surgery. Result: Success.",
+        "Sleep Mode: Glitchy. Once completed 10,000 steps at 01:30 AM.",
+        "Background Process: Wrestling experience (5+ years). Don't try to debug me physically.",
+        "Memory: Can recite the first 100 digits of pi... just kidding!"
       ]
     },
     "chess": {

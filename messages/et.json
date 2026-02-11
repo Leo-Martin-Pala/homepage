@@ -398,21 +398,17 @@
       "role": "AI entusiast ja tarkvaraarendaja",
       "funFact": "🎲 Juhuslik lõbus fakt:",
       "facts": [
-        "Alustasin programmeerimist 7-aastaselt JavaScriptiga!",
-        "Ehitasin kõneagendi, mis räägib eesti keelt ja ennustab ilma",
-        "Seadistasin ise AI platvormi juurdepääsuga üle 280 keelemudelile",
-        "Konfigureerisin Dell PowerEdge R610 serveri Proxmoxiga",
-        "Rahvusvahelise Maateaduste Olümpiaadi pronksmedalist",
-        "Õpetasin algkooli lastele malet",
-        "Teenin praegu majavanema rollis akadeemilises organisatsioonis EÜS Põhjala",
-        "Ehitasin LLM maleboti, mis mängib keelemudelite vastu",
-        "Tegin andmeteaduse projekti Bitcoini hindade ennustamiseks globaalsete sündmuste abil",
-        "Armastan katsetada uusi AI tööriistu ja tehnoloogiaid",
-        "Oskan öelda pi esimesed 100 kohta... tegelikult ei oska!",
-        "Oman kodulaborit mitme virtuaalmasinaga",
-        "Joon progemise ajal liiga palju kohvi",
-        "Jäin kord terve öö üles serveriprobleemi lahendamiseks",
-        "Usun, et parim kood kirjutatakse pärast head trenni"
+        "Purchasing Logic: Uurisin 6 kuud metallidetektoreid... ja ei ostnud ühtegi. Sama juhtus droonidega.",
+        "Status: Self-hosting entusiast. Tuba püsib soe tänu Dell R610 serverile.",
+        "Init: Alustasin progemisega 7-aastaselt (JavaScript oli mu esimene keel).",
+        "Audio Driver: Oskan kahehäälselt vilistada.",
+        "Rendering Engine: Suudan vaimusilmas ette kujutada iga väljamõeldud materjali tekstuuri.",
+        "Botany Module: Tuvastan metsas lillakad 100% täpsusega.",
+        "Hardware: Ülemaailmse maateaduste olümpiaadi pronksmedalist.",
+        "Runtime Error: Tegin eesti keele eksami 48h pärast käeoperatsiooni. Tulemus: Edukas.",
+        "Sleep Mode: Glitchy. Kord tegin oma 10 000 sammu täis kell 1:30 öösel.",
+        "Background Process: 5+ aastat maadlust. Ära proovi mind füüsiliselt 'debugida'.",
+        "Memory: Tean peast pii 100 esimest numbrit... okei, tegin nalja!"
       ]
     },
     "chess": {
