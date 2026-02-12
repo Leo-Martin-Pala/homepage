@@ -158,7 +158,7 @@ export default function Navigation() {
             </div>
 
             {/* Desktop Navigation - Icons Only */}
-            <div className="hidden md:flex lg:hidden items-center gap-2">
+            <div className="hidden md:flex lg:hidden items-center gap-3">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 const itemPath = `/${locale}${item.href === '/' ? '' : item.href}`;
@@ -178,7 +178,7 @@ export default function Navigation() {
                     `}
                     aria-label={item.label}
                   >
-                    <Icon size={20} />
+                    <Icon size={24} />
                     {isActive && (
                       <motion.div
                         layoutId="activeNavIcon"
