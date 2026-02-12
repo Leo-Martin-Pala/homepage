@@ -87,8 +87,8 @@ export default function Navigation() {
               <span className="text-dusty-rose-dark dark:text-dusty-rose">LM</span>Pala
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-2">
+            {/* Desktop Navigation - Text + Icon */}
+            <div className="hidden lg:flex items-center gap-2">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 const itemPath = `/${locale}${item.href === '/' ? '' : item.href}`;
@@ -115,6 +115,74 @@ export default function Navigation() {
                       <motion.div
                         layoutId="activeNav"
                         className="absolute bottom-0 left-0 right-0 h-1 bg-dusty-rose dark:bg-dusty-rose rounded-full"
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+
+              {/* Controls */}
+              <div className="flex items-center gap-2 ml-4 pl-4 border-l-2 border-brown/20 dark:border-cream/20">
+                <ThemeToggle />
+                <LanguageSwitcher />
+                <button
+                  onClick={handleSoundToggle}
+                  className="p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
+                  aria-label={soundEnabled ? t('muteSound') : t('enableSound')}
+                >
+                  {soundEnabled ? (
+                    <Volume2 size={20} className="text-sage-dark dark:text-sage" />
+                  ) : (
+                    <VolumeX size={20} className="text-brown-light dark:text-cream/50" />
+                  )}
+                </button>
+                {/* Achievement Board Button */}
+                <motion.button
+                  onClick={handleAchievementClick}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative p-2 rounded-lg hover:bg-cream-dark dark:hover:bg-brown transition-colors"
+                  aria-label={t('viewAchievements')}
+                  title={t('achievements')}
+                >
+                  <Trophy size={20} className="text-warm-gold" />
+                  {/* Achievement Count Badge */}
+                  {mounted && unlockedAchievements.length > 0 && (
+                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-dusty-rose text-white text-xs font-bold rounded-full flex items-center justify-center">
+                      {unlockedAchievements.length}
+                    </span>
+                  )}
+                </motion.button>
+              </div>
+            </div>
+
+            {/* Desktop Navigation - Icons Only */}
+            <div className="hidden md:flex lg:hidden items-center gap-2">
+              {navItems.map((item) => {
+                const Icon = item.icon;
+                const itemPath = `/${locale}${item.href === '/' ? '' : item.href}`;
+                const isActive = pathname === itemPath || (item.href !== '/' && pathname.startsWith(itemPath));
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={itemPath}
+                    onClick={handleNavClick}
+                    className={`
+                      relative p-3 font-medium transition-all duration-200 rounded-lg
+                      ${isActive
+                        ? 'text-brown dark:text-cream bg-cream-dark dark:bg-brown'
+                        : 'text-brown/80 dark:text-cream/90 hover:text-brown dark:hover:text-cream hover:bg-cream-dark dark:hover:bg-brown'
+                      }
+                    `}
+                    aria-label={item.label}
+                  >
+                    <Icon size={20} />
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeNavIcon"
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-dusty-rose dark:bg-dusty-rose rounded-full"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
                     )}

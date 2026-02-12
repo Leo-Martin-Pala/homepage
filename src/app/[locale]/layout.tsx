@@ -59,7 +59,7 @@ export default async function LocaleLayout({
               <AchievementProvider>
                 <EasterEggs>
                   <Navigation />
-                  <main className="min-h-screen">
+                  <main className="min-h-screen overflow-x-hidden">
                     {children}
                   </main>
                   <Footer />
