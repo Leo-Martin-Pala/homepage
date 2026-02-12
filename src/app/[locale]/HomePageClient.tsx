@@ -96,7 +96,7 @@ export default function HomePageClient() {
               e.stopPropagation();
               handleCubeClick(cubeNumbers[0]);
             }}
-            className="group absolute top-[5%] left-[3%] md:top-[12%] md:left-[8%] w-10 h-10 md:w-16 md:h-16 bg-sage/40 dark:bg-sage/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-sage/40 shadow-lg pointer-events-auto z-20"
+            className="group absolute top-[3%] left-[3%] md:top-[12%] md:left-[8%] w-10 h-10 md:w-16 md:h-16 bg-sage/40 dark:bg-sage/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-sage/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-lg md:text-2xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[0]}
@@ -127,7 +127,7 @@ export default function HomePageClient() {
               e.stopPropagation();
               handleCubeClick(cubeNumbers[1]);
             }}
-            className="group absolute top-[12%] right-[5%] md:top-[25%] md:right-[12%] w-9 h-9 md:w-14 md:h-14 bg-dusty-rose/40 dark:bg-dusty-rose/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-dusty-rose/40 shadow-lg pointer-events-auto z-20"
+            className="group absolute top-[3%] right-[3%] md:top-[25%] md:right-[12%] w-9 h-9 md:w-14 md:h-14 bg-dusty-rose/40 dark:bg-dusty-rose/25 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-dusty-rose/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-base md:text-xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[1]}
@@ -158,7 +158,7 @@ export default function HomePageClient() {
               e.stopPropagation();
               handleCubeClick(cubeNumbers[2]);
             }}
-            className="group absolute top-[18%] left-[10%] md:top-[60%] md:left-[5%] w-10 h-10 md:w-20 md:h-20 bg-warm-gold/35 dark:bg-warm-gold/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-warm-gold/40 shadow-lg pointer-events-auto z-20"
+            className="group absolute bottom-[22%] left-[5%] md:top-[60%] md:left-[5%] md:bottom-auto w-10 h-10 md:w-20 md:h-20 bg-warm-gold/35 dark:bg-warm-gold/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-warm-gold/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-lg md:text-3xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[2]}
@@ -189,7 +189,7 @@ export default function HomePageClient() {
               e.stopPropagation();
               handleCubeClick(cubeNumbers[3]);
             }}
-            className="group absolute top-[22%] right-[2%] md:top-[70%] md:right-[6%] w-11 h-11 md:w-16 md:h-16 bg-terracotta/35 dark:bg-terracotta/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-terracotta/40 shadow-lg pointer-events-auto z-20"
+            className="group absolute bottom-[16%] right-[3%] md:top-[70%] md:right-[6%] md:bottom-auto w-11 h-11 md:w-16 md:h-16 bg-terracotta/35 dark:bg-terracotta/20 rounded-xl cursor-pointer hover:scale-110 transition-all border-2 border-terracotta/40 shadow-lg pointer-events-auto z-20"
           >
             <span className="absolute inset-0 flex items-center justify-center text-lg md:text-2xl font-bold text-brown/0 dark:text-brown-dark/0 group-hover:text-brown/30 dark:group-hover:text-brown-dark/30 transition-all duration-300">
               {cubeNumbers[3]}
